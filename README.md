@@ -9,7 +9,9 @@ The first version is a static website designed for GitHub Pages. It includes:
 - Responsive dashboard layout
 - Search and filters for category, compensation and location
 - Saved opportunities and application statuses
-- Manual opportunity entry
+- Manual opportunity entry with quick capture from pasted casting captions/briefs
+- Public source directory covering 11 user-supplied Instagram accounts and two UK casting boards
+- Basic extraction of likely title, category, compensation, location, deadline and links from pasted text
 - Browser-local persistence using localStorage
 - Private modelling profile editor (profile details remain in the current browser)
 - Initial opportunity-to-profile matching labels with brief explanations
@@ -28,7 +30,7 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Important current limitations
 
-- The discovery pipeline currently supports permitted RSS/Atom feeds. No feed sources are configured yet, so the live feed will remain empty until suitable sources are added.
+- The discovery pipeline supports permitted RSS/Atom feeds, but none are configured yet. The source directory is a research/intake shortlist, not an automatic scraper, so the live feed will remain empty until suitable feeds or authorised integrations are added.
 - Instagram accounts are registered for manual review; arbitrary third-party Stories are not available through the standard Instagram API, so the project does not scrape them.
 - Manually entered opportunities and the modelling profile are stored in the current browser only. They are not synced across devices.
 - Profile matching is an early keyword-based heuristic, not a reliable eligibility decision. Always check the original casting brief.
@@ -38,12 +40,12 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Roadmap
 
-1. Expand and verify the source directory, including Instagram opportunity accounts and agencies.
+1. Verify and prioritise source coverage, including the two public UK casting boards and Instagram accounts.
 2. Add permitted public RSS/Atom feeds and documented API integrations.
-3. Improve cross-source deduplication and retain all source links.
-4. Add freshness checks, deadline/expiry handling and source attribution.
-5. Build a permitted Instagram intake workflow (account-owner permission, authorised integration or user-submitted posts/Stories).
-6. Add profile matching, alerts and cross-device persistence.
+3. Improve matching against casting age, height, gender and work preferences.
+4. Improve cross-source deduplication and retain all source links.
+5. Add freshness checks, deadline/expiry handling and source attribution.
+6. Build alerts and optional cross-device persistence without exposing private profile details.
 
 ## Compensation labels
 
