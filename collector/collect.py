@@ -91,7 +91,7 @@ def opportunity_type(text: str) -> tuple[str, str]:
         return "Creator campaign", "High"
     if re.search(r"\b(model agency|agency application|apply to (?:the )?(?:model )?agency|model representation|join (?:the )?(?:model )?agency|new faces application|become a model|apply as a model)\b", lower):
         return "Agency application", "High"
-    if re.search(r"\b(extra(?:s)?|supporting artist|background artist|background actor|actor casting|acting role|speaking role|voice.?over casting)\b", lower):
+    if re.search(r"\b(extra(?:s)?|supporting artists?|background artists?|background actors?|actor casting|acting roles?|speaking roles?|voice.?over casting|walk.on roles?)\b", lower):
         return "Acting / Extras", "High"
     if re.search(r"\b(promo(?:tional)? staff|promotional model|brand ambassador|event staff|event host|sampling staff|product demonstrator)\b", lower):
         return "Promotional / Events", "High"
@@ -259,7 +259,7 @@ def robots_allows(url: str) -> tuple[bool, str]:
 
 
 class DetailPageParser(HTMLParser):
-    """Extract visible text and common metadata from a public casting detail page."""
+    """Extract visible text, metadata and JSON-LD from a public casting detail page."""
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.title_parts = []
@@ -269,12 +269,18 @@ class DetailPageParser(HTMLParser):
         self.meta = {}
         self.jsonld = []
         self._capture = None
-        self._script_type = ""
+        self._script_is_jsonld = False
+        self._script_buffer = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         tag = tag.lower()
-        if tag in ("nav", "footer", "header", "aside", "script", "style", "noscript"):
+        if tag == "script":
+            self._script_is_jsonld = (attrs.get("type") or "").lower().split(";")[0].strip() == "application/ld+json"
+            self._script_buffer = []
+            self._skip_depth += 1
+            return
+        if tag in ("nav", "footer", "header", "aside", "style", "noscript"):
             self._skip_depth += 1
             return
         if self._skip_depth:
@@ -290,6 +296,9 @@ class DetailPageParser(HTMLParser):
             self._capture = "h1"
 
     def handle_data(self, data):
+        if self._script_is_jsonld:
+            self._script_buffer.append(data)
+            return
         if self._skip_depth:
             return
         value = " ".join(data.split())
@@ -303,7 +312,17 @@ class DetailPageParser(HTMLParser):
 
     def handle_endtag(self, tag):
         tag = tag.lower()
-        if tag in ("nav", "footer", "header", "aside", "script", "style", "noscript") and self._skip_depth:
+        if tag == "script":
+            if self._script_is_jsonld:
+                raw = "".join(self._script_buffer).strip()
+                if raw:
+                    self.jsonld.append(raw)
+            self._script_is_jsonld = False
+            self._script_buffer = []
+            if self._skip_depth:
+                self._skip_depth -= 1
+            return
+        if tag in ("nav", "footer", "header", "aside", "style", "noscript") and self._skip_depth:
             self._skip_depth -= 1
         if tag in ("title", "h1"):
             self._capture = None
@@ -411,7 +430,7 @@ def fetch_detail_page(url: str) -> dict:
         "meta": parser.meta,
     }
 
-def fetch_html_listings(source: dict) -> list[dict]:
+def fetch_html_listings(source: dict, existing_items: dict[str, dict] | None = None) -> list[dict]:
     page_url = source.get("url", "")
     if not page_url:
         return []
@@ -439,6 +458,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
     results = []
     source_id = source.get("id", "")
     detail_pages_checked = 0
+    existing_items = existing_items or {}
     for href, title in parser.links:
         title = clean_listing_title(title)
         if not title or len(title) < 10 or len(title) > 260:
@@ -472,12 +492,18 @@ def fetch_html_listings(source: dict) -> list[dict]:
             continue
         seen.add(canonical)
         stable = hashlib.sha256(canonical.lower().encode()).hexdigest()[:16]
+        previous_item = existing_items.get(stable, {})
         detail = {}
-        detail_error = ""
-        if detail_pages_checked < 8:
+        detail_error = previous_item.get("detail_fetch_error") or ""
+        detail_attempts = int(previous_item.get("detail_fetch_attempts", 0) or 0)
+        # Work through unchecked listings over successive runs instead of repeatedly
+        # spending the per-source request budget on the same first eight links.
+        if previous_item.get("detail_page_checked") is not True and detail_pages_checked < 8 and detail_attempts < 2:
             detail_pages_checked += 1
+            detail_attempts += 1
             try:
                 detail = fetch_detail_page(canonical)
+                detail_error = ""
                 time.sleep(1.0)
             except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
                 detail_error = str(exc)[:180]
@@ -525,6 +551,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
             "review_status": "needs_review",
             "detail_page_checked": bool(detail),
             "detail_fetch_error": detail_error or None,
+            "detail_fetch_attempts": detail_attempts,
             "casting_requirements": {"gender": gender_requirement, "age_range": age_requirement, "fee_as_stated": fee or "Not specified"},
             "application_method": application,
         })
@@ -572,7 +599,7 @@ def main() -> None:
     scrape_stats = []
     for source in active_pages:
         try:
-            page_items = fetch_html_listings(source)
+            page_items = fetch_html_listings(source, collected)
             scrape_stats.append({"source": source.get("name", source.get("id")), "leads": len(page_items), "status": "ok"})
             for item in page_items:
                 key = item["id"]
