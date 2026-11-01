@@ -168,6 +168,135 @@ def fetch_feed(source: dict) -> list[dict]:
         })
     return results
 
+
+# Conservative public-page discovery. This is deliberately a lead extractor, not
+# a browser/login scraper. Each source must opt in and pass its robots.txt check.
+from html.parser import HTMLParser
+from urllib.parse import urljoin, urldefrag
+import urllib.robotparser
+
+LISTING_HINTS = re.compile(
+    r"\b(model|models|casting|castings|casting call|open call|audition|talent|"
+    r"campaign|photoshoot|photo shoot|lookbook|fashion|commercial|brand|"
+    r"new faces|wanted|seeking|fit model|editorial)\b", re.I
+)
+NAV_LABELS = {
+    "home", "about", "contact", "contact us", "privacy", "terms", "login",
+    "log in", "sign up", "register", "search", "next", "previous", "read more",
+    "view all", "learn more", "menu", "my account", "apply now"
+}
+
+class ListingLinkParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.links = []
+        self.current = None
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag.lower() == "a" and attrs.get("href"):
+            self.current = {"href": attrs["href"], "text": []}
+
+    def handle_data(self, data):
+        if self.current is not None:
+            self.current["text"].append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "a" and self.current is not None:
+            text_value = " ".join(" ".join(self.current["text"]).split())
+            self.links.append((self.current["href"], text_value))
+            self.current = None
+
+def robots_allows(url: str) -> tuple[bool, str]:
+    parsed = urlparse(url)
+    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+    request = urllib.request.Request(robots_url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            robots_text = response.read(500_000).decode("utf-8", errors="replace")
+        parser = urllib.robotparser.RobotFileParser()
+        parser.set_url(robots_url)
+        parser.parse(robots_text.splitlines())
+        allowed = parser.can_fetch(USER_AGENT, url)
+        return allowed, "robots.txt allows path" if allowed else "robots.txt disallows path"
+    except urllib.error.HTTPError as exc:
+        # A missing robots.txt is not a robots prohibition; other HTTP failures
+        # are treated conservatively as unavailable.
+        if exc.code == 404:
+            return True, "robots.txt not found"
+        return False, f"robots.txt returned HTTP {exc.code}"
+    except Exception as exc:
+        return False, f"robots.txt check failed: {str(exc)[:160]}"
+
+def fetch_html_listings(source: dict) -> list[dict]:
+    page_url = source.get("url", "")
+    if not page_url:
+        return []
+    allowed, reason = robots_allows(page_url)
+    if not allowed:
+        raise PermissionError(reason)
+    request = urllib.request.Request(
+        page_url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-GB,en;q=0.8",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=25) as response:
+        content_type = response.headers.get("Content-Type", "")
+        if "html" not in content_type.lower():
+            raise ValueError(f"Expected HTML, received {content_type[:100]}")
+        raw = response.read(4_000_000)
+        final_url = response.geturl()
+    parser = ListingLinkParser()
+    parser.feed(raw.decode("utf-8", errors="replace"))
+    base_host = urlparse(final_url).netloc.lower().removeprefix("www.")
+    seen = set()
+    results = []
+    for href, title in parser.links:
+        title = re.sub(r"\s+", " ", html.unescape(title)).strip()
+        if not title or len(title) < 10 or len(title) > 180:
+            continue
+        if title.casefold() in NAV_LABELS or not LISTING_HINTS.search(title):
+            continue
+        link = urldefrag(urljoin(final_url, href))[0]
+        parsed_link = urlparse(link)
+        if parsed_link.scheme not in ("http", "https"):
+            continue
+        link_host = parsed_link.netloc.lower().removeprefix("www.")
+        if link_host != base_host or link.rstrip("/") == final_url.rstrip("/"):
+            continue
+        canonical = clean_url(link)
+        if not canonical or canonical in seen:
+            continue
+        seen.add(canonical)
+        stable = hashlib.sha256(canonical.lower().encode()).hexdigest()[:16]
+        results.append({
+            "id": stable,
+            "title": title[:180],
+            "category": category(title),
+            "compensation": "Unknown",
+            "location": "Location TBC",
+            "deadline": None,
+            "source": source.get("name", "Public listing page"),
+            "discovery_source": source.get("name", "HTML discovery"),
+            "source_platform": source.get("platform", "web"),
+            "source_url": canonical,
+            "url": canonical,
+            "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+            "published_at": None,
+            "added": datetime.now(timezone.utc).date().isoformat(),
+            "collected_at": datetime.now(timezone.utc).isoformat(),
+            "status": "New",
+            "saved": False,
+            "demo": False,
+            "collection_method": "html_scrape",
+            "review_status": "needs_review",
+            "application_method": "Open the original listing and check eligibility, compensation, deadline and application route",
+        })
+    return results
+
 def main() -> None:
     config = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     collected: dict[str, dict] = {}
@@ -190,6 +319,7 @@ def main() -> None:
     except (OSError, ValueError):
         pass
     active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
+    active_pages = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "html_scrape" and s.get("url")]
     feed_stats = []
     for source in active_feeds:
         try:
@@ -206,18 +336,36 @@ def main() -> None:
                     collected[key]["also_seen_at"].append({"source": item["source"], "url": item["source_url"]})
         except (urllib.error.URLError, TimeoutError, ET.ParseError, ValueError) as exc:
             errors.append({"source": source.get("name", source.get("id")), "error": str(exc)[:300]})
+    scrape_stats = []
+    for source in active_pages:
+        try:
+            page_items = fetch_html_listings(source)
+            scrape_stats.append({"source": source.get("name", source.get("id")), "leads": len(page_items), "status": "ok"})
+            for item in page_items:
+                key = item["id"]
+                if key not in collected:
+                    collected[key] = item
+                    collected[key]["also_seen_at"] = []
+                else:
+                    collected[key].setdefault("also_seen_at", []).append({"source": item["source"], "url": item["source_url"]})
+        except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
+            scrape_stats.append({"source": source.get("name", source.get("id")), "leads": 0, "status": "skipped_or_error", "detail": str(exc)[:250]})
+            errors.append({"source": source.get("name", source.get("id")), "error": str(exc)[:300]})
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "source_count": len(active_feeds),
+        "source_count": len(active_feeds) + len(active_pages),
         "opportunities": sorted(collected.values(), key=lambda x: x.get("published_at") or "", reverse=True),
         "errors": errors,
-        "feed_stats": feed_stats
+        "feed_stats": feed_stats,
+        "scrape_stats": scrape_stats
     }
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Checked {len(active_feeds)} feed(s); collected {len(collected)} opportunity/ies; {len(errors)} error(s).")
+    print(f"Checked {len(active_feeds)} feed(s) and {len(active_pages)} public page(s); collected {len(collected)} opportunity/ies; {len(errors)} error(s).")
     for stat in feed_stats:
         print("  " + stat["source"] + ": " + str(stat["leads"]) + " lead(s)")
+    for stat in scrape_stats:
+        print("  SCRAPE " + stat["source"] + ": " + str(stat["leads"]) + " lead(s) [" + stat["status"] + "]")
     for error in errors:
         print("  ERROR " + error["source"] + ": " + error["error"])
 
