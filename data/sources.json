@@ -272,13 +272,13 @@
       "id": "web-models-direct-jobs",
       "name": "Models Direct — Job Board",
       "url": "https://www.modelsdirect.com/modelling-jobs",
-      "collection": "html_scrape",
+      "collection": "manual_review",
       "platform": "web",
-      "enabled": true,
+      "enabled": false,
       "source_group": "opportunity_repost",
       "type": "listing_board",
       "verification_status": "public_listing_page_seen",
-      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
+      "notes": "Disabled: public page currently exposes generic agency/registration pages rather than a usable listing index; keep email intake and manual checks."
     },
     {
       "id": "web-3light-uk-casting-directory",
@@ -287,10 +287,10 @@
       "url": "https://www.3lighttalent.co.uk/casting-directory",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "html_scrape",
-      "enabled": true,
+      "collection": "manual_review",
+      "enabled": false,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
+      "notes": "Disabled: this is a talent directory, not a public casting-listing index."
     },
     {
       "id": "web-fashiondb-open-castings",
@@ -299,10 +299,10 @@
       "url": "https://fashiondb.com/open-castings",
       "type": "open_call_directory",
       "source_group": "model_agency",
-      "collection": "html_scrape",
-      "enabled": true,
+      "collection": "manual_review",
+      "enabled": false,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
+      "notes": "Disabled: this page resolves to an agency directory, not individual casting briefs."
     },
     {
       "id": "web-talentmanagement-jobs",
