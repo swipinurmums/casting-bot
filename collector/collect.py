@@ -21,6 +21,7 @@ from urllib.parse import urlparse, urlunparse
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "data" / "sources.json"
+EMAIL_LEADS_FILE = ROOT / "data" / "email-leads.json"
 OUTPUT_FILE = ROOT / "data" / "opportunities.json"
 USER_AGENT = "ModellingOpportunityRadar/0.1 (+https://github.com/swipinurmums/casting-bot)"
 OPPORTUNITY_TITLE = re.compile(r"\b(casting call for models?|model casting|model call|model search|model wanted|models wanted|model needed|models needed|open call for models?|fit models?|fit model|new faces|talent search|looking for (?:male |female |new )?models?|seeking (?:male |female |new )?models?|audition(?:s)? for models?)\b|\b(?:male|female|men\x27s|women\x27s) models?\b.{0,90}\b(?:casting|wanted|needed|shoot|campaign|lookbook|photoshoot)\b", re.I)
@@ -179,7 +180,7 @@ def main() -> None:
                 collected[item["id"]] = item
     except (OSError, ValueError, KeyError):
         pass
-    active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
+    # Import minimal metadata leads published by the user-authorised Gmail bridge.\n    # These remain unverified until the original casting brief is checked.\n    try:\n        email_payload = json.loads(EMAIL_LEADS_FILE.read_text(encoding="utf-8"))\n        for item in email_payload.get("leads", []):\n            if item.get("id"):\n                collected[item["id"]] = item\n    except (OSError, ValueError):\n        pass\n    active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
     feed_stats = []
     for source in active_feeds:
         try:
