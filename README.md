@@ -58,3 +58,5 @@ Open `index.html` in a browser. No build step or package installation is require
 - **Unknown** — the listing does not make compensation clear.
 
 Never infer that an opportunity is unpaid simply because no rate is shown.
+
+**Discovery quality:** automated RSS results are unverified leads until the original casting brief is checked. The collector reports per-feed lead counts in its GitHub Actions log. Backstage is not automatically collected because its terms prohibit automated access tools.
