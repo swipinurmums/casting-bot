@@ -20,7 +20,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "Open Casting London's listing and confirm the campaign is still accepting applications"
     },
     {
       "id": "curated-mm-menswear-styling-leyton-2026-11",
@@ -40,7 +41,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "DM your details via the casting listing"
     },
     {
       "id": "curated-mm-sheffield-menswear-lookbook-2026-11",
@@ -60,7 +62,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "Open the UK male-castings board and select the Sheffield lookbook listing"
     },
     {
       "id": "curated-mm-leeds-property-lifestyle-2026-11",
@@ -80,7 +83,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "Open the UK castings board and select the Leeds property-shoot listing"
     },
     {
       "id": "curated-mm-manchester-fit-model-2026-11",
@@ -100,7 +104,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "Open the UK male-castings board and select the Manchester fit-model listing"
     },
     {
       "id": "curated-mm-london-street-photo-tfp-2027",
@@ -120,7 +125,8 @@
       "status": "New",
       "saved": false,
       "demo": false,
-      "collection_method": "manual_curated"
+      "collection_method": "manual_curated",
+      "application_method": "Message the photographer through the casting listing"
     }
   ],
   "errors": []
