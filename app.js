@@ -167,7 +167,7 @@ $("#parse-brief").addEventListener("click",()=>{
  if(found)form.elements.namedItem("location").value=found;
  else if(/remote|UK[- ]wide|nationwide/i.test(raw))form.elements.namedItem("location").value="Remote / UK-wide";
  const dateMatch=raw.match(/(?:deadline|apply by|closes?|closing date)[:\s-]*([0-3]?\d[\/.-][01]?\d[\/.-](?:20)?\d{2}|(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+[0-3]?\d(?:,?\s+20\d{2})?|[0-3]?\d\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+20\d{2})/i);
- if(dateMatch){const rawDate=dateMatch[1],uk=rawDate.match(/^([0-3]?\d)[\/.-]([01]?\d)[\/.-](20\d{2})$/);const parsed=uk?new Date(Number(uk[3]),Number(uk[2])-1,Number(uk[1])):new Date(rawDate);if(!Number.isNaN(parsed.getTime()))form.elements.namedItem("deadline").value=parsed.toISOString().slice(0,10);}
+ if(dateMatch){const rawDate=dateMatch[1],uk=rawDate.match(/^([0-3]?\d)[\/.-]([01]?\d)[\/.-](20\d{2})$/);const parsed=uk?new Date(Number(uk[3]),Number(uk[2])-1,Number(uk[1])):new Date(rawDate);if(!Number.isNaN(parsed.getTime()))form.elements.namedItem("deadline").value=parsed.getFullYear()+"-"+String(parsed.getMonth()+1).padStart(2,"0")+"-"+String(parsed.getDate()).padStart(2,"0");}
  const linkMatch=raw.match(/https?:\/\/[^\s<>]+/i);if(linkMatch&&!form.elements.namedItem("url").value)form.elements.namedItem("url").value=linkMatch[0].replace(/[),.]+$/,"");
  const instagramMatch=raw.match(/(?:instagram\.com\/|@)([a-z0-9._]{2,30})/i);if(instagramMatch&&!form.elements.namedItem("source").value)form.elements.namedItem("source").value="@"+instagramMatch[1];
  $("#capture-hint").textContent="Details filled where recognisable. Check every field and add the original post/application link before saving.";
