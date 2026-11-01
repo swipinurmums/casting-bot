@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T19:38:06.895774+00:00",
+  "updated_at": "2026-11-01T19:44:15.823433+00:00",
   "source_count": 13,
   "opportunities": [
     {
@@ -169,6 +169,22 @@
       "demo": false,
       "collection_method": "manual_curated",
       "application_method": "Open Casting London's listing and confirm the campaign is still accepting applications"
+    },
+    {
+      "id": "email-d41c6eceb6aea33610ee",
+      "title": "modelling radar test",
+      "source": "Email notification",
+      "sender_domain": "gmail.com",
+      "received_at": "2026-11-01T19:24:15.000Z",
+      "source_url": "",
+      "links": [],
+      "collection_method": "email_notification",
+      "review_status": "needs_review",
+      "compensation": "Unknown",
+      "application_method": "Open the original casting link and verify eligibility, fee, deadline and application route",
+      "status": "New",
+      "saved": false,
+      "demo": false
     }
   ],
   "errors": [],
