@@ -150,10 +150,10 @@
       "url": "https://toolsformodels.com/en/castings/country/gb",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public UK casting listings page. Review each original listing and its terms manually; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-casting-london",
@@ -162,10 +162,10 @@
       "url": "https://castinglondon.co.uk/castings",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public casting listings page. Review each original listing and its terms manually; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "google-news-male-model-uk",
@@ -239,22 +239,22 @@
       "url": "https://castingcallsunitedkingdom.com/casting-location/manchester/",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public regional casting archive with modelling and screen opportunities. Manual review only; do not automate collection without checking permission and site terms."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-modelmanagement-uk",
       "name": "ModelManagement — UK Castings",
       "url": "https://www.modelmanagement.com/castings/united-kingdom/",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "platform": "web",
       "enabled": true,
       "source_group": "opportunity_repost",
       "type": "listing_board",
       "verification_status": "public_listing_page_seen",
-      "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-backstage-uk",
@@ -272,13 +272,13 @@
       "id": "web-models-direct-jobs",
       "name": "Models Direct — Job Board",
       "url": "https://www.modelsdirect.com/modelling-jobs",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "platform": "web",
       "enabled": true,
       "source_group": "opportunity_repost",
       "type": "listing_board",
       "verification_status": "public_listing_page_seen",
-      "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-3light-uk-casting-directory",
@@ -287,10 +287,10 @@
       "url": "https://www.3lighttalent.co.uk/casting-directory",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public UK casting directory with modelling, commercial and other talent categories. Review each listing for suitability, pay, deadline and application route; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-fashiondb-open-castings",
@@ -299,10 +299,10 @@
       "url": "https://fashiondb.com/open-castings",
       "type": "open_call_directory",
       "source_group": "model_agency",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Directory of agency open calls and walk-in information. Check the agency's own page or post before applying; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "web-talentmanagement-jobs",
@@ -311,10 +311,10 @@
       "url": "https://www.talentmanagement.com/search/jobs",
       "type": "listing_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public modelling jobs search page with UK briefs. Check the individual brief for age, location, compensation, deadline and application route; no automated scraping configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "google-news-models-direct",
@@ -362,10 +362,10 @@
       "url": "https://www.talenttalks.co.uk/audition/category/All/",
       "type": "casting_board",
       "source_group": "opportunity_repost",
-      "collection": "manual_review",
+      "collection": "html_scrape",
       "enabled": true,
       "verification_status": "public_listing_page_seen",
-      "notes": "Public current auditions board. Individual briefs checked manually; automated ingestion not configured."
+      "notes": "Public listing index scraper enabled. Runtime robots.txt check; no login, cookies, private endpoints or access-control bypass. Extracted links are unverified leads and must be checked against the original brief."
     },
     {
       "id": "google-news-talent-talks",
