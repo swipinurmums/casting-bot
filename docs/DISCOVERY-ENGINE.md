@@ -11,7 +11,9 @@
 
 ## Current collector
 
-`collector/collect.py` reads explicitly configured RSS/Atom feeds. It does not crawl arbitrary websites. Add a source only after checking its terms, robots guidance and feed usage permissions.
+`collector/collect.py` reads eight explicitly configured Google News RSS/Atom search feeds. Three use domain-restricted queries for Models Direct, Backstage and 3Light Talent, alongside broader UK and Manchester casting searches. These are search-index discovery leads, not direct publisher feeds or guaranteed coverage. The collector does not crawl arbitrary websites. Add a source only after checking its terms, robots guidance and feed usage permissions.
+
+Other directories currently registered for manual review include ToolsForModels, FashionDB, Talent Management, Models Direct, Backstage and 3Light Talent. A directory appearing in the registry does not mean its listings are automatically collected.
 
 Run locally:
 
