@@ -169,11 +169,13 @@ function visibleItems(){
   const query = $("#search").value.trim().toLowerCase();
   const category = currentCategory || $("#category-filter").value;
   const pay = $("#pay-filter").value;
+  const type = $("#type-filter").value;
   const location = $("#location-filter").value;
   let items = opportunities.filter(item => {
     const text = [item.title,item.category,item.location,item.source,item.description].join(" ").toLowerCase();
     if(query && !text.includes(query)) return false;
     if(category && item.category !== category) return false;
+    if(type && (item.opportunity_type || "Other") !== type) return false;
     if(pay && item.compensation !== pay) return false;
     if(location && item.location !== location && !(location==="Remote / UK-wide" && /uk|remote/i.test(item.location))) return false;
     if(currentView==="saved" && !item.saved) return false;
@@ -211,15 +213,16 @@ function render(){
 }
 function cardHtml(item){
   const payClass = item.compensation==="Paid"?"paid":item.compensation==="TFP"?"tfp":item.compensation==="Unpaid"?"unpaid":"unknown";
+  const typeLabel = item.opportunity_type || "Unclassified";
   const safeUrl = safeLink(item.url);
   const statusOptions = ["New","Saved","Applied","Expired"];
   const match = hasProfile() ? matchFor(item) : {label:"Profile needed",className:"possible-match",reason:"Create your private profile to see personalised matching."};
-  return '<article class="op-card"><div><div class="op-meta"><span class="match-pill '+match.className+'">'+match.label+'</span><span class="tag">'+escapeHtml(item.category)+'</span><span class="tag '+payClass+'">'+escapeHtml(item.compensation||"Unknown")+'</span>'+(item.demo?'<span class="tag sample">Example data</span>':'')+(item.review_status==="needs_review"?'<span class="tag unknown">Unverified lead</span>':'')+'</div><h3>'+escapeHtml(item.title)+'</h3><div class="op-source">'+escapeHtml(item.source||"Source not specified")+'</div>'+(item.application_method?'<p class="application-method"><strong>Apply:</strong> '+escapeHtml(item.application_method)+'</p>':'')+(item.casting_requirements?'<p class="application-method"><strong>Brief:</strong> '+escapeHtml(item.casting_requirements.gender||"Not specified")+' · Age '+escapeHtml(item.casting_requirements.age_range||"Not specified")+(item.casting_requirements.fee_as_stated&&item.casting_requirements.fee_as_stated!=="Not specified"?' · '+escapeHtml(item.casting_requirements.fee_as_stated):'')+'</p>':'')+'<p class="match-reason">'+escapeHtml(match.reason)+'</p><p class="op-description">'+escapeHtml(item.description||"No additional details provided.")+'</p><div class="op-details"><span>⌖ '+escapeHtml(item.location||"Location TBC")+'</span><span>◷ '+escapeHtml(prettyDate(item.deadline))+'</span></div></div><div class="op-actions"><button class="save-button '+(item.saved?"saved":"")+'" data-save="'+escapeHtml(item.id)+'" aria-label="'+(item.saved?"Remove bookmark":"Save opportunity")+'">'+(item.saved?"♥":"♡")+'</button><select class="status-select" data-status="'+escapeHtml(item.id)+'" aria-label="Application status">'+statusOptions.map(s=>'<option '+(item.status===s?"selected":"")+'>'+s+'</option>').join("")+'</select><a class="apply-link" href="'+escapeHtml(safeUrl)+'" target="_blank" rel="noopener noreferrer">View source ↗</a></div></article>';
+  return '<article class="op-card"><div><div class="op-meta"><span class="match-pill '+match.className+'">'+match.label+'</span><span class="tag">'+escapeHtml(item.category)+'</span><span class="tag opportunity-type">'+escapeHtml(typeLabel)+'</span><span class="tag '+payClass+'">'+escapeHtml(item.compensation||"Unknown")+'</span>'+(item.demo?'<span class="tag sample">Example data</span>':'')+(item.review_status==="needs_review"?'<span class="tag unknown">Unverified lead</span>':'')+'</div><h3>'+escapeHtml(item.title)+'</h3><div class="op-source">'+escapeHtml(item.source||"Source not specified")+'</div>'+(item.application_method?'<p class="application-method"><strong>Apply:</strong> '+escapeHtml(item.application_method)+'</p>':'')+(item.casting_requirements?'<p class="application-method"><strong>Brief:</strong> '+escapeHtml(item.casting_requirements.gender||"Not specified")+' · Age '+escapeHtml(item.casting_requirements.age_range||"Not specified")+(item.casting_requirements.fee_as_stated&&item.casting_requirements.fee_as_stated!=="Not specified"?' · '+escapeHtml(item.casting_requirements.fee_as_stated):'')+'</p>':'')+'<p class="match-reason">'+escapeHtml(match.reason)+'</p><p class="op-description">'+escapeHtml(item.description||"No additional details provided.")+'</p><div class="op-details"><span>⌖ '+escapeHtml(item.location||"Location TBC")+'</span><span>◷ '+escapeHtml(prettyDate(item.deadline))+'</span></div></div><div class="op-actions"><button class="save-button '+(item.saved?"saved":"")+'" data-save="'+escapeHtml(item.id)+'" aria-label="'+(item.saved?"Remove bookmark":"Save opportunity")+'">'+(item.saved?"♥":"♡")+'</button><select class="status-select" data-status="'+escapeHtml(item.id)+'" aria-label="Application status">'+statusOptions.map(s=>'<option '+(item.status===s?"selected":"")+'>'+s+'</option>').join("")+'</select><a class="apply-link" href="'+escapeHtml(safeUrl)+'" target="_blank" rel="noopener noreferrer">View source ↗</a></div></article>';
 }
 function safeLink(value){
   try { const url=new URL(value); return ["http:","https:"].includes(url.protocol)?url.href:"#"; } catch { return "#"; }
 }
-function resetFilters(){ $("#category-filter").value=""; $("#pay-filter").value=""; $("#location-filter").value=""; $("#search").value=""; currentCategory=""; }
+function resetFilters(){ $("#category-filter").value=""; $("#type-filter").value=""; $("#pay-filter").value=""; $("#location-filter").value=""; $("#search").value=""; currentCategory=""; }
 function openDialog(){ $("#opportunity-dialog").showModal(); }
 $("#profile-open").addEventListener("click",profileFormOpen);
 $("#profile-prompt-open").addEventListener("click",profileFormOpen);
