@@ -176,7 +176,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=(%22male%20model%22%20OR%20%22men's%20model%22)%20(casting%20OR%20wanted%20OR%20shoot)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS search feed for public UK modelling/casting announcements. Search results require checking against the original publisher; listings may be irrelevant, duplicated, stale or not direct casting calls. Compensation and eligibility must not be inferred."
     },
@@ -202,7 +202,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=model%20casting%20OR%20model%20wanted%20Manchester%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS search feed for public UK modelling/casting announcements. Search results require checking against the original publisher; listings may be irrelevant, duplicated, stale or not direct casting calls. Compensation and eligibility must not be inferred."
     },
@@ -215,7 +215,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=paid%20model%20casting%20OR%20model%20campaign%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS search feed for public UK modelling/casting announcements. Search results require checking against the original publisher; listings may be irrelevant, duplicated, stale or not direct casting calls. Compensation and eligibility must not be inferred."
     },
@@ -228,7 +228,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=model%20agency%20open%20call%20OR%20new%20faces%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS search feed for public UK modelling/casting announcements. Search results require checking against the original publisher; listings may be irrelevant, duplicated, stale or not direct casting calls. Compensation and eligibility must not be inferred."
     },
@@ -325,7 +325,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3Amodelsdirect.com%2Fmodelling-jobs%20(model%20OR%20models)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS domain-restricted discovery query for Models Direct listings. Search indexing is not guaranteed; all leads must be checked against the original brief."
     },
@@ -351,7 +351,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3A3lighttalent.co.uk%2Fcasting-directory%20(model%20OR%20modelling%20OR%20commercial)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS domain-restricted discovery query for 3Light Talent. Coverage depends on search indexing; not a direct feed or guarantee of new listings."
     },
@@ -376,7 +376,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3Atalenttalks.co.uk%2Faudition%20(model%20OR%20models%20OR%20fashion)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     },
@@ -389,7 +389,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=(%22model%20wanted%22%20OR%20%22models%20wanted%22%20OR%20%22male%20model%22)%20UK%20(casting%20OR%20shoot%20OR%20campaign)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     },
@@ -402,7 +402,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=(%22fashion%20casting%22%20OR%20%22fashion%20model%20casting%22%20OR%20%22commercial%20model%22)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     },
@@ -415,7 +415,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=(%22model%20photoshoot%22%20OR%20%22models%20for%20shoot%22%20OR%20%22model%20campaign%22)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     },
@@ -428,7 +428,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3Amodelsdirect.com%2Fmodelling-jobs%20(model%20OR%20models)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     },
@@ -441,7 +441,7 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3A3lighttalent.co.uk%2Fcasting-directory%20(model%20OR%20modelling)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": false,
+      "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     }
