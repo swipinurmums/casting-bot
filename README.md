@@ -10,7 +10,8 @@ The first version is a static website designed for GitHub Pages. It includes:
 - Search and filters for category, compensation and location
 - Saved opportunities and application statuses
 - Manual opportunity entry with quick capture from pasted casting captions/briefs
-- Public source directory covering user-supplied Instagram accounts, UK casting boards and five Google News RSS discovery queries
+- A source directory spanning Instagram accounts, independent casting directories, agency open-call directories and UK casting boards
+- Eight Google News RSS discovery queries, including domain-restricted searches for Models Direct, Backstage and 3Light Talent
 - Basic extraction of likely title, category, compensation, location, deadline and links from pasted text
 - Browser-local persistence using localStorage
 - Private modelling profile editor (profile details remain in the current browser)
@@ -30,18 +31,19 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Important current limitations
 
-- The discovery pipeline now checks five Google News RSS search feeds for UK modelling/casting announcements every three hours. These are discovery leads, not verified castings: always check the original publisher, eligibility, compensation, deadlines and application route. Some results may be irrelevant, duplicated or stale. Other boards and Instagram accounts remain manual-review sources unless an authorised feed or integration is available.
+- The discovery pipeline checks eight Google News RSS search feeds every three hours. Three are domain-restricted discovery queries for Models Direct, Backstage and 3Light Talent. These are search-index leads, not direct integrations or verified castings; indexing is not guaranteed. Always check the original publisher, eligibility, compensation, deadlines and application route. Results may be irrelevant, duplicated or stale.
+- ToolsForModels, FashionDB, Talent Management, Models Direct, Backstage, 3Light Talent and other directory/social sources are also listed for manual review. They are not yet individually crawled or synchronised into the feed.
 - Instagram accounts are registered for manual review; arbitrary third-party Stories are not available through the standard Instagram API, so the project does not scrape them.
 - Manually entered opportunities and the modelling profile are stored in the current browser only. They are not synced across devices.
 - Profile matching is an early keyword-based heuristic, not a reliable eligibility decision. Always check the original casting brief.
 - Underwear briefs are flagged for individual review; nudity is excluded. Missing requirements should remain uncertain rather than being guessed.
-- Example cards are fictional UI examples and must not be treated as real opportunities.
+- Example cards are fictional UI examples and must not be treated as real casting calls.
 - A public GitHub Pages site must never contain API keys, passwords, private tokens or other secrets.
 
 ## Roadmap
 
-1. Verify and prioritise source coverage, including the two public UK casting boards and Instagram accounts.
-2. Add permitted public RSS/Atom feeds and documented API integrations.
+1. Verify and prioritise source coverage, including agency sites, independent casting boards and Instagram accounts.
+2. Add more permitted public RSS/Atom feeds and documented API integrations where publishers provide them.
 3. Improve matching against casting age, height, gender and work preferences.
 4. Improve cross-source deduplication and retain all source links.
 5. Add freshness checks, deadline/expiry handling and source attribution.
