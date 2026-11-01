@@ -53,9 +53,9 @@
       "deadline": "2026-11-15",
       "source": "ModelManagement",
       "source_platform": "web",
-      "source_url": "https://www.modelmanagement.com/castings/male/united-kingdom/",
-      "url": "https://www.modelmanagement.com/castings/male/united-kingdom/",
-      "description": "Newly posted male-model casting for a menswear brand lookbook in Sheffield. The listing identifies it as paid and says travel costs are covered; rate, shoot date and detailed requirements need checking on the original listing. The UK male-castings page is linked because the individual listing URL was not exposed in the public listing preview.",
+      "source_url": "https://www.modelmanagement.com/casting/male-model-for-a-menswear-brand-lookbook-shoot/",
+      "url": "https://www.modelmanagement.com/casting/male-model-for-a-menswear-brand-lookbook-shoot/",
+      "description": "Male model for Fifth Digit's menswear lookbook in Chesterfield, Derbyshire (listed under Sheffield). Age 21–29; ideally 6ft+ and size M/L, slim or athletic. Travel costs covered; rate to be agreed, portfolio images included. Your 188cm height is above the listed preferred range of 179–185cm, so treat as a possible long-shot and ask before applying.",
       "published_at": "2026-11-01T00:00:00+00:00",
       "added": "2026-11-01",
       "collected_at": "2026-11-01T00:00:00+00:00",
@@ -63,7 +63,7 @@
       "saved": false,
       "demo": false,
       "collection_method": "manual_curated",
-      "application_method": "Open the UK male-castings board and select the Sheffield lookbook listing"
+      "application_method": "Apply through the individual ModelManagement casting page"
     },
     {
       "id": "curated-mm-leeds-property-lifestyle-2026-11",
@@ -74,9 +74,9 @@
       "deadline": "2026-11-18",
       "source": "ModelManagement",
       "source_platform": "web",
-      "source_url": "https://www.modelmanagement.com/castings/united-kingdom/",
-      "url": "https://www.modelmanagement.com/castings/united-kingdom/",
-      "description": "Casting board lists male and female / family models for a lifestyle property shoot in Leeds, with £300 stated pay. Confirm whether the client is accepting individual male applications, age/appearance requirements, shoot date and travel arrangements before applying. The UK casting directory is linked because the individual listing URL was not exposed in the public listing preview.",
+      "source_url": "https://www.modelmanagement.com/casting/female-and-male-family-models-needed-for-lifestyle-property-shoot/",
+      "url": "https://www.modelmanagement.com/casting/female-and-male-family-models-needed-for-lifestyle-property-shoot/",
+      "description": "One-day lifestyle shoot in city-centre Leeds for a show-home development, with a dog on set. Up to £300 depending on experience. The male age preference is 25–37, so this is outside your stated casting age range (22); retained for transparency but not a recommended match.",
       "published_at": "2026-11-01T00:00:00+00:00",
       "added": "2026-11-01",
       "collected_at": "2026-11-01T00:00:00+00:00",
@@ -84,7 +84,7 @@
       "saved": false,
       "demo": false,
       "collection_method": "manual_curated",
-      "application_method": "Open the UK castings board and select the Leeds property-shoot listing"
+      "application_method": "Apply through the individual ModelManagement casting page (age preference 25–37)"
     },
     {
       "id": "curated-mm-manchester-fit-model-2026-11",
@@ -95,9 +95,9 @@
       "deadline": "2026-11-26",
       "source": "ModelManagement",
       "source_platform": "web",
-      "source_url": "https://www.modelmanagement.com/castings/male/united-kingdom/",
-      "url": "https://www.modelmanagement.com/castings/male/united-kingdom/",
-      "description": "ModelManagement's UK male-castings page lists a paid fit-model call in Manchester, open to male and female models. Rate, garment sizing, fitting dates and exact requirements are not shown in the directory preview; check the full brief before applying.",
+      "source_url": "https://www.modelmanagement.com/casting/manchester-male-and-female-fit-models-needed/",
+      "url": "https://www.modelmanagement.com/casting/manchester-male-and-female-fit-models-needed/",
+      "description": "Manchester-based fit-model agency recruiting male and female models; £38.50–£40/hour, no experience needed. Male sizes XS–XXXL; applicants submit collar, chest, natural waist, seat and shoe measurements. Listed height preference is 167–185cm, so your 188cm is above the stated range; check with the agency before applying.",
       "published_at": "2026-11-01T00:00:00+00:00",
       "added": "2026-11-01",
       "collected_at": "2026-11-01T00:00:00+00:00",
@@ -105,7 +105,7 @@
       "saved": false,
       "demo": false,
       "collection_method": "manual_curated",
-      "application_method": "Open the UK male-castings board and select the Manchester fit-model listing"
+      "application_method": "Apply through the individual ModelManagement casting page and submit measurements"
     },
     {
       "id": "curated-mm-london-street-photo-tfp-2027",
