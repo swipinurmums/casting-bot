@@ -174,6 +174,7 @@ def fetch_feed(source: dict) -> list[dict]:
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urldefrag
 import urllib.robotparser
+import time
 
 LISTING_HINTS = re.compile(
     r"\b(model|models|casting|castings|casting call|open call|audition|talent|"
@@ -227,6 +228,128 @@ def robots_allows(url: str) -> tuple[bool, str]:
         return False, f"robots.txt returned HTTP {exc.code}"
     except Exception as exc:
         return False, f"robots.txt check failed: {str(exc)[:160]}"
+
+
+class DetailPageParser(HTMLParser):
+    """Extract visible text and common metadata from a public casting detail page."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.title_parts = []
+        self.h1_parts = []
+        self.text_parts = []
+        self.meta = {}
+        self.jsonld = []
+        self._capture = None
+        self._script_type = ""
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        tag = tag.lower()
+        if tag == "meta":
+            key = (attrs.get("property") or attrs.get("name") or attrs.get("itemprop") or "").lower()
+            value = attrs.get("content", "").strip()
+            if key and value:
+                self.meta[key] = value
+        elif tag == "title":
+            self._capture = "title"
+        elif tag in ("h1", "h2"):
+            self._capture = tag
+        elif tag == "script" and "ld+json" in attrs.get("type", "").lower():
+            self._capture = "jsonld"
+            self._script_type = "jsonld"
+
+    def handle_data(self, data):
+        value = " ".join(data.split())
+        if not value:
+            return
+        self.text_parts.append(value)
+        if self._capture == "title":
+            self.title_parts.append(value)
+        elif self._capture in ("h1", "h2"):
+            self.h1_parts.append(value)
+        elif self._capture == "jsonld":
+            self.jsonld.append(data)
+
+    def handle_endtag(self, tag):
+        if tag.lower() in ("title", "h1", "h2", "script"):
+            self._capture = None
+            self._script_type = ""
+
+def extract_jsonld_text(parser: DetailPageParser) -> str:
+    values = []
+    for raw in parser.jsonld:
+        try:
+            obj = json.loads(raw)
+            stack = obj if isinstance(obj, list) else [obj]
+            while stack:
+                node = stack.pop()
+                if isinstance(node, dict):
+                    for key in ("name", "description", "jobTitle", "title", "datePosted", "validThrough", "jobLocation", "address", "streetAddress", "addressLocality", "addressRegion"):
+                        value = node.get(key)
+                        if isinstance(value, str):
+                            values.append(value)
+                        elif isinstance(value, dict):
+                            stack.append(value)
+                        elif isinstance(value, list):
+                            stack.extend(value)
+                    graph = node.get("@graph")
+                    if isinstance(graph, list):
+                        stack.extend(graph)
+                elif isinstance(node, list):
+                    stack.extend(node)
+        except (ValueError, TypeError):
+            continue
+    return " ".join(values)
+
+def extract_deadline(text: str) -> str | None:
+    patterns = [
+        r"(?:casting\s+ends|apply\s+by|application\s+deadline|deadline|closing\s+date|closes)\s*:?\s*(\d{1,2}\s+[A-Za-z]+\s+20\d{2})",
+        r"(?:casting\s+ends|apply\s+by|application\s+deadline|deadline|closing\s+date|closes)\s*:?\s*([A-Za-z]+\s+\d{1,2},?\s+20\d{2})",
+        r"(?:casting\s+ends|apply\s+by|application\s+deadline|deadline|closing\s+date|closes)\s*:?\s*(20\d{2}-\d{2}-\d{2})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, text, re.I)
+        if not match:
+            continue
+        value = match.group(1).replace(",", "").strip()
+        for fmt in ("%d %B %Y", "%d %b %Y", "%B %d %Y", "%b %d %Y", "%Y-%m-%d"):
+            try:
+                return datetime.strptime(value, fmt).date().isoformat()
+            except ValueError:
+                pass
+    return None
+
+def fetch_detail_page(url: str) -> dict:
+    allowed, reason = robots_allows(url)
+    if not allowed:
+        raise PermissionError(reason)
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "en-GB,en;q=0.8",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=20) as response:
+        content_type = response.headers.get("Content-Type", "")
+        if "html" not in content_type.lower():
+            raise ValueError(f"Expected HTML, received {content_type[:100]}")
+        raw = response.read(2_500_000)
+        final_url = response.geturl()
+    parser = DetailPageParser()
+    parser.feed(raw.decode("utf-8", errors="replace"))
+    visible = " ".join(parser.text_parts)
+    meta_description = parser.meta.get("description") or parser.meta.get("og:description") or parser.meta.get("twitter:description") or ""
+    jsonld_text = extract_jsonld_text(parser)
+    combined = " ".join(x for x in (visible, meta_description, jsonld_text) if x)
+    return {
+        "final_url": clean_url(final_url) or url,
+        "page_title": " ".join(parser.h1_parts).strip() or " ".join(parser.title_parts).strip(),
+        "description": re.sub(r"\s+", " ", meta_description or jsonld_text or visible).strip()[:1800],
+        "content": re.sub(r"\s+", " ", combined).strip()[:12000],
+        "meta": parser.meta,
+    }
 
 def fetch_html_listings(source: dict) -> list[dict]:
     page_url = source.get("url", "")
@@ -288,20 +411,47 @@ def fetch_html_listings(source: dict) -> list[dict]:
             continue
         seen.add(canonical)
         stable = hashlib.sha256(canonical.lower().encode()).hexdigest()[:16]
+        detail = {}
+        detail_error = ""
+        try:
+            detail = fetch_detail_page(canonical)
+            time.sleep(1.0)
+        except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
+            detail_error = str(exc)[:180]
+        detail_text = detail.get("content", "")
+        combined_text = " ".join((title, detail_text))
+        description = detail.get("description") or "Listing discovered on the source's public index page. Open the original brief to check details."
+        title_from_page = detail.get("page_title", "")
+        if title_from_page and len(title_from_page) >= 8 and len(title_from_page) <= 180:
+            title = title_from_page
+        gender_requirement = "Female only" if re.search(r"\b(female|women|woman|girls?)\b.{0,35}\b(model|models|required|wanted|needed)\b|\b(model|models)\b.{0,35}\b(female|women|woman|girls?)\b", combined_text, re.I) else (
+            "Male only" if re.search(r"\b(male|men|man|boys?)\b.{0,35}\b(model|models|required|wanted|needed)\b|\b(model|models)\b.{0,35}\b(male|men|man|boys?)\b", combined_text, re.I) else "Not specified"
+        )
+        age_match = re.search(r"\b(?:aged?|ages?)\s*(\d{1,2})\s*(?:-|–|—|to)\s*(\d{1,2})\s*(?:yrs?|years?)?\b", combined_text, re.I)
+        age_requirement = f"{age_match.group(1)}–{age_match.group(2)}" if age_match else "Not specified"
+        fee_match = re.search(r"(?:£\s?\d+(?:,\d{3})*(?:\.\d{1,2})?(?:\s*(?:per|/)\s*(?:hour|day|half.day|session))?|\b\d+(?:\.\d+)?\s*(?:EUR|euros?)\b)", combined_text, re.I)
+        fee = fee_match.group(0) if fee_match else ""
+        application = "Check the original brief for application instructions"
+        if re.search(r"\bapply\s+(?:via|through|on)\s+(?:the\s+)?platform\b", combined_text, re.I):
+            application = "Platform application"
+        elif re.search(r"\bDM\s+(?:me|us|the)\b|\bdirect message\b", combined_text, re.I):
+            application = "Direct message"
+        elif re.search(r"\bmailto:|email\s+(?:your|a)\s+(?:portfolio|application|photos|details)\b", combined_text, re.I):
+            application = "Email"
         results.append({
             "id": stable,
             "title": title[:180],
-            "category": category(title),
-            "compensation": "Unknown",
-            "location": "Location TBC",
-            "deadline": None,
+            "category": category(combined_text),
+            "compensation": compensation(combined_text),
+            "location": location(combined_text),
+            "deadline": extract_deadline(combined_text),
             "source": source.get("name", "Public listing page"),
             "discovery_source": source.get("name", "HTML discovery"),
             "source_id": source_id,
             "source_platform": source.get("platform", "web"),
             "source_url": canonical,
             "url": canonical,
-            "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+            "description": description[:1800],
             "published_at": None,
             "added": datetime.now(timezone.utc).date().isoformat(),
             "collected_at": datetime.now(timezone.utc).isoformat(),
@@ -310,7 +460,10 @@ def fetch_html_listings(source: dict) -> list[dict]:
             "demo": False,
             "collection_method": "html_scrape",
             "review_status": "needs_review",
-            "application_method": "Open the original listing and check eligibility, compensation, deadline and application route",
+            "detail_page_checked": bool(detail),
+            "detail_fetch_error": detail_error or None,
+            "casting_requirements": {"gender": gender_requirement, "age_range": age_requirement, "fee_as_stated": fee or "Not specified"},
+            "application_method": application,
         })
     return results
 
