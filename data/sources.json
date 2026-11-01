@@ -338,9 +338,9 @@
       "url": "https://news.google.com/",
       "feed_url": "https://news.google.com/rss/search?q=site%3Abackstage.com%2Fcasting%20(model%20OR%20models)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
       "collection": "rss_atom",
-      "enabled": true,
+      "enabled": false,
       "verification_status": "public_rss_search_feed",
-      "notes": "Google News RSS domain-restricted discovery query for Backstage casting pages. Search indexing is not guaranteed; check original listing and application requirements."
+      "notes": "Disabled for automated collection: Backstage Terms of Service expressly prohibit bots, crawlers, spiders, data miners and other automatic access tools. Keep for human review only."
     },
     {
       "id": "google-news-3light-castings",
@@ -366,6 +366,84 @@
       "enabled": true,
       "verification_status": "public_listing_page_seen",
       "notes": "Public current auditions board. Individual briefs checked manually; automated ingestion not configured."
+    },
+    {
+      "id": "google-news-talent-talks",
+      "name": "Talent Talks — indexed audition leads",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Atalenttalks.co.uk%2Faudition%20(model%20OR%20models%20OR%20fashion)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
+    },
+    {
+      "id": "google-news-model-wanted",
+      "name": "UK model wanted notices",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=(%22model%20wanted%22%20OR%20%22models%20wanted%22%20OR%20%22male%20model%22)%20UK%20(casting%20OR%20shoot%20OR%20campaign)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
+    },
+    {
+      "id": "google-news-fashion-casting",
+      "name": "UK fashion casting calls",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=(%22fashion%20casting%22%20OR%20%22fashion%20model%20casting%22%20OR%20%22commercial%20model%22)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
+    },
+    {
+      "id": "google-news-model-shoots",
+      "name": "UK model photoshoot opportunities",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=(%22model%20photoshoot%22%20OR%20%22models%20for%20shoot%22%20OR%20%22model%20campaign%22)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
+    },
+    {
+      "id": "google-news-models-direct-jobs",
+      "name": "Models Direct — indexed job listings",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Amodelsdirect.com%2Fmodelling-jobs%20(model%20OR%20models)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
+    },
+    {
+      "id": "google-news-3light-model-castings",
+      "name": "3Light Talent — indexed model castings",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3A3lighttalent.co.uk%2Fcasting-directory%20(model%20OR%20modelling)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Search-index discovery only. Every result is an unverified lead until the original casting page is checked. No direct site scraping."
     }
   ]
 }
