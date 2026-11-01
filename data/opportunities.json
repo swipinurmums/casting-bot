@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T21:12:05.152018+00:00",
+  "updated_at": "2026-11-01T21:17:03.383951+00:00",
   "source_count": 18,
   "opportunities": [
     {
@@ -237,7 +237,7 @@
       "description": "Models1 London — model and curve applications · London · United Kingdom · Apply to Models1 in London for women, men and curve representation. Prepare three…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:43.202223+00:00",
+      "collected_at": "2026-11-01T21:15:52.077346+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -252,9 +252,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851955+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079045+00:00",
       "opportunity_type": "Agency application",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "390e5136e27123eb",
@@ -307,7 +308,7 @@
       "description": "KILLSTAR — Freelance Fit Model, Brighton · Brighton · United Kingdom · Freelance fit model opportunity with KILLSTAR in Brighton, UK. Advertised rate: £25/hour.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:44.965687+00:00",
+      "collected_at": "2026-11-01T21:15:52.077786+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -322,9 +323,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "£25 per hour"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851960+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079051+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "7b7057ef39775e31",
@@ -342,7 +344,7 @@
       "description": "Inspire Intimates: 36F lingerie and swimwear fit model · Harrogate · United Kingdom · Inspire Intimates seeks a 36F lingerie fit model in Harrogate. No…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:46.666714+00:00",
+      "collected_at": "2026-11-01T21:15:52.078295+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -357,9 +359,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851964+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079055+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b928772096e758ab",
@@ -377,7 +380,7 @@
       "description": "Wild Thing: model applications for lingerie and swimwear · United Kingdom · Wild Thing is looking for new models for its fashion, bralette and swimwear…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:50.234947+00:00",
+      "collected_at": "2026-11-01T21:15:52.078826+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -392,9 +395,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851971+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079063+00:00",
       "opportunity_type": "Agency application",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b27d59d5302412fc",
@@ -412,7 +416,7 @@
       "description": "POLAS Model Agency — Open Model Application · London · United Kingdom · POLAS Model Agency accepts model applications with natural colour photos, personal…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:52.019906+00:00",
+      "collected_at": "2026-11-01T21:15:52.079060+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -427,9 +431,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851973+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079068+00:00",
       "opportunity_type": "Agency application",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "64ecbe1241870493",
@@ -447,7 +452,7 @@
       "description": "London · United Kingdom · Apply to Kate Moss Agency with four recent natural-light photos: headshot, profile and full length. Professional images aren't…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:53.850912+00:00",
+      "collected_at": "2026-11-01T21:15:52.079228+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -462,15 +467,16 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851977+00:00",
-      "opportunity_type": "Agency application",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:15:58.079072+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "5596ba135498f3d4",
-      "title": "Opportunity Modest Creator Hub Modest Creator Hub — Create content for fashion and beauty brands United Kingdom Shoot videos, product photos or everyday lifestyle content? Paid Vie",
-      "category": "Fashion",
-      "compensation": "Unknown",
+      "title": "Modest Creator Hub: join the fashion and beauty roster · United Kingdom",
+      "category": "Commercial",
+      "compensation": "Paid",
       "location": "Location TBC",
       "deadline": null,
       "source": "ToolsForModels — UK Castings",
@@ -479,10 +485,10 @@
       "source_platform": "web",
       "source_url": "https://toolsformodels.com/en/casting/modest-creator-hub-fashion-beauty-lifestyle-creators",
       "url": "https://toolsformodels.com/en/casting/modest-creator-hub-fashion-beauty-lifestyle-creators",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Modest Creator Hub — Create content for fashion and beauty brands · United Kingdom · Modest Creator Hub welcomes modest fashion, beauty and lifestyle creators…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:53.851251+00:00",
+      "collected_at": "2026-11-01T21:15:54.601331+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -490,20 +496,21 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851979+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079074+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "d568ec3c5ca6cc5d",
-      "title": "Casting Des Hamilton Casting Des Hamilton Casting — Paid Bentley car tutorial role United Kingdom Know your way around Bentley cars and enjoy explaining how things work? Paid View ",
+      "title": "Des Hamilton Casting: paid car tutorial presenter call · United Kingdom",
       "category": "Model casting",
       "compensation": "Unknown",
       "location": "Location TBC",
@@ -514,10 +521,10 @@
       "source_platform": "web",
       "source_url": "https://toolsformodels.com/en/casting/gb-dhc-car-tutorial-youtuber",
       "url": "https://toolsformodels.com/en/casting/gb-dhc-car-tutorial-youtuber",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Des Hamilton Casting — Paid Bentley car tutorial role · United Kingdom · Des Hamilton Casting seeks men in their 30s–60s who know Bentley cars for a paid…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:53.851664+00:00",
+      "collected_at": "2026-11-01T21:15:56.350286+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -525,22 +532,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851983+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079078+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "d39e162fe7b67990",
-      "title": "Casting London Fashion Day London Fashion Day Season 8 — Model casting London · United Kingdom London Fashion Day is accepting model applications for Season 8 at Porchester Hall on",
+      "title": "London Fashion Day 2026 | Runway model casting, 8 November · London · United Kingdom",
       "category": "Agency application",
-      "compensation": "Unknown",
+      "compensation": "TFP",
       "location": "London",
       "deadline": null,
       "source": "ToolsForModels — UK Castings",
@@ -549,10 +557,10 @@
       "source_platform": "web",
       "source_url": "https://toolsformodels.com/en/casting/london-fashion-day-season-8-model-casting-2026",
       "url": "https://toolsformodels.com/en/casting/london-fashion-day-season-8-model-casting-2026",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "London Fashion Day Season 8 — Model casting · London · United Kingdom · Apply to London Fashion Day's 8 November runway show at Porchester Hall. New and…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:53.851876+00:00",
+      "collected_at": "2026-11-01T21:15:58.078971+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -560,16 +568,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
-        "age_range": "Not specified",
+        "age_range": "16–17",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:10:53.851986+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079080+00:00",
       "opportunity_type": "Agency application",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "c194ac09c006c266",
@@ -587,7 +596,7 @@
       "description": "DescriptionPRODUCTION Period drama set in the 1970s SEEKING Men and women aged 18–80 to work as background artists FILMING LOCATION Greater Manchester FILMING DATES November 2026 – February 2027 COMPENSATION Paid REQUIREMENTS Must hold a DBS certificate issued within the last 18 months or be willing to apply if selected. Good hair length all over...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:56.932554+00:00",
+      "collected_at": "2026-11-01T21:15:59.913672+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -602,9 +611,10 @@
         "age_range": "18–80",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202817+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:16:05.926934+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "4850a5d0a2614133",
@@ -622,7 +632,7 @@
       "description": "DescriptionSEEKING Identical twin boys aged 2–4, with dark eyes, dark hair and olive skin FILMING LOCATION Manchester AVAILABILITY Must be available week commencing 23 November LOCATION REQUIREMENT Must be based in Greater Manchester DEADLINE 9am Monday 2 NovemberComplete Details and How to Apply🔒Premium ContentFor complete details and submission information,you must be a member.Join NowMember Login",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:58.244870+00:00",
+      "collected_at": "2026-11-01T21:15:59.913787+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -637,9 +647,10 @@
         "age_range": "2–4",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202823+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926941+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "cb1ef5bb3e099133",
@@ -657,7 +668,7 @@
       "description": "DescriptionSYNOPSIS A young woman who reconnects with her distant mother following her grandmother’s death SEEKING TESS Mid-20s, primary role. Ambitious but reserved, Tess feels trapped around her mother and is struggling with the end of her childhood MAUREEN 40 - 60, primary role. A people person, but deeply insecure. Hiding the deep grief and sadness...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:59.561047+00:00",
+      "collected_at": "2026-11-01T21:15:59.913883+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -672,9 +683,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202828+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926946+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "3018a02907e012bd",
@@ -692,7 +704,7 @@
       "description": "DescriptionSYNOPSIS A journalist looking to break a big story interviews a whistleblower for a large tech company, only to find themselves in a spiral of paranoia SEEKING Two local actors for the lead roles CLARICE Female, 25–40. A smart, confident journalist who's pushed to the test by a story out of her depth JUDE Male,...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:00.753570+00:00",
+      "collected_at": "2026-11-01T21:15:59.913988+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -707,9 +719,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202832+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926949+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "85c4e01ef71af83b",
@@ -727,7 +740,7 @@
       "description": "DescriptionSEEKING Unsigned male models aged 18+ and 6ft+ LOCATION Manchester-based models PREFERRED SKILLS Basketball and football players are a bonus COMPENSATION Paid, plus expenses TRAVEL Travel to a European city Must have a valid passport CASTING In-person casting Thursday in Manchester cityComplete Details and How to Apply🔒Premium ContentFor complete details and submission information,you must be...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:01.800978+00:00",
+      "collected_at": "2026-11-01T21:15:59.914087+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -742,9 +755,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202836+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926953+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "3adcd633254bd8a2",
@@ -762,7 +776,7 @@
       "description": "DescriptionSEEKING A strong male singer for the multi-role part of Prince / Father ROLE Prince / Father of Sleeping Beauty, a versatile character actor who plays both roles with the help of costume REQUIREMENTS Male-identifying Age appearance 20–30 Excellent comedic timing Strong vocal ability Confident, versatile performer with good stage presence LOCATION Greater Manchester-based applicants...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:02.846289+00:00",
+      "collected_at": "2026-11-01T21:15:59.914188+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -777,9 +791,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "£2,574"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202839+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926957+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "473299b9d2ab9b8a",
@@ -797,7 +812,7 @@
       "description": "DescriptionPRODUCTION Stitches, a short film exploring the loss of love after a sudden accent, with a focus on naturalism and non-verbal communication SEEKING Ellis – Lead male, aged 22–27 A young man who feels disconnected from his own life and wishes his partner would give him space Alicia – Lead female, aged 22–27 A woman...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:04.025593+00:00",
+      "collected_at": "2026-11-01T21:15:59.914286+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -812,9 +827,10 @@
         "age_range": "22–27",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202843+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926961+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "8767bd2c8e8934a0",
@@ -832,7 +848,7 @@
       "description": "DescriptionPRODUCTION The Anatomist, a short film set in the Renaissance era LOGLINE Henry Thorne attempts to prove the existence of the soul SEEKING One actor/model of any gender and ethnicity to portray a divine soul ROLE DETAILS A small non-speaking role involving gold body paint applied to the arms, face, shoulders and chest LOCATION Manchester....",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:05.202275+00:00",
+      "collected_at": "2026-11-01T21:15:59.914394+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -847,16 +863,17 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202846+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926964+00:00",
       "opportunity_type": "Acting / Extras",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "e4ea8ca77afca35e",
-      "title": "URGENT CASTING CALL – BOLLYWOOD MOVIE",
+      "title": "URGENT CASTING CALL – BOLLYWOOD MOVIE - Casting Calls UK",
       "category": "Model casting",
       "compensation": "Unknown",
-      "location": "Location TBC",
+      "location": "Manchester",
       "deadline": null,
       "source": "Casting Calls UK — Manchester",
       "discovery_source": "Casting Calls UK — Manchester",
@@ -864,10 +881,10 @@
       "source_platform": "web",
       "source_url": "https://castingcallsunitedkingdom.com/2026/10/urgent-casting-call-bollywood-movie-3",
       "url": "https://castingcallsunitedkingdom.com/2026/10/urgent-casting-call-bollywood-movie-3",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "DescriptionSEEKING Male actors aged 25–60 years Oriental, Thai, Japanese or Chinese DATE Monday, 26 October 2026 LOCATION BB2, near Blackburn, between Manchester and Leeds TIME To be confirmed COMPENSATION £124 for 10 hours REQUIREMENTS Must be available for the shoot MEALS Meal provided on setComplete Details and How to Apply🔒Premium ContentFor complete details and submission...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:05.202528+00:00",
+      "collected_at": "2026-11-01T21:16:03.096823+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -875,23 +892,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "age_range": "25–60",
+        "fee_as_stated": "£124"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202849+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926967+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "194b400c5308f754",
-      "title": "CASTING CALL – BOLLYWOOD MOVIE",
+      "title": "CASTING CALL – BOLLYWOOD MOVIE - Casting Calls UK",
       "category": "Model casting",
       "compensation": "Unknown",
-      "location": "Location TBC",
+      "location": "Manchester",
       "deadline": null,
       "source": "Casting Calls UK — Manchester",
       "discovery_source": "Casting Calls UK — Manchester",
@@ -899,10 +917,10 @@
       "source_platform": "web",
       "source_url": "https://castingcallsunitedkingdom.com/2026/10/casting-call-bollywood-movie-7",
       "url": "https://castingcallsunitedkingdom.com/2026/10/casting-call-bollywood-movie-7",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "DescriptionSEEKING Male and female actors aged 20–60 years All ethnicities welcome LOOK Smart, elegant, high-end appearance SCENE Wedding scene SHOOT DATES Saturday 31st October and Sunday 1st November 2026 LOCATION Burnley (BB11), near Blackburn, between Manchester and Leeds COMPENSATION £124 for 10 hours. Overtime will be paid on a pro-rata basis AVAILABILITY This is a...",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:05.202680+00:00",
+      "collected_at": "2026-11-01T21:16:05.926765+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -910,21 +928,22 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "age_range": "20–60",
+        "fee_as_stated": "£124"
       },
-      "last_seen_at": "2026-11-01T21:11:05.202853+00:00",
+      "last_seen_at": "2026-11-01T21:16:05.926970+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "0926cee18a9139e8",
       "title": "Models Wanted: Relaxed London Street Shoot",
-      "category": "Editorial",
+      "category": "Model casting",
       "compensation": "Unpaid",
       "location": "London",
       "deadline": "2027-01-22",
@@ -937,7 +956,7 @@
       "description": "<p>Please read before applying ?</p><p>Hey! I’m looking for a model to join me for a relaxed street photography shoot in London. All experience levels are welcome!</p><p>If you’ve already applied to my previous listing, you don’t need to apply again. That listing expired, but I still have your application.</p><p>Most of my photography work has taken place in Paris, so I’m using these shoots to explore locations in London and get comfortable with my new Fujifilm setup. I’ll also have my Sony with me, so we can try a mix of looks.</p><p>The plan is to wander around a few streets and capture natural, casual portraits with a street style feel. I’m thinking East London, as it tends to be quieter during the week, but I’m happy to hear your location suggestions and creative ideas. If you need some headshots, we can work those in too.</p><p>This is an unpaid collaboration, and you’ll receive photos from the shoot to use for your portfolio and social media. The whole shoot will take place outdoors or in public spaces.</p><p>Please note that I fit these shoots around work, and they always take place during the daytime. We can agree on a date and location that work for us both. </p><p>If you’re interested, drop me a message! Feel free to send over any ideas or inspiration from Pinterest, Instagram or wherever you’ve spotted something you’d like to try.</p><p>If your application is approved, please keep an eye on your messages. I’ll send you my availability so we can arrange a shoot.</p><p>Thanks!</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:11.214674+00:00",
+      "collected_at": "2026-11-01T21:16:08.664553+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -952,14 +971,15 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333581+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573088+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "14467a5286c7aeb4",
       "title": "Dresses Gowns and Petticoats Collaboration",
-      "category": "Editorial",
+      "category": "Fashion",
       "compensation": "Paid",
       "location": "Manchester",
       "deadline": "2026-11-15",
@@ -972,7 +992,7 @@
       "description": "<p>Now here's an interesting subject if you fancy a collab! Many outfits benefit from a suitable undergarment, such as full dance dresses, or for a ball-gown style, the crinoline or 'hoopskirt' if you're from the US.</p><p>We can also shoot some standard 'separates' and 'day-dress' outfits at the same time as we have lots of recent and not-so-recent shoot samples you can try on.</p><p>This is a studio shoot with a full set of high res. pix coming your way a couple of days after your shoot. Our studio is in East Hampshire UK easily accessed by train (we can even collect you from the station) or by car.</p><p>We're always happy to shoot a new set of headshots, full length shots etc. for you portfolio at the same time. (FOC of course!)</p><p>See our website and our Instagram for the most up-to-date photos</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:14.399220+00:00",
+      "collected_at": "2026-11-01T21:16:08.664787+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -987,14 +1007,15 @@
         "age_range": "20–50",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333587+00:00",
-      "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:16:27.573095+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "2fa311dcc4c902c1",
       "title": "Male model for a menswear brand lookbook shoot",
-      "category": "Editorial",
+      "category": "Commercial",
       "compensation": "Paid",
       "location": "London",
       "deadline": "2026-11-15",
@@ -1007,7 +1028,7 @@
       "description": "<p>Fifth Digit is a small, independent menswear brand. I'm looking for a male model, around 21 to 29, for a simple lookbook shoot against a plain backdrop. Ideally 6ft or taller, slim or athletic, size M or L, with a strong, distinctive face. The posing is still and natural: standing tall, relaxed hands, a calm, direct look at the camera. Images will be used on our website and social media.</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:17.209300+00:00",
+      "collected_at": "2026-11-01T21:16:08.664979+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1022,9 +1043,10 @@
         "age_range": "21–29",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333591+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573099+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "0aae350ec4b2aba6",
@@ -1042,7 +1064,7 @@
       "description": "<p>Fashion photographer specialising in Editorial and portfolio imagery, currently looking to work with new male faces for portfolio and test shoots in Edinburgh, both in studio and on location.</p><p>Ideal applicants: • Height 5’11”-6’0” • Strong fashion/editorial look • No previous modelling experience required</p><p>I have experience creating professional modelling portfolios and have previously worked with new face and agency-represented models.</p><p>My work focuses on producing strong editorial and commercial-quality images suitable for portfolios, agency submissions and social media.</p><p>Paid portfolio and test shoot packages are available, tailored to models looking to build or update their book with professional imagery.</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:19.642506+00:00",
+      "collected_at": "2026-11-01T21:16:08.665111+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1057,9 +1079,10 @@
         "age_range": "18–24",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333595+00:00",
-      "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:16:27.573103+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "9e2dc6a31f7bb9a8",
@@ -1077,7 +1100,7 @@
       "description": "<p>I'm offering a free photoshoot for new models and old models who have concepts and need a photographer to work with. You may have all unprocessed softcopies and 5 retouched photos. I just need the BTS the most. I'm also looking to partner with female models who are into onlyfans content creations and photoshoot on permanent bases for a fee(to be discussed)</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:22.926224+00:00",
+      "collected_at": "2026-11-01T21:16:08.665255+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1092,9 +1115,10 @@
         "age_range": "19–41",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333598+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573107+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "9e9e9b6d8ef4370f",
@@ -1112,7 +1136,7 @@
       "description": "<p>I am a photography student at west college Scotland looking for female models to collaborate on a creative fashion editorial photoshoot in Glasgow </p><p>the shoot will explore three different fashion concepts</p><p>autumn/winterfashion </p><p>elegant</p><p>autumn preppy chic</p><p>this is an unpaid TFP collaboration , ideal for models looking to develop or expend their portfolios. please get in touch with a recent photograph or portfolio along with your availability in Glasgow . feel free to message me.</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:25.376846+00:00",
+      "collected_at": "2026-11-01T21:16:08.665410+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1127,14 +1151,15 @@
         "age_range": "19–45",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333602+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573111+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "263991d94135d929",
       "title": "BEHIND THE MO: Movember-themed portrait collaboration",
-      "category": "Editorial",
+      "category": "Model casting",
       "compensation": "TFP",
       "location": "London",
       "deadline": "2026-11-28",
@@ -1147,7 +1172,7 @@
       "description": "<p>I’m looking for male models (18+) for Behind the Mo, a Movember-themed portrait series exploring men’s health, mental wellbeing and the faces we show the world.</p><p>This cause matters to me. Before picking up the camera, I completed the Movember activity challenge, logging over 39 hours across 31 workouts and finishing in the top 5% of more than 26,000 participants.</p><p><strong>The concept</strong></p><p> Each model is photographed in a single portrait inspired by classic menswear (white shirts, ties, braces, blazers and bow ties) with a moustache. The styling is playful, but the expression is honest. Behind every moustache is a real person, and each portrait asks how well we really know how someone is doing.</p><p><strong>Who I’m looking for</strong></p><ul><li>Men aged 18+ with a moustache, or growing one this November</li><li>Any moustache length welcome, from a few weeks’ growth to a full handlebar</li><li>All looks, ages and experience levels</li></ul><p><strong>Optional story</strong></p><p> Models are invited, but never required, to share a short story about a challenge they’ve faced and how they got through it. This is discussed privately at consultation, you approve your words before anything is published, and you choose whether to be named or anonymous.</p><p><strong>Details</strong></p><ul><li><strong>Basis:</strong> collaboration (TFP), with edited images for your portfolio</li><li><strong>Dates:</strong> late November to give moustaches time to grow</li><li><strong>Wardrobe:</strong> white shirt, tie, braces, blazer or bow tie if you have them; styling support provided</li><li><strong>Usage:</strong> the conceptual page of my website, social media and portfolio</li></ul><p><strong>To apply</strong></p><p> Send a message with recent photos and let me ",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:27.727199+00:00",
+      "collected_at": "2026-11-01T21:16:08.665549+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1162,9 +1187,10 @@
         "age_range": "18–40",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333606+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573115+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b7a89896609d24be",
@@ -1182,7 +1208,7 @@
       "description": "<p>I'm looking for a model for an experimental, conceptual portrait shoot, and would love to collaborate with a MUA, stylist or emerging fashion designer/fashion graduate who would like to showcase their work.</p><p><br></p><p>I'm a creative portrait photographer drawn to surrealism, and I really want to experiment with Paolo Roversi-inspired photography, particularly painting with light. In general I want my photography to go towards this mood/gothic direction, so I will organise some outdoor shoots too.</p><p><br></p><p>The vision:</p><p>- White gothic/baroque or black dramatic wardrobe</p><p>- Expressive, dramatic makeup</p><p>- Surreal elements, handmade props and textures</p><p>- Experimental lighting and painterly portraits</p><p><br></p><p>I have a few locations in mind, potentially a beautiful interior or a studio with a hand-painted backdrop.</p><p><br></p><p>When:</p><p>Late November / early December 2026</p><p><br></p><p>I'd love to take my time with this project, create some props and thoughtfully develop the concept together.</p><p><br></p><p>This will be a TFP collaboration, with everyone contributing creatively and receiving images for their portfolios.</p><p><br></p><p>If this resonates with you, please DM me with your portfolio or Instagram. ?</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.331762+00:00",
+      "collected_at": "2026-11-01T21:16:08.665707+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1197,15 +1223,16 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333610+00:00",
-      "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:16:27.573119+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "559522534a72a08a",
-      "title": "Camera test London, United Kingdom Casting ends Nov 9, 2026 Paid shoot or event More details Last activity: online now",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "Camera test",
+      "category": "Editorial",
+      "compensation": "Paid",
       "location": "London",
       "deadline": "2026-11-09",
       "source": "ModelManagement — UK Castings",
@@ -1214,10 +1241,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/camera-test",
       "url": "https://www.modelmanagement.com/casting/camera-test",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Require 2 female models for a street shoot in central London to test a new prototype camera. The video footage will be seen on instagram and YouTube. You will also have access to final footage should you need it. It’ll be a very short shoot approx 1hr of posing, walking.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.332020+00:00",
+      "collected_at": "2026-11-01T21:16:11.362207+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1225,22 +1252,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "gender": "Female only",
+        "age_range": "20–40",
+        "fee_as_stated": "£30 per hour"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333616+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:16:27.573123+00:00",
+      "opportunity_type": "Potential modelling work",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "9edb78b16efe6abb",
-      "title": "Member's Rating 5 (1) London Black & White Street Portraiture Session London, United Kingdom Casting ends Nov 11, 2026 Collaborative shoot or event More details Last activity: onli",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "London Black & White Street Portraiture Session",
+      "category": "Editorial",
+      "compensation": "TFP",
       "location": "London",
       "deadline": "2026-11-11",
       "source": "ModelManagement — UK Castings",
@@ -1249,10 +1277,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/london-black-white-street-portraiture-session",
       "url": "https://www.modelmanagement.com/casting/london-black-white-street-portraiture-session",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "<p>Hi all! Seeking a model for a TFP shoot in the city centre of London next week. Hoping to capture some exciting portraits in black and white on a mixture of digital and 35mm. This is a collaborative shoot to add work to both our portfolios. Ideally we would work when the weather is very moody to give us some really nice characterful images. </p><p>I'm available to shoot: 30/10, 02/11, 03/11, 04/11. </p><p>The attached images are reference only, found online.</p><p>A little bit about me - I'm a photographer building up my portfolio in portraits and commercial work with shoots happening weekly. I often shoot at a studio in West London and I'm seeking not only to plan exciting photo shoots but also to build up my network of regular collaborators. </p><p>Looking forward to hearing from you! </p><p>Matthew</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.332237+00:00",
+      "collected_at": "2026-11-01T21:16:13.966982+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1260,22 +1288,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
+        "gender": "Female only",
+        "age_range": "20–50",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333621+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:16:27.573126+00:00",
+      "opportunity_type": "Potential modelling work",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "71c2c13fc55a6279",
-      "title": "Member's Rating 5 (1) Female model required for warm and bold winter shoot London, United Kingdom Casting ends Nov 27, 2026 Collaborative shoot or event More details Last activity:",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "Female model required for warm and bold winter shoot",
+      "category": "Editorial",
+      "compensation": "TFP",
       "location": "London",
       "deadline": "2026-11-27",
       "source": "ModelManagement — UK Castings",
@@ -1284,10 +1313,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/female-model-required-for-warm-and-bold-winter-shoot",
       "url": "https://www.modelmanagement.com/casting/female-model-required-for-warm-and-bold-winter-shoot",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "<p># CASTING CALL: WARM & BOLD — WINTER FASHION EDITORIAL</p><p><br></p><p>TFP SHOOT</p><p>**Shoot Type:** Fashion Editorial / Outdoor Portraiture</p><p>**Style:** Luxury • Bold • Warm Tones • Cinematic</p><p><br></p><p>### About the Shoot</p><p><br></p><p>I'm looking for a confident and expressive model for a stylish winter fashion photoshoot set in the beautiful surroundings of Hyde Park, London.</p><p><br></p><p>The concept, **“Warm & Bold,”** combines rich winter colours, luxurious layering and striking fashion poses to create sophisticated, cinematic editorial images. Think burgundy and camel coats, cosy knitwear, leather shorts, knee-high boots and statement accessories, captured against autumn leaves, park pathways and elegant natural scenery.</p><p><br></p><p>### The Look & Creative Direction</p><p><br></p><p>* Rich colours: burgundy, chocolate brown, camel, cream and black.</p><p>* Winter layering with oversized coats, knitwear, leather shorts and statement boots.</p><p>* Confident walking poses, relaxed seated shots, close-up portraits and editorial-style compositions.</p><p>* Natural light, warm tones and a luxury fashion magazine aesthetic.</p><p><br></p><p>### Model Requirements</p><p><br></p><p>* Confident posing and comfortable working outdoors.</p><p>* Strong expressions and an interest in fashion/editorial photography.</p><p>* Able to collaborate on styling and creative direction.</p><p>* Experience is welcome, but emerging models are encouraged to apply.</p><p><br></p><p>### Shoot Details</p><p><br></p><p>* **Location:** to be discuss</p><p>* **Date:** To be agreed with the selected model.</p><p>* **Duration:** Approximately 1–2 hours.</p><p><br></p><p>* **Deliverables:** A curated selection of edited, high-quality images for portfolio and social media",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.332504+00:00",
+      "collected_at": "2026-11-01T21:16:16.858059+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1295,22 +1324,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333624+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:16:27.573129+00:00",
+      "opportunity_type": "Potential modelling work",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "31e00b5a4be44331",
-      "title": "Female model wanted for a creative cut and colour London, United Kingdom Casting ends Nov 9, 2026 Paid shoot or event £150 More details Last activity: recently active",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "Female model wanted for a creative cut and colour",
+      "category": "Editorial",
+      "compensation": "Paid",
       "location": "London",
       "deadline": "2026-11-09",
       "source": "ModelManagement — UK Castings",
@@ -1319,10 +1349,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/female-model-wanted-for-a-creative-cut-and-colour",
       "url": "https://www.modelmanagement.com/casting/female-model-wanted-for-a-creative-cut-and-colour",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "<p>Hi everyone!</p><p>We’re currently looking for a <strong>female hair model</strong> for an upcoming hair show on <strong>10th November</strong>.</p><p><strong>Model requirements:</strong></p><ul><li><strong>Height:</strong> 5’9”–5’11”</li><li><strong>Hair length:</strong> Short, above the shoulders</li><li><strong>Colour concept:</strong> A bold, graphic colour placement featuring a defined line through the fringe area</li></ul><p><strong>Availability required:</strong></p><ul><li><strong>8th November:</strong> Half day (preparation)</li><li><strong>10th November:</strong> Full day (hair show)</li></ul><p>We’re looking for someone confident, open to a creative hair transformation, and excited to be part of a fashion-forward show.</p><p><br></p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.332782+00:00",
+      "collected_at": "2026-11-01T21:16:19.559025+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1330,23 +1360,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
-        "age_range": "Not specified",
+        "age_range": "18–29",
         "fee_as_stated": "£150"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333627+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573133+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "747b449687c7b471",
-      "title": "Looking for models for doing alternative creative portraits Folkestone, United Kingdom Casting ends Jan 24, 2027 Collaborative shoot or event More details Last activity: recently a",
-      "category": "Model casting",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "title": "Looking for models for doing alternative creative portraits",
+      "category": "Editorial",
+      "compensation": "Paid",
+      "location": "Manchester",
       "deadline": "2027-01-24",
       "source": "ModelManagement — UK Castings",
       "discovery_source": "ModelManagement — UK Castings",
@@ -1354,10 +1385,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/looking-for-models-for-doing-alternative-creative-portraits",
       "url": "https://www.modelmanagement.com/casting/looking-for-models-for-doing-alternative-creative-portraits",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "<p>Looking for confident alternative models to do and creative/ dark and moody portraits</p><p>No specific gender required just needs to be open-minded and confident in front of camera</p><p>if this sounds like you, hopefully we can collaborate</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.333067+00:00",
+      "collected_at": "2026-11-01T21:16:22.580865+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1365,22 +1396,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
+        "gender": "Female only",
+        "age_range": "18–55",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333630+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573137+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "2eb262821d05c9ca",
-      "title": "FEMALE MODELS WANTED London, United Kingdom Casting ends Nov 23, 2026 Collaborative shoot or event More details Last activity: recently active",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "FEMALE MODELS WANTED",
+      "category": "Editorial",
+      "compensation": "Paid",
       "location": "London",
       "deadline": "2026-11-23",
       "source": "ModelManagement — UK Castings",
@@ -1389,10 +1421,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/female-model-wanted-37",
       "url": "https://www.modelmanagement.com/casting/female-model-wanted-37",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "<p>Looking for 2 female models. This is a collaborative UNI project taking place at Middlesex University. </p><p>x Long black hair, preferably sharp features</p><p>× Curly/wavy blonde or ginger hair</p><p>Curvy and older women are also very welcome ??</p>",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.333233+00:00",
+      "collected_at": "2026-11-01T21:16:25.096987+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1400,22 +1432,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
-        "age_range": "Not specified",
+        "age_range": "20–40",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333632+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573140+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "4f3e90a3eabd91e0",
-      "title": "Looking for models for collab / TFP shoot London, United Kingdom Casting ends Nov 22, 2026 Collaborative shoot or event More details Last activity: recently active",
-      "category": "Model casting",
-      "compensation": "Unknown",
+      "title": "Looking for models for collab / TFP shoot",
+      "category": "Editorial",
+      "compensation": "TFP",
       "location": "London",
       "deadline": "2026-11-22",
       "source": "ModelManagement — UK Castings",
@@ -1424,10 +1457,10 @@
       "source_platform": "web",
       "source_url": "https://www.modelmanagement.com/casting/model-for-collab-tfp-shoot-",
       "url": "https://www.modelmanagement.com/casting/model-for-collab-tfp-shoot-",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Hi, I'm a photographer in London/ Buckinghamshire looking for a model to collab with on a personal project. When planning shoots, I like to also ask my models if they had any ideas they wanted to do, to merge our ideas together and create a photoshoot / photo collection that we both love! Looking to shoot fashion / editorial style photos with someone with passion for creativity!!",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:30.333413+00:00",
+      "collected_at": "2026-11-01T21:16:27.572901+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1435,16 +1468,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
+        "gender": "Female only",
+        "age_range": "18–33",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:30.333635+00:00",
+      "last_seen_at": "2026-11-01T21:16:27.573143+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "c742b3042986af4f",
@@ -1462,7 +1496,7 @@
       "description": "Lincoln Evening Bus Services Shoot - Female Models required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:32.614210+00:00",
+      "collected_at": "2026-11-01T21:16:28.289031+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1477,9 +1511,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147707+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779615+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "537620de0462bb3b",
@@ -1497,7 +1532,7 @@
       "description": "Lincoln Evening Bus Services Shoot - Male Models required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:34.122637+00:00",
+      "collected_at": "2026-11-01T21:16:28.289138+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1512,9 +1547,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147713+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779620+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "e2e57881b0d2b801",
@@ -1532,7 +1568,7 @@
       "description": "Female Models Aged 25-37yrs required for a Autumn Winter Handbag Launch Campaign Shoot",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:35.601898+00:00",
+      "collected_at": "2026-11-01T21:16:28.289241+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1547,9 +1583,10 @@
         "age_range": "25–37",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147716+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779624+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "58c6c39628070d8d",
@@ -1567,7 +1604,7 @@
       "description": "Female Models Aged 18-30yrs required for a Hair Product Shoot",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:37.128876+00:00",
+      "collected_at": "2026-11-01T21:16:28.289327+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1582,9 +1619,10 @@
         "age_range": "18–30",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147719+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779627+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b135ec88982cd35e",
@@ -1602,7 +1640,7 @@
       "description": "Surgical Equipment Shoot - Male Models required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:38.648637+00:00",
+      "collected_at": "2026-11-01T21:16:28.289418+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1617,9 +1655,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147722+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779631+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "f70d9ffee347c315",
@@ -1637,7 +1676,7 @@
       "description": "Popular Bar Content Shoot - Female Models aged 45+",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:40.128801+00:00",
+      "collected_at": "2026-11-01T21:16:28.289500+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1652,9 +1691,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147726+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779634+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "1c086f7e5aa12fa6",
@@ -1672,7 +1712,7 @@
       "description": "Male Model 45+ required for a Popular Bar Content Shoot",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:41.640544+00:00",
+      "collected_at": "2026-11-01T21:16:28.289583+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1687,9 +1727,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147729+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779637+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "524df9b3800e2e72",
@@ -1707,7 +1748,7 @@
       "description": "Iconic British Heritage Brand Christmas Photoshoot - Boy aged5-8yrs required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.142819+00:00",
+      "collected_at": "2026-11-01T21:16:28.289676+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1722,9 +1763,10 @@
         "age_range": "5–8",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147732+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779643+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "8a0bfd20671b5418",
@@ -1739,10 +1781,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/XMQC-7444/-/iconic-british-heritage-brand-christmas-photoshoot-child-models-girls-aged-5-8yrs",
       "url": "https://www.talentmanagement.com/search/job/XMQC-7444/-/iconic-british-heritage-brand-christmas-photoshoot-child-models-girls-aged-5-8yrs",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Iconic British Heritage Brand Christmas Photoshoot - Child Models - Girls Aged 5-8yrs",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143071+00:00",
+      "collected_at": "2026-11-01T21:16:29.808345+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1750,16 +1792,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "5–8",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147735+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779646+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "60295f7339e2bf07",
@@ -1774,10 +1817,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/CKPD-6846/-/stock-photoshoot-male-models-aged-50-80yrs-required",
       "url": "https://www.talentmanagement.com/search/job/CKPD-6846/-/stock-photoshoot-male-models-aged-50-80yrs-required",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Stock Photoshoot - Male Models Aged 50 - 80yrs required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143205+00:00",
+      "collected_at": "2026-11-01T21:16:31.307770+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1785,16 +1828,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Male only",
+        "gender": "Female only",
         "age_range": "50–80",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147738+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779649+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "0fb535dbcad2ae33",
@@ -1809,10 +1853,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/QTDV-4999/-/female-models-aged-50-80yrs-required-for-a-stock-photoshoot",
       "url": "https://www.talentmanagement.com/search/job/QTDV-4999/-/female-models-aged-50-80yrs-required-for-a-stock-photoshoot",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Female Models Aged 50-80yrs required for a Stock Photoshoot",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143323+00:00",
+      "collected_at": "2026-11-01T21:16:32.815040+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1820,16 +1864,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "50–80",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147740+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779652+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "360b056c2830d972",
@@ -1844,10 +1889,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/GPGY-4643/-/female-fashion-models-required-aged-18-39yrs",
       "url": "https://www.talentmanagement.com/search/job/GPGY-4643/-/female-fashion-models-required-aged-18-39yrs",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Female Fashion Models required Aged 18-39yrs",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143429+00:00",
+      "collected_at": "2026-11-01T21:16:34.360127+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1855,16 +1900,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "18–39",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147743+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779655+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "8ecbc7081517f3d3",
@@ -1879,10 +1925,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/RVFW-8477/-/skincare-shoot-female-hand-model-required",
       "url": "https://www.talentmanagement.com/search/job/RVFW-8477/-/skincare-shoot-female-hand-model-required",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Skincare Shoot, Female Hand Model required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143533+00:00",
+      "collected_at": "2026-11-01T21:16:37.220115+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1890,16 +1936,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147745+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779659+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "e5aa2b8422c81d19",
@@ -1914,10 +1961,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/SWMW-3867/-/supermarket-photoshoot-female-models-required",
       "url": "https://www.talentmanagement.com/search/job/SWMW-3867/-/supermarket-photoshoot-female-models-required",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Supermarket Photoshoot - Female Models required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143632+00:00",
+      "collected_at": "2026-11-01T21:16:38.718237+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1925,16 +1972,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147749+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779662+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "8e10b4c5d2c8e481",
@@ -1949,10 +1997,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/FKZV-6869/-/supermarket-photoshoot-male-models-required",
       "url": "https://www.talentmanagement.com/search/job/FKZV-6869/-/supermarket-photoshoot-male-models-required",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Supermarket Photoshoot - Male Models required",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143730+00:00",
+      "collected_at": "2026-11-01T21:16:40.292571+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1960,16 +2008,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Male only",
+        "gender": "Female only",
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147751+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779664+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "2e942d46dcc49b64",
@@ -1984,10 +2033,10 @@
       "source_platform": "web",
       "source_url": "https://www.talentmanagement.com/search/job/VQTB-7968/-/female-modes-aged-20-35yrs-required-for-a-heritage-women-s-brand-fashion-shoot",
       "url": "https://www.talentmanagement.com/search/job/VQTB-7968/-/female-modes-aged-20-35yrs-required-for-a-heritage-women-s-brand-fashion-shoot",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Female Modes Aged 20-35yrs required for a Heritage Women's Brand Fashion Shoot",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.143860+00:00",
+      "collected_at": "2026-11-01T21:16:41.776759+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -1995,16 +2044,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Female only",
         "age_range": "20–35",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147755+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779667+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "7f6a73bd7f901669",
@@ -2022,7 +2072,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144003+00:00",
+      "collected_at": "2026-11-01T21:16:41.776940+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2037,9 +2087,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147757+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779669+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "2d58ce15f0e0fa71",
@@ -2057,7 +2108,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144126+00:00",
+      "collected_at": "2026-11-01T21:16:41.777046+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2072,9 +2123,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147760+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779672+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b5005d73feeb1fe7",
@@ -2092,7 +2144,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144222+00:00",
+      "collected_at": "2026-11-01T21:16:41.777125+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2107,9 +2159,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147763+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779674+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "8902b1255df02092",
@@ -2127,7 +2180,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144335+00:00",
+      "collected_at": "2026-11-01T21:16:41.777212+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2142,9 +2195,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147765+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779676+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "cf5cd77633d5e22a",
@@ -2162,7 +2216,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144452+00:00",
+      "collected_at": "2026-11-01T21:16:41.777301+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2177,9 +2231,10 @@
         "age_range": "30–55",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147768+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779679+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "46bc1db44f6dda26",
@@ -2197,7 +2252,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144571+00:00",
+      "collected_at": "2026-11-01T21:16:41.777414+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2212,9 +2267,10 @@
         "age_range": "45–70",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147772+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779681+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "13e1eb5fc1d9f3c3",
@@ -2232,7 +2288,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144691+00:00",
+      "collected_at": "2026-11-01T21:16:41.777510+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2247,9 +2303,10 @@
         "age_range": "30–45",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147775+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779684+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "ed5ff92622e0ee87",
@@ -2267,7 +2324,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144808+00:00",
+      "collected_at": "2026-11-01T21:16:41.777595+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2282,9 +2339,10 @@
         "age_range": "30–45",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147778+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779686+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "a2020cd7f21b1442",
@@ -2302,7 +2360,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.144929+00:00",
+      "collected_at": "2026-11-01T21:16:41.777669+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2317,9 +2375,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147781+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779688+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "5604d6430a9fac63",
@@ -2337,7 +2396,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145034+00:00",
+      "collected_at": "2026-11-01T21:16:41.777743+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2352,9 +2411,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147784+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779691+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "e3ee9d4fe1f9c170",
@@ -2372,7 +2432,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145137+00:00",
+      "collected_at": "2026-11-01T21:16:41.777815+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2387,9 +2447,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147787+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779693+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "11fc8961c77d6659",
@@ -2407,7 +2468,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145241+00:00",
+      "collected_at": "2026-11-01T21:16:41.777887+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2422,9 +2483,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147790+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779695+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b575ab2c21fcbc14",
@@ -2442,7 +2504,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145353+00:00",
+      "collected_at": "2026-11-01T21:16:41.777966+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2457,9 +2519,10 @@
         "age_range": "25–55",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147792+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779698+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "518f72686efe1726",
@@ -2477,7 +2540,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145464+00:00",
+      "collected_at": "2026-11-01T21:16:41.778047+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2492,9 +2555,10 @@
         "age_range": "25–55",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147795+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779700+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "9ac847c15af4b17f",
@@ -2512,7 +2576,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145575+00:00",
+      "collected_at": "2026-11-01T21:16:41.778129+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2527,9 +2591,10 @@
         "age_range": "50–80",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147798+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779702+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "b70ad90cf77a7c35",
@@ -2547,7 +2612,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145679+00:00",
+      "collected_at": "2026-11-01T21:16:41.778205+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2562,9 +2627,10 @@
         "age_range": "25–35",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147801+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779704+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "5fd080b2005383e5",
@@ -2582,7 +2648,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145792+00:00",
+      "collected_at": "2026-11-01T21:16:41.778287+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2597,9 +2663,10 @@
         "age_range": "22–35",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147804+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779707+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "c5973936d44b1b4e",
@@ -2617,7 +2684,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.145904+00:00",
+      "collected_at": "2026-11-01T21:16:41.778365+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2632,9 +2699,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147806+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779709+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "7af6739842707425",
@@ -2652,7 +2720,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146018+00:00",
+      "collected_at": "2026-11-01T21:16:41.778444+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2667,9 +2735,10 @@
         "age_range": "30–60",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147809+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779711+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "7ba8ff313bc430d0",
@@ -2687,7 +2756,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146130+00:00",
+      "collected_at": "2026-11-01T21:16:41.778521+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2702,9 +2771,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147812+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779714+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "0c95559443815162",
@@ -2722,7 +2792,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146241+00:00",
+      "collected_at": "2026-11-01T21:16:41.778600+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2737,9 +2807,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147815+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779716+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "466c5fda10c12813",
@@ -2757,7 +2828,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146342+00:00",
+      "collected_at": "2026-11-01T21:16:41.778672+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2772,9 +2843,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147818+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779719+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "58dd98bf0e13d0de",
@@ -2792,7 +2864,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146450+00:00",
+      "collected_at": "2026-11-01T21:16:41.778748+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2807,9 +2879,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147820+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779721+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "77ae9abdaac0c585",
@@ -2827,7 +2900,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146549+00:00",
+      "collected_at": "2026-11-01T21:16:41.778816+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2842,9 +2915,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147823+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779724+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "9a4b570b17c66408",
@@ -2862,7 +2936,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146646+00:00",
+      "collected_at": "2026-11-01T21:16:41.778885+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2877,9 +2951,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147826+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779726+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "bf65e7a0ac5118ac",
@@ -2897,7 +2972,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146738+00:00",
+      "collected_at": "2026-11-01T21:16:41.778949+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2912,9 +2987,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147828+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779729+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "086056b429983ba2",
@@ -2932,7 +3008,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.146832+00:00",
+      "collected_at": "2026-11-01T21:16:41.779016+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2947,9 +3023,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147831+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779731+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "38a1810fecc7473e",
@@ -2967,7 +3044,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147018+00:00",
+      "collected_at": "2026-11-01T21:16:41.779123+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -2982,9 +3059,10 @@
         "age_range": "9–11",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147834+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779733+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "7aae1a7c8aa1bcac",
@@ -3002,7 +3080,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147130+00:00",
+      "collected_at": "2026-11-01T21:16:41.779197+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3017,9 +3095,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147837+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779736+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "c172faf07b83526a",
@@ -3037,7 +3116,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147238+00:00",
+      "collected_at": "2026-11-01T21:16:41.779271+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3052,9 +3131,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147839+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779739+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "caa178fb158f7549",
@@ -3072,7 +3152,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147335+00:00",
+      "collected_at": "2026-11-01T21:16:41.779338+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3087,9 +3167,10 @@
         "age_range": "8–12",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147842+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779741+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "969ea7777e2cca41",
@@ -3107,7 +3188,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147445+00:00",
+      "collected_at": "2026-11-01T21:16:41.779418+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3122,9 +3203,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147845+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779743+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "da7c1831eca2fcf2",
@@ -3142,7 +3224,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:43.147543+00:00",
+      "collected_at": "2026-11-01T21:16:41.779485+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3157,14 +3239,15 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:11:43.147848+00:00",
+      "last_seen_at": "2026-11-01T21:16:41.779745+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "09183d6dd5823b3b",
       "title": "SA's aged 18+ wanted for Telecoms Shoot. St Albans. Wednesday 4th November. Paid",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3177,7 +3260,7 @@
       "description": "SA's aged 18+ wanted for Telecoms Shoot. St Albans. Wednesday 4th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: SA's aged 18+ wanted for Telecoms Shoot. St Albans. Wednesday 4th November. Paid We're looking for cast aged 18+ to be Supporting Artists in a Telecoms shoot. Filming is on Wednesday 4th November in St Albans. No parking is available unfortunately as the Studio car park is being used as part of the shoot. The nearest train station is Radlett. Production minibuses will be available to transport people from Radlett to the Studio. Payment is £140 for 10 hours including 1 hour for break. Call times are still TBC. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: St Albans Payment: £140 Check Commission Rates Job category: Ad Age: 18+ Shoot Date: 04/11/2026 Posted: N/A Deadline 05/11/2026 Apply For This Job Other jobs you may be interested in Female Actor aged 25-40 required for featured role in pet food brand shoot In Leeds. 11th and 12th November. Paid £2000 11th and 12th November View This Job Female aged 30-50 wanted for Social Media Shoot. Tuesday 3rd November. Paid £300 Please read full brief View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work Hi",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:47.681299+00:00",
+      "collected_at": "2026-11-01T21:16:43.409712+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3192,14 +3275,15 @@
         "age_range": "25–40",
         "fee_as_stated": "£140"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140478+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372925+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "6dd66a4e45f2e3ab",
       "title": "Female aged 65+ wanted for Featured Role in You Tube Channel. Tuesday 10th November. Paid",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3212,7 +3296,7 @@
       "description": "Female aged 65+ wanted for Featured Role in You Tube Channel. Tuesday 10th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Female aged 65+ wanted for Featured Role in You Tube Channel. Tuesday 10th November. Paid We're looking for a Female aged 65+ to play a dinner lady character in a You Tube video. We're looking for someone with acting experience, Very comfortable improvising - able to switch between caring/gentle and scolding. Filming is on Tuesday 10th November in London. Location still TBC. Payment is £150 for up to 5 hours. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: London Payment: £150 Check Commission Rates Job category: You Tube Age: 65+ Gender: Female Shoot Date: 10/11/2026 Posted: N/A Deadline 11",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:50.098836+00:00",
+      "collected_at": "2026-11-01T21:16:43.409847+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3227,14 +3311,15 @@
         "age_range": "Not specified",
         "fee_as_stated": "£150"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140484+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372930+00:00",
+      "opportunity_type": "Other",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "5a30a2b8f1a0ef6b",
       "title": "ACTRESS ONLY: White Female Actress Wanted For A Utilities Company Shoot - Wednesday 11th November",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3247,7 +3332,7 @@
       "description": "ACTRESS ONLY: White Female Actress Wanted For A Utilities Company Shoot - Wednesday 11th November | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: ACTRESS ONLY: White Female Actress Wanted For A Utilities Company Shoot - Wednesday 11th November Black or mixed race male actor aged 35-75 wanted for a utilities company shoot. This is a featured role so confident acting skills are essential. The shoot will take place in London on Wednesday 11th November, exact location TBC. Payment for the role is £750 for 11 hours which includes all usage fees, exact call times TBC. Sound like you? If so apply ASAP! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: London Payment: £750 Check Commission Rates Job category: Utilities Company Age: 35-75 Shoot Date: 11/11/2026 Posted: N/A Deadline 11/11/2026 Apply For This Job Other jobs you may be interested in Comedy Actress Aged 21-38 For Social Media Shoot On Wednesday 11th Of November Paid £300 Only needed for half a day View This Job People With Strong Acting And Presenting Skills Aged 20-35 For Socials Shoot In January 2027 Paid £250 Men Must Be Able To Grow A Beard View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testim",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:52.538522+00:00",
+      "collected_at": "2026-11-01T21:16:43.409969+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3262,14 +3347,15 @@
         "age_range": "35–75",
         "fee_as_stated": "£750"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140488+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372934+00:00",
+      "opportunity_type": "Other",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "37c51f09ca4a7169",
       "title": "YOUNG ACTORS ONLY: Young Looking Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3282,7 +3368,7 @@
       "description": "YOUNG ACTORS ONLY: Young Looking Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: YOUNG ACTORS ONLY: Young Looking Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November Black or mixed race male actor aged 17-25 wanted for a utilities company shoot. This is a featured role so confident acting skills are essential. The shoot will take place in London on Wednesday 11th November, exact location TBC. Payment for the role is £750 for 11 hours which includes all usage fees, exact call times TBC. Sound like you? If so apply ASAP! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. Details Location: London Payment: £750 Check Commission Rates Job category: Utilities Company Age: 17-25 Shoot Date: 11/11/2026 Posted: N/A Deadline 11/11/2026 This is an open posting Create a New Free Profile or Apply For This Job Other jobs you may be interested in Featured Role // Male or Female aged 35-55 wanted for Mortgage Brand Shoot. Thursday 12th November. Paid Acting experience required View This Job Handsome Muscular Man Aged 18-45 For Social Media Shoot On Monday 9th Of November Paid £200 Might Need To Be Topless View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks ",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:54.945653+00:00",
+      "collected_at": "2026-11-01T21:16:43.410113+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3297,14 +3383,15 @@
         "age_range": "17–25",
         "fee_as_stated": "£750"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140492+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372938+00:00",
+      "opportunity_type": "Other",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "d6ce706636560060",
       "title": "ACTORS ONLY: Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3317,7 +3404,7 @@
       "description": "ACTORS ONLY: Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: ACTORS ONLY: Black Or Mixed Race Male Actor Wanted For A Utilities Company Shoot - Wednesday 11th November Black or mixed race male actor aged 35-55 wanted for a utilities company shoot. This is a featured role so confident acting skills are essential. The shoot will take place in London on Wednesday 11th November, exact location TBC. Payment for the role is £750 for 11 hours which includes all usage fees, exact call times TBC. Sound like you? If so apply ASAP! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. Details Location: London Payment: £750 Check Commission Rates Job category: Utilities Company Age: 35-55 Shoot Date: 11/11/2026 Posted: N/A Deadline 11/11/2026 This is an open posting Create a New Free Profile or Apply For This Job Other jobs you may be interested in Children Aged 2 - 7 Wanted For A Holiday Company Shoot In BOGNOR REGIS - Friday 6th November Children aged 2 - 7 wanted for a holiday company shoot in BOGNOR REGIS, shooting Friday 6th November View This Job People With Strong Acting And Presenting Skills Aged 20-35 For Socials Shoot In January 2027 Paid £250 Men Must Be Able To Grow A Beard View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag ",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:11:57.518458+00:00",
+      "collected_at": "2026-11-01T21:16:43.410241+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3332,9 +3419,10 @@
         "age_range": "35–55",
         "fee_as_stated": "£750"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140495+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372942+00:00",
+      "opportunity_type": "Other",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "c18e71e81a530918",
@@ -3352,7 +3440,7 @@
       "description": "People Of All Backgrounds Wanted For A Music Video Shoot - Sunday 8th November | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: People Of All Backgrounds Wanted For A Music Video Shoot - Sunday 8th November People of all backgrounds aged 18-70 wanted for a music video shoot. The shoot wil take place in London on Sunday 8th November, exact location TBC. Payment for the role is £200 for 11 hours, exact call times TBC. Sound like you? If so, apply ASAP! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: London Payment: £200 Check Commission Rates Job category: Music Video Shoot Age: 18-70 Shoot Date: 08/11/2026 Posted: N/A Deadline 08/11/2026 Apply For This Job Other jobs you may be interested in French talent aged 50-65 required for Christmas campaign On Wednesday 4th Or Thursday 5th Of November Paid £500 One day View This Job Children Aged 2 - 7 Wanted For A Holiday Company Shoot In BOGNOR REGIS - Friday 6th November Children aged 2 - 7 wanted for a holiday company shoot in BOGNOR REGIS, shooting Friday 6th November View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testimonials Contact Us T: 0844 887 0610 E: castings@talenttalks.co.uk Company No: 07665982 T",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:00.117748+00:00",
+      "collected_at": "2026-11-01T21:16:43.410368+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3367,14 +3455,15 @@
         "age_range": "18–70",
         "fee_as_stated": "£200"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140498+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372945+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "55f586ebd98b0c67",
       "title": "Slim White Male aged 18-30 who is 6ft 1\" Tall wanted for Stand-in Role. Monday 2nd November. London. Paid",
-      "category": "Model casting",
+      "category": "Other",
       "compensation": "Paid",
       "location": "London",
       "deadline": null,
@@ -3387,7 +3476,7 @@
       "description": "Slim White Male aged 18-30 who is 6ft 1&quot; Tall wanted for Stand-in Role. Monday 2nd November. London. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Slim White Male aged 18-30 who is 6ft 1\" Tall wanted for Stand-in Role. Monday 2nd November. London. Paid We're looking for a Slim White Male aged 18-30 who is 6ft 1\" Tall to be a Stand-in in a shoot on Monday 2nd November. Filming will be in Central London between around 12pm-9pm. Payment is £175 for up to 10 hours with 1 hour for break. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: Central London Payment: £175 Check Commission Rates Job category: Stand-in Age: 18-30 Gender: Male Shoot Date: 02/11/2026 Posted: N/A Deadline 03/11/2026 This is an open posting Create a N",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:02.707489+00:00",
+      "collected_at": "2026-11-01T21:16:43.410488+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3402,9 +3491,10 @@
         "age_range": "18–30",
         "fee_as_stated": "£175"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140502+00:00",
-      "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "last_seen_at": "2026-11-01T21:17:03.372949+00:00",
+      "opportunity_type": "Other",
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "7f22aa9d420e1830",
@@ -3422,7 +3512,7 @@
       "description": "URGENT FRENCH speaking Female aged 20-40 required for Christmas campaign. On 4th and 5th of November Paid &pound;500 | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: URGENT FRENCH speaking Female aged 20-40 required for Christmas campaign. On 4th and 5th of November Paid £500 We are working on a Christmas campaign for a delivery brand and casting various roles. We need Females aged 20-40 who can speak French and have tapes of this to send when requested. 4th and 5th of November needed both days. Fee is £500 all in for 9+1 hour working day Usage wise - BVOD, Paid social, and PR content · 2 months’ organic usage across all Deliveroo channels per region · 2 months paid social usage · BVOD usage across 3 assets only for 1 month PLEASE APPLY Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to ",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.138199+00:00",
+      "collected_at": "2026-11-01T21:16:43.410623+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3437,15 +3527,16 @@
         "age_range": "20–40",
         "fee_as_stated": "£500"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140505+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372953+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "0a7e169a37d2cb06",
       "title": "People that speak a FOREIGN LANGUAGE wanted for You Tube Shoot. Tuesday 10th November. London. Paid",
-      "category": "Other",
-      "compensation": "Unknown",
+      "category": "Model casting",
+      "compensation": "Paid",
       "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
@@ -3454,10 +3545,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45369",
       "url": "https://www.talenttalks.co.uk/audition/45369",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "People that speak a FOREIGN LANGUAGE wanted for You Tube Shoot. Tuesday 10th November. London. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: People that speak a FOREIGN LANGUAGE wanted for You Tube Shoot. Tuesday 10th November. London. Paid We're looking for Cast that speak a FOREIGN language to be featured in a You Tube video game show 'Guess the Language'. Any language except British is good. This will be a speaking/interactive role. Filming will be on Tuesday 10th November in London. Payment is £150 for up to 5 hours of filming. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: London Payment: £150 Check Commission Rates Job category: You Tube Age: 25+ Shoot Date: 10/11/2026 Posted: N/A Deadline 11/11/2026 This is an o",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.138417+00:00",
+      "collected_at": "2026-11-01T21:16:45.973361+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3465,22 +3556,23 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
+        "gender": "Female only",
         "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "fee_as_stated": "£150"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140508+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372956+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "6e572fdf948c26aa",
       "title": "People that speak an ASIAN Language wanted for You Tube Shoot. Tuesday 10th November. London. Paid",
-      "category": "Other",
-      "compensation": "Unknown",
+      "category": "Model casting",
+      "compensation": "Paid",
       "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
@@ -3489,10 +3581,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45368",
       "url": "https://www.talenttalks.co.uk/audition/45368",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "People that speak an ASIAN Language wanted for You Tube Shoot. Tuesday 10th November. London. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: People that speak an ASIAN Language wanted for You Tube Shoot. Tuesday 10th November. London. Paid We're looking for Cast that speak an Asian language to be featured in a You Tube video game show 'Guess the Language'. This will be a speaking/interactive role. Filming will be on Tuesday 10th November in London. Payment is £150 for up to 5 hours of filming. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: London Payment: £150 Check Commission Rates Job category: You Tube Age: 25+ Shoot Date: 10/11/2026 Posted: N/A Deadline 11/11/2026 This is an open posting Create a New Free Profile or",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.138567+00:00",
+      "collected_at": "2026-11-01T21:16:48.558506+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3500,23 +3592,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
+        "gender": "Female only",
         "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "fee_as_stated": "£150"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140511+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372960+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "d159f90d2e7270c0",
       "title": "NIGHT SHOOT - Supporting Artists Aged 18+ Required for Commercial Shoot Sunday 8th November. Paid",
-      "category": "Commercial",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "category": "Editorial",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3524,10 +3617,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45365",
       "url": "https://www.talenttalks.co.uk/audition/45365",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "NIGHT SHOOT - Supporting Artists Aged 18+ Required for Commercial Shoot Sunday 8th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: NIGHT SHOOT - Supporting Artists Aged 18+ Required for Commercial Shoot Sunday 8th November. Paid THIS IS A NIGHT SHOOT, PLEASE ONLY APPLY IF YOU ARE OK WITH THIS. We are looking for supporting artists aged 18+ for a commercial shoot on Sunday 8th November. East London location (parking AVAILABLE) This shoot may finish when public transport isn’t running, so only apply if you can drive or will be ok arranging transport. Payment £250 Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: East London Payment: £250 Check Commission Rates Job category: Commercial Age: 18+ Shoot Date: 08/11/2026 Posted: N/A Deadline 08/11/2026 Apply For This Job Other jobs you may be interested in Mother And Baby Aged 30-55 For NHS Campaign On 3rd-4th And 17th-17th Of November Paid £150 Will Be Across Two Of Those Dates View This Job Female aged 70+ wanted for Fashion Photoshoot. Sunday 8th November. Paid £3000 Please read full brief View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testimonials Contact Us T: 0844 887 0610 E: castings@ta",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.138770+00:00",
+      "collected_at": "2026-11-01T21:16:50.972131+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3535,23 +3628,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "gender": "Female only",
+        "age_range": "30–55",
+        "fee_as_stated": "£250"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140514+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372963+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "1313d5873e9adc91",
       "title": "Supporting Artists Aged 18+ Required for Commercial Shoot Saturday 7th November. Paid",
-      "category": "Commercial",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "category": "Editorial",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3559,10 +3653,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45364",
       "url": "https://www.talenttalks.co.uk/audition/45364",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Supporting Artists Aged 18+ Required for Commercial Shoot Saturday 7th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Supporting Artists Aged 18+ Required for Commercial Shoot Saturday 7th November. Paid We are looking for supporting artists aged 18+ for a commercial shoot on Saturday 7th November. London location (NO parking) Payment £140 Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: London, Kingston Payment: £140 Check Commission Rates Job category: Commercial Age: 18+ Shoot Date: 07/11/2026 Posted: N/A Deadline 07/11/2026 Apply For This Job Other jobs you may be interested in Young Looking Male aged 12-18 wanted for Fashion Photoshoot. Sunday 8th November. Paid £3000 Please read full brief View This Job CHILD CASTING // Girl aged 6-8 required for supermarket social content piece. Wednesday 11th November. Paid £550 Wednesday 11th November View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testimonials Contact Us T: 0844 887 0610 E: castings@talenttalks.co.uk Company No: 07665982 Talent Talks Ltd 3 Mills Studio London E3 3DU © 2026 Talent Talks Terms & Conditions | Cookies Site by WeSolutions Login Register © 2026 Talent Talks",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.138942+00:00",
+      "collected_at": "2026-11-01T21:16:53.545029+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3570,23 +3664,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "gender": "Female only",
+        "age_range": "12–18",
+        "fee_as_stated": "£140"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140516+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372967+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "cec9a392dab7c32c",
       "title": "Supporting Artists Aged 18+ Required for Commercial Shoot Friday 6th November. Paid",
-      "category": "Commercial",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "category": "Editorial",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3594,10 +3689,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45363",
       "url": "https://www.talenttalks.co.uk/audition/45363",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Supporting Artists Aged 18+ Required for Commercial Shoot Friday 6th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Supporting Artists Aged 18+ Required for Commercial Shoot Friday 6th November. Paid We are looking for supporting artists aged 18+ for a commercial shoot on Friday 6th November. London location (NO parking) Payment £140 Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: London Payment: £140 Check Commission Rates Job category: Commercial Age: 18+ Shoot Date: 06/11/2026 Posted: N/A Deadline 06/11/2026 Apply For This Job Other jobs you may be interested in Cast aged 20-50 wanted for Fashion Photoshoot. Sunday 8th November. Paid £3000 Please read full brief View This Job St Leonards On Sea // Local SA's wanted for Pub Scene. Monday 2nd November. Paid Please read full brief View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testimonials Contact Us T: 0844 887 0610 E: castings@talenttalks.co.uk Company No: 07665982 Talent Talks Ltd 3 Mills Studio London E3 3DU © 2026 Talent Talks Terms & Conditions | Cookies Site by WeSolutions Login Register © 2026 Talent Talks",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139098+00:00",
+      "collected_at": "2026-11-01T21:16:56.241708+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3605,23 +3700,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "age_range": "20–50",
+        "fee_as_stated": "£140"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140519+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372970+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "42b61afc863817c0",
       "title": "Supporting Artists Aged 18+ Required for Commercial Shoot Thursday 5th November. Paid",
       "category": "Commercial",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3629,10 +3725,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45362",
       "url": "https://www.talenttalks.co.uk/audition/45362",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Supporting Artists Aged 18+ Required for Commercial Shoot Thursday 5th November. Paid | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Supporting Artists Aged 18+ Required for Commercial Shoot Thursday 5th November. Paid We are looking for supporting artists aged 18+ for a commercial shoot on Thursday 5th November. London location (NO parking) Payment £140 Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members. Details Location: London Payment: £140 Check Commission Rates Job category: Commercial Age: 18+ Shoot Date: 05/11/2026 Posted: N/A Deadline 05/11/2026 Apply For This Job Other jobs you may be interested in Mother And Baby Walk-On Role Aged 25-45 For NHS Campaign On 3rd-4th And 17th-17th Of November Paid £250 Will Be Across Two Of Those Dates View This Job St Leonards On Sea // Local SA's wanted for Pub Scene. Monday 2nd November. Paid Please read full brief View This Job Contact us via social media Share. Connect. Inspire. Follow And Tag Us On Our Socials #TTFamily #TalentTalks X (formerly Twitter) Facebook YouTube Instagram About Us About Us Meet The Team News Privacy Policy Work History Work History Recent Shoots Showreels Testimonials Contact Us T: 0844 887 0610 E: castings@talenttalks.co.uk Company No: 07665982 Talent Talks Ltd 3 Mills Studio London E3 3DU © 2026 Talent Talks Terms & Conditions | Cookies Site by WeSolutions Login Register © 2026 Talent Talks",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139243+00:00",
+      "collected_at": "2026-11-01T21:16:58.836465+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3640,23 +3736,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Not specified",
-        "age_range": "Not specified",
-        "fee_as_stated": "Not specified"
+        "age_range": "25–45",
+        "fee_as_stated": "£140"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140522+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372973+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "ca5ae68da0e0a3fc",
       "title": "Hispanic Looking Male aged 65+ wanted for Featured Role. w/c 30th November. Paid £1750",
-      "category": "Other",
-      "compensation": "Unknown",
-      "location": "Location TBC",
+      "category": "Commercial",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3664,10 +3761,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45359",
       "url": "https://www.talenttalks.co.uk/audition/45359",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "Hispanic Looking Male aged 65+ wanted for Featured Role. w/c 30th November. Paid &pound;1750 | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: Hispanic Looking Male aged 65+ wanted for Featured Role. w/c 30th November. Paid £1750 We're looking for a Hispanic/Latino looking Male aged 65+ to be featured in a pharmaceutical shoot. This is a featured speaking role. We're looking for someone that can speak in an Amercian accent. Filming will be one day w/c 30th November in London. Date still TBC. Payment is £500 for the shoot and £1250 usage for 2 years TVC and online usage including socials. Please apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: London Payment: £1750 Check Commission Rates Job category: Ad Campaign Age: 65+ Shoot Date: 30/",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139465+00:00",
+      "collected_at": "2026-11-01T21:17:01.101943+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3675,23 +3772,24 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
         "gender": "Male only",
-        "age_range": "Not specified",
+        "age_range": "2–7",
         "fee_as_stated": "£1750"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140525+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372977+00:00",
+      "opportunity_type": "Acting / Extras",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "4d6f899e7fe06f17",
       "title": "LIVERPOOL Based Male Aged 18-30 For Sports Brand Shoot On Either 9th-10th Or 11th Of November Paid £160",
-      "category": "Other",
-      "compensation": "Unknown",
-      "location": "Liverpool",
+      "category": "Model casting",
+      "compensation": "Paid",
+      "location": "London",
       "deadline": null,
       "source": "Talent Talks — Current Auditions",
       "discovery_source": "Talent Talks — Current Auditions",
@@ -3699,10 +3797,10 @@
       "source_platform": "web",
       "source_url": "https://www.talenttalks.co.uk/audition/45358",
       "url": "https://www.talenttalks.co.uk/audition/45358",
-      "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
+      "description": "LIVERPOOL Based Male Aged 18-30 For Sports Brand Shoot On Either 9th-10th Or 11th Of November Paid &pound;160 | Audition | Talent Talks X (formerly Twitter) Facebook YouTube Instagram Login Register Login Register Home About us Meet The Team Latest News Events Work History Recent Shoots Showreels Testimonials Production Pro ID Footballers Post A Job Production Enquiries Cast Categories Chitless Self Audition System Production Register Current Jobs Help & FAQs FAQs Contact Us Share this job: LIVERPOOL Based Male Aged 18-30 For Sports Brand Shoot On Either 9th-10th Or 11th Of November Paid £160 We're casting for a Male aged 18-30 for a SA role in Liverpool for a Sports brand. MUST BE LOCAL TO LIVERPOOL Location: Liverpool On either 9th-10th or 11th of November Paid £140 for 9+1 hour working day Please Apply! Payment is subject to Talent Talks commission, this being 15% for subscribed Talent Talks members and 20% for non-subscribed Talent Talks members. This is an OPEN POST, so anyone can apply. If you are a subscribed member or you have a profile already you will be able to apply for this job post. If you do not have a profile with us, not a problem, at all. All you need to do is follow the below instructions: Click here and this will allow you to create a profile, please add your photos to it and complete the profile as much as possible. Please then make sure you APPLY for this job post. So you'll need to find it on the jobs page and APPLY. You MUST apply for the job AFTER creating a profile if you are new to the Talent Talks website. Details Location: Liverpool Payment: £160 Check Commission Rates Job category: SA's Age: 18-30 Gender: Male Shoot Date: 09/11/2026 Posted: N/A Deadline 11/11/2026 This is an open posting Create a New Free Profile or Apply For This Job Other",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139622+00:00",
+      "collected_at": "2026-11-01T21:17:03.372146+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3710,16 +3808,17 @@
       "review_status": "needs_review",
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "detail_page_checked": false,
+      "detail_page_checked": true,
       "detail_fetch_error": null,
       "casting_requirements": {
-        "gender": "Not specified",
+        "gender": "Female only",
         "age_range": "18–30",
         "fee_as_stated": "£160"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140528+00:00",
-      "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "last_seen_at": "2026-11-01T21:17:03.372979+00:00",
+      "opportunity_type": "Modelling casting",
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 1
     },
     {
       "id": "40936d5a71f37d26",
@@ -3737,7 +3836,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139771+00:00",
+      "collected_at": "2026-11-01T21:17:03.372359+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3752,9 +3851,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140531+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372981+00:00",
       "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "19dd05bbf1b15483",
@@ -3772,7 +3872,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.139934+00:00",
+      "collected_at": "2026-11-01T21:17:03.372482+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3787,9 +3887,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140534+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372984+00:00",
       "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "cb731be14739b92b",
@@ -3807,7 +3908,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.140095+00:00",
+      "collected_at": "2026-11-01T21:17:03.372607+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3822,9 +3923,10 @@
         "age_range": "20–35",
         "fee_as_stated": "£3500"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140537+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372986+00:00",
       "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "4ef2cc6f36814ddf",
@@ -3842,7 +3944,7 @@
       "description": "Listing discovered on the source's public index page. Open the original brief to check details.",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:12:05.140306+00:00",
+      "collected_at": "2026-11-01T21:17:03.372775+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3857,9 +3959,10 @@
         "age_range": "Not specified",
         "fee_as_stated": "Not specified"
       },
-      "last_seen_at": "2026-11-01T21:12:05.140540+00:00",
+      "last_seen_at": "2026-11-01T21:17:03.372989+00:00",
       "opportunity_type": "Other",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "01a9071bfc414639",
@@ -3877,7 +3980,7 @@
       "description": "The MiLK Collective London — fashion, curve and digital talent · London · United Kingdom · Apply to The MiLK Collective in London for fashion, curve, broadcast…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:41.383437+00:00",
+      "collected_at": "2026-11-01T21:15:52.077157+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3892,9 +3995,10 @@
       },
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "last_seen_at": "2026-11-01T21:10:53.851947+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079037+00:00",
       "opportunity_type": "Potential modelling work",
-      "opportunity_type_confidence": "Review"
+      "opportunity_type_confidence": "Review",
+      "detail_fetch_attempts": 0
     },
     {
       "id": "ce46edb8a19d02ca",
@@ -3912,7 +4016,7 @@
       "description": "Curvy Kate: lingerie and swimwear fit models, 30D–44K · Ickenham · United Kingdom · Curvy Kate seeks lingerie and swimwear fit models near London in bra sizes…",
       "published_at": null,
       "added": "2026-11-01",
-      "collected_at": "2026-11-01T21:10:48.458070+00:00",
+      "collected_at": "2026-11-01T21:15:52.078636+00:00",
       "status": "New",
       "saved": false,
       "demo": false,
@@ -3927,9 +4031,10 @@
       },
       "application_method": "Check the original brief for application instructions",
       "also_seen_at": [],
-      "last_seen_at": "2026-11-01T21:10:53.851967+00:00",
+      "last_seen_at": "2026-11-01T21:15:58.079059+00:00",
       "opportunity_type": "Modelling casting",
-      "opportunity_type_confidence": "High"
+      "opportunity_type_confidence": "High",
+      "detail_fetch_attempts": 0
     }
   ],
   "errors": [],
