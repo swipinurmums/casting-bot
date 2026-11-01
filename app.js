@@ -20,19 +20,63 @@ function profileFormOpen(){
  $("#profile-dialog").showModal();
 }
 function matchFor(item){
- const text=[item.title,item.description,item.source,item.category].join(" ").toLowerCase(),location=(item.location||"").toLowerCase();
- const flags=[];let score=0,review=false,unsuitable=false;
- if(/\b(nude|nudity|implied nude|artistic nude)\b/.test(text)){unsuitable=true;flags.push("Nudity is outside your stated boundaries");}
- if(/\b(underwear|lingerie)\b/.test(text)){review=true;flags.push("Underwear brief requires individual approval");}
- if(/\b(female only|women only|woman only|girls only)\b/.test(text)&&/male/i.test(profile.gender||"")){unsuitable=true;flags.push("Brief appears to specify a different gender category");}
- const interests=[[/\b(swimwear|swimsuit|beachwear)\b/,"swimwear","Swimwear interest"],[/\b(beauty|skincare|skin care|cosmetic)\b/,"beauty","Beauty/skincare interest"],[/\b(jewellery|jewelry|watch|accessories)\b/,"jewellery","Jewellery/accessories interest"],[/\b(fitness|sportswear|gym|activewear)\b/,"fitness","Fitness interest"],[/\b(editorial|fashion|runway|lookbook)\b/,"fashion","Fashion/editorial interest"],[/\b(commercial|campaign|e-commerce|ecommerce|advert)\b/,"commercial","Commercial-work interest"]];
- for(const [pattern,key,label] of interests){if(pattern.test(text)){if(profile[key]){score++;flags.push("Matches "+label);}else review=true;}}
- if(location){if(/manchester|london|birmingham/i.test(location)){score++;flags.push("Preferred location");}else{review=true;flags.push(/uk|remote/i.test(location)?"Check travel arrangements":"Check travel cost against fee");}}else{review=true;flags.push("Location not specified");}
- if(item.compensation==="Paid")score++;else if(item.compensation==="Unknown"){review=true;flags.push("Compensation not confirmed");}
- if(!item.description||!item.url){review=true;flags.push("Brief or application details need checking");}
- if(unsuitable)return {label:"Not suitable",className:"not-suitable",reason:flags.join(" · ")};
- if(review||score<2)return {label:"Possible match",className:"possible-match",reason:flags.join(" · ")||"Check the full brief before applying"};
- return {label:"Strong match",className:"strong-match",reason:flags.join(" · ")};
+ const text=[item.title,item.description,item.source,item.category].join(" ").toLowerCase();
+ const location=(item.location||"").toLowerCase();
+ const flags=[];let score=0,review=false;
+ // Only use clear, explicit incompatibilities for a "Not suitable" result.
+ if(/\\b(nudity|nude modelling|nude modeling|nude model|full nude|implied nude|artistic nude)\\b/.test(text)){
+   return {label:"Not suitable",className:"not-suitable",reason:"Nudity is outside your stated boundaries"};
+ }
+ if(/\\b(female only|women only|woman only|girls only)\\b/.test(text)&&/male/i.test(profile.gender||"")){
+   return {label:"Not suitable",className:"not-suitable",reason:"Brief explicitly specifies a different gender category"};
+ }
+ // Compare age only when both the profile and listing give a recognisable range.
+ const profileAges=(String(profile.ageRange||"").match(/\\d{1,2}/g)||[]).map(Number);
+ const listingAgeMatch=text.match(/(?:ages?|aged)\\s*(\\d{1,2})\\s*(?:-|–|—|to|through)\\s*(\\d{1,2})|(?:\\b\\d{1,2})\\s*(?:-|–|—|to)\\s*(\\d{1,2})\\s*(?:years? old|year-old)/i);
+ if(profileAges.length>=2&&listingAgeMatch){
+   const min=Number(listingAgeMatch[1]||listingAgeMatch[3]),max=Number(listingAgeMatch[2]||listingAgeMatch[4]);
+   if(max<Math.min(...profileAges)||min>Math.max(...profileAges)){
+     return {label:"Not suitable",className:"not-suitable",reason:"Stated casting age range does not overlap your profile"};
+   }
+   score++;flags.push("Casting age range overlaps your profile");
+ } else if(/\\b(over 18|18\\+|adult models?)\\b/i.test(text)){
+   score++;flags.push("Adult casting");
+ }
+ if(/\\b(underwear|lingerie)\\b/.test(text)){
+   review=true;flags.push("Underwear brief requires your individual approval");
+ }
+ const interests=[
+  [/\\b(swimwear|swimsuit|beachwear)\\b/,"swimwear","Swimwear"],
+  [/\\b(beauty|skincare|skin care|cosmetic)\\b/,"beauty","Beauty/skincare"],
+  [/\\b(jewellery|jewelry|watch|accessories)\\b/,"jewellery","Jewellery/accessories"],
+  [/\\b(fitness|sportswear|gym|activewear)\\b/,"fitness","Fitness"],
+  [/\\b(editorial|fashion|runway|lookbook)\\b/,"fashion","Fashion/editorial"],
+  [/\\b(commercial|campaign|e-commerce|ecommerce|advert)\\b/,"commercial","Commercial"]
+ ];
+ for(const [pattern,key,label] of interests){
+   if(pattern.test(text)&&profile[key]){score++;flags.push("Matches your "+label+" interest");}
+ }
+ // Use the user's travel preferences where possible; don't penalise unknown or incomplete locations.
+ const preferredPlaces=(String(profile.travel||"")+" "+String(profile.base||"Manchester")).toLowerCase();
+ const preferred=/manchester|london|birmingham/.test(preferredPlaces)?preferredPlaces:"manchester london birmingham "+preferredPlaces;
+ if(location){
+   if(/manchester|london|birmingham/.test(location)&&preferred.includes(location.match(/manchester|london|birmingham/)[0])){
+     score++;flags.push("Preferred location");
+   } else if(/uk|remote|nationwide/.test(location)){
+     review=true;flags.push("Check travel arrangements");
+   } else {
+     review=true;flags.push("Check travel cost against the fee");
+   }
+ } else {
+   review=true;flags.push("Location not specified");
+ }
+ // Compensation and missing listing details affect due diligence, not personal suitability.
+ if(item.compensation==="Paid")flags.push("Paid opportunity");
+ else if(item.compensation==="Unknown")flags.push("Compensation not stated — check the original brief");
+ if(!item.description||!item.url)flags.push("Some brief/application details are missing");
+ if(review)return {label:"Possible match",className:"possible-match",reason:flags.join(" · ")||"Worth checking against the full brief"};
+ if(score>0)return {label:"Strong match",className:"strong-match",reason:flags.join(" · ")};
+ return {label:"Possible match",className:"possible-match",reason:flags.join(" · ")||"No clear mismatch found — review the full brief"};
 }
 
 async function loadDiscoveredOpportunities(){
