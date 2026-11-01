@@ -248,28 +248,37 @@
       "id": "web-modelmanagement-uk",
       "name": "ModelManagement — UK Castings",
       "url": "https://www.modelmanagement.com/castings/united-kingdom/",
-      "group": "opportunity_repost",
       "collection": "manual_review",
       "platform": "web",
-      "enabled": true
+      "enabled": true,
+      "source_group": "opportunity_repost",
+      "type": "listing_board",
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
     },
     {
       "id": "web-backstage-uk",
       "name": "Backstage — UK Modelling Castings",
       "url": "https://www.backstage.com/casting/open-casting-calls/london-uk-model-male/",
-      "group": "opportunity_repost",
       "collection": "manual_review",
       "platform": "web",
-      "enabled": true
+      "enabled": true,
+      "source_group": "opportunity_repost",
+      "type": "listing_board",
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
     },
     {
       "id": "web-models-direct-jobs",
       "name": "Models Direct — Job Board",
       "url": "https://www.modelsdirect.com/modelling-jobs",
-      "group": "opportunity_repost",
       "collection": "manual_review",
       "platform": "web",
-      "enabled": true
+      "enabled": true,
+      "source_group": "opportunity_repost",
+      "type": "listing_board",
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
     }
   ]
 }
