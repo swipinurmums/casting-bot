@@ -1,28 +1,7 @@
 {
-  "updated_at": "2026-11-01T16:16:38.786Z",
-  "source_count": 5,
+  "updated_at": "2026-11-01T18:35:51.538183+00:00",
+  "source_count": 8,
   "opportunities": [
-    {
-      "id": "curated-casting-london-wellness-models-2026-11",
-      "title": "Wellness supplement campaign — models and real people",
-      "category": "Commercial",
-      "compensation": "Paid",
-      "location": "Remote / UK-wide",
-      "deadline": null,
-      "source": "Casting London",
-      "source_platform": "web",
-      "source_url": "https://castinglondon.co.uk/castings",
-      "url": "https://castinglondon.co.uk/castings",
-      "description": "Casting for men and women aged 18+ for a UK wellness brand launch campaign. Experienced models and real people welcome. Rate listed as £500 per shooting day; location is UK, to be confirmed; shoot dates are expected in mid-November. The casting page stated it was closing in 6 days when checked on 1 November 2026. Open the original board and verify that it is still accepting applications, the exact deadline, usage terms and travel arrangements before applying.",
-      "published_at": null,
-      "collected_at": "2026-11-01T16:15:00+00:00",
-      "added": "2026-11-01",
-      "status": "New",
-      "saved": false,
-      "demo": false,
-      "collection_method": "manual_curated",
-      "application_method": "Open Casting London's listing and confirm the campaign is still accepting applications"
-    },
     {
       "id": "curated-mm-menswear-styling-leyton-2026-11",
       "title": "Menswear styling test & social content shoot",
@@ -127,6 +106,27 @@
       "demo": false,
       "collection_method": "manual_curated",
       "application_method": "Message the photographer through the casting listing"
+    },
+    {
+      "id": "curated-casting-london-wellness-models-2026-11",
+      "title": "Wellness supplement campaign — models and real people",
+      "category": "Commercial",
+      "compensation": "Paid",
+      "location": "Remote / UK-wide",
+      "deadline": null,
+      "source": "Casting London",
+      "source_platform": "web",
+      "source_url": "https://castinglondon.co.uk/castings",
+      "url": "https://castinglondon.co.uk/castings",
+      "description": "Casting for men and women aged 18+ for a UK wellness brand launch campaign. Experienced models and real people welcome. Rate listed as £500 per shooting day; location is UK, to be confirmed; shoot dates are expected in mid-November. The casting page stated it was closing in 6 days when checked on 1 November 2026. Open the original board and verify that it is still accepting applications, the exact deadline, usage terms and travel arrangements before applying.",
+      "published_at": null,
+      "collected_at": "2026-11-01T16:15:00+00:00",
+      "added": "2026-11-01",
+      "status": "New",
+      "saved": false,
+      "demo": false,
+      "collection_method": "manual_curated",
+      "application_method": "Open Casting London's listing and confirm the campaign is still accepting applications"
     }
   ],
   "errors": []
