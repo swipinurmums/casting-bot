@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01T20:10:35.433312+00:00",
-  "source_count": 0,
+  "updated_at": "2026-11-01T20:16:40.649934+00:00",
+  "source_count": 12,
   "opportunities": [
     {
       "id": "curated-mm-menswear-styling-leyton-2026-11",
@@ -172,5 +172,54 @@
     }
   ],
   "errors": [],
-  "feed_stats": []
+  "feed_stats": [
+    {
+      "source": "Male model castings — UK",
+      "leads": 0
+    },
+    {
+      "source": "Model opportunities — Manchester",
+      "leads": 0
+    },
+    {
+      "source": "Paid modelling opportunities — UK",
+      "leads": 0
+    },
+    {
+      "source": "Model agency open calls — UK",
+      "leads": 0
+    },
+    {
+      "source": "Models Direct — indexed casting leads",
+      "leads": 0
+    },
+    {
+      "source": "3Light Talent — casting leads",
+      "leads": 0
+    },
+    {
+      "source": "Talent Talks — indexed audition leads",
+      "leads": 0
+    },
+    {
+      "source": "UK model wanted notices",
+      "leads": 0
+    },
+    {
+      "source": "UK fashion casting calls",
+      "leads": 0
+    },
+    {
+      "source": "UK model photoshoot opportunities",
+      "leads": 0
+    },
+    {
+      "source": "Models Direct — indexed job listings",
+      "leads": 0
+    },
+    {
+      "source": "3Light Talent — indexed model castings",
+      "leads": 0
+    }
+  ]
 }
