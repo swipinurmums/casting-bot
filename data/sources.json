@@ -243,6 +243,33 @@
       "enabled": true,
       "verification_status": "public_listing_page_seen",
       "notes": "Public regional casting archive with modelling and screen opportunities. Manual review only; do not automate collection without checking permission and site terms."
+    },
+    {
+      "id": "web-modelmanagement-uk",
+      "name": "ModelManagement — UK Castings",
+      "url": "https://www.modelmanagement.com/castings/united-kingdom/",
+      "group": "opportunity_repost",
+      "collection": "manual_review",
+      "platform": "web",
+      "enabled": true
+    },
+    {
+      "id": "web-backstage-uk",
+      "name": "Backstage — UK Modelling Castings",
+      "url": "https://www.backstage.com/casting/open-casting-calls/london-uk-model-male/",
+      "group": "opportunity_repost",
+      "collection": "manual_review",
+      "platform": "web",
+      "enabled": true
+    },
+    {
+      "id": "web-models-direct-jobs",
+      "name": "Models Direct — Job Board",
+      "url": "https://www.modelsdirect.com/modelling-jobs",
+      "group": "opportunity_repost",
+      "collection": "manual_review",
+      "platform": "web",
+      "enabled": true
     }
   ]
 }
