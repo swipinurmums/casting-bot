@@ -254,9 +254,10 @@ def fetch_html_listings(source: dict) -> list[dict]:
     base_host = urlparse(final_url).netloc.lower().removeprefix("www.")
     seen = set()
     results = []
+    source_id = source.get("id", "")
     for href, title in parser.links:
         title = re.sub(r"\s+", " ", html.unescape(title)).strip()
-        if not title or len(title) < 10 or len(title) > 180:
+        if not title or len(title) < 10 or len(title) > 260:
             continue
         if title.casefold() in NAV_LABELS or not LISTING_HINTS.search(title):
             continue
@@ -266,6 +267,21 @@ def fetch_html_listings(source: dict) -> list[dict]:
             continue
         link_host = parsed_link.netloc.lower().removeprefix("www.")
         if link_host != base_host or link.rstrip("/") == final_url.rstrip("/"):
+            continue
+        path = parsed_link.path.rstrip("/").lower()
+        allowed = {
+            "web-tools-for-models-uk": path.startswith("/en/casting/"),
+            "web-casting-london": path == "/castings" or path.startswith("/castings/"),
+            "web-casting-calls-uk-manchester": bool(re.search(r"/20\d{2}/\d{2}/", path)),
+            "web-modelmanagement-uk": path.startswith("/casting/") and not any(x in path for x in ("digital-twins", "model-academy")),
+            "web-talentmanagement-jobs": path.startswith("/search/job/"),
+            "web-talent-talks-auditions": bool(re.fullmatch(r"/audition/\d+", path)),
+        }
+        if source_id in allowed and not allowed[source_id]:
+            continue
+        if re.search(r"/(become-a-model|hire-a-model|hire-models|talent-directory|agencies?)(/|$)", path):
+            continue
+        if re.search(r"\b(sign.?up|register|become a model|hire a model|model academy|post a casting|digital twins?)\b", title, re.I):
             continue
         canonical = clean_url(link)
         if not canonical or canonical in seen:
@@ -281,6 +297,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
             "deadline": None,
             "source": source.get("name", "Public listing page"),
             "discovery_source": source.get("name", "HTML discovery"),
+            "source_id": source_id,
             "source_platform": source.get("platform", "web"),
             "source_url": canonical,
             "url": canonical,
