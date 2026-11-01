@@ -354,6 +354,18 @@
       "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS domain-restricted discovery query for 3Light Talent. Coverage depends on search indexing; not a direct feed or guarantee of new listings."
+    },
+    {
+      "id": "web-talent-talks-auditions",
+      "name": "Talent Talks — Current Auditions",
+      "platform": "web",
+      "url": "https://www.talenttalks.co.uk/audition/category/All/",
+      "type": "casting_board",
+      "source_group": "opportunity_repost",
+      "collection": "manual_review",
+      "enabled": true,
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public current auditions board. Individual briefs checked manually; automated ingestion not configured."
     }
   ]
 }
