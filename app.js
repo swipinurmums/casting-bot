@@ -283,7 +283,7 @@ $("#opportunity-list").addEventListener("change",event=>{
   const item=opportunities.find(x=>x.id===select.dataset.status);
   if(item){item.status=select.value;if(select.value==="Saved")item.saved=true;persist();render();}
 });
-["search","category-filter","pay-filter","location-filter","sort-filter"].forEach(id=>$("#"+id).addEventListener("input",render));
+["search","category-filter","type-filter","pay-filter","location-filter","sort-filter"].forEach(id=>$("#"+id).addEventListener("input",render));
 document.querySelectorAll(".nav-item[data-view]").forEach(btn=>btn.addEventListener("click",()=>{currentView=btn.dataset.view;currentCategory="";render();}));
 document.querySelectorAll(".category-link").forEach(btn=>btn.addEventListener("click",()=>{currentView="all";currentCategory=btn.dataset.category;$("#category-filter").value="";render();}));
 document.addEventListener("keydown",event=>{if((event.metaKey||event.ctrlKey)&&event.key.toLowerCase()==="k"){event.preventDefault();$("#search").focus();}});
