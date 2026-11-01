@@ -105,7 +105,7 @@ def category(text: str) -> str:
     lower = text.lower()
     if re.search(r"\b(creator community|content creator|influencer campaign|influencer|ugc creator|user.generated content)\b", lower):
         return "Creator / Influencer"
-    if re.search(r"\b(agency application|apply to (?:the )?agency|model representation|join (?:the )?agency|new faces application)\b", lower):
+    if re.search(r"\b(agency application|apply to (?:the )?agency|apply as a model|model and curve applications|model applications|model representation|join (?:the )?agency|new faces application)\b", lower):
         return "Agency application"
     if any(word in lower for word in ("runway", "catwalk", "fashion week")):
         return "Runway"
@@ -598,6 +598,8 @@ def main() -> None:
         label, confidence = opportunity_type(combined)
         item["opportunity_type"] = label
         item["opportunity_type_confidence"] = confidence
+        if item.get("collection_method") == "html_scrape":
+            item["category"] = category(combined)
 
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
