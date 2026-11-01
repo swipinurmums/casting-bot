@@ -84,6 +84,23 @@ def compensation(text: str) -> str:
         return "Paid"
     return "Unknown"
 
+def opportunity_type(text: str) -> tuple[str, str]:
+    lower = text.lower()
+    # Classify by the actual work being requested, not simply fashion-related words.
+    if re.search(r"\\b(creator community|content creator|ugc creator|user.generated content|influencer campaign|influencer|social media creator|tiktok creator|instagram creator)\\b", lower):
+        return "Creator campaign", "High"
+    if re.search(r"\\b(model agency|agency application|apply to (?:the )?(?:model )?agency|model representation|join (?:the )?(?:model )?agency|new faces application|become a model)\\b", lower):
+        return "Agency application", "High"
+    if re.search(r"\\b(extra(?:s)?|supporting artist|background artist|background actor|actor casting|acting role|speaking role|voice.?over casting)\\b", lower):
+        return "Acting / Extras", "High"
+    if re.search(r"\\b(promo(?:tional)? staff|promotional model|brand ambassador|event staff|event host|sampling staff|product demonstrator)\\b", lower):
+        return "Promotional / Events", "High"
+    if re.search(r"\\b(model casting|casting call for models?|models? wanted|model wanted|fit model|fit models|model search|open call for models?|looking for (?:male |female )?models?|seeking (?:male |female )?models?)\\b", lower):
+        return "Modelling casting", "High"
+    if re.search(r"\\b(model|models|modelling|modeling|casting|castings|fashion|editorial|lookbook)\\b", lower):
+        return "Potential modelling work", "Review"
+    return "Other", "Review"
+
 def category(text: str) -> str:
     lower = text.lower()
     if re.search(r"\b(creator community|content creator|influencer campaign|influencer|ugc creator|user.generated content)\b", lower):
@@ -151,8 +168,11 @@ def fetch_feed(source: dict) -> list[dict]:
             continue
         publisher = child_text(node, ("source",))
         stable = hashlib.sha256(link.lower().encode()).hexdigest()[:16]
+        type_label, type_confidence = opportunity_type(combined_text)
         results.append({
             "id": stable,
+            "opportunity_type": type_label,
+            "opportunity_type_confidence": type_confidence,
             "title": title[:180],
             "category": category(combined),
             "compensation": compensation(combined),
@@ -571,6 +591,14 @@ def main() -> None:
         except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
             scrape_stats.append({"source": source.get("name", source.get("id")), "leads": 0, "status": "skipped_or_error", "detail": str(exc)[:250]})
             errors.append({"source": source.get("name", source.get("id")), "error": str(exc)[:300]})
+    # Backfill type labels across retained records too, without dropping or rewriting
+    # their original category, compensation, review status, or user tracking fields.
+    for item in collected.values():
+        combined = " ".join(str(item.get(key, "")) for key in ("title", "description", "source", "category"))
+        label, confidence = opportunity_type(combined)
+        item["opportunity_type"] = label
+        item["opportunity_type_confidence"] = confidence
+
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "source_count": len(active_feeds) + len(active_pages),
