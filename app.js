@@ -124,7 +124,7 @@ async function loadDiscoveredOpportunities(){
       const local = localById.get(item.id) || {};
       return {...item, status:local.status || "New", saved:local.saved || false, demo:false};
     });
-    const manualItems = localItems.filter(item=>!item.demo && !remoteItems.some(remote=>remote.id===item.id));
+    const manualItems = localItems.filter(item=>!item.demo && item.collection_method!=="rss_discovery" && !remoteItems.some(remote=>remote.id===item.id));
     opportunities = remoteItems.concat(manualItems);
     if(!remoteItems.length && !manualItems.length) opportunities = localItems;
     persist();
