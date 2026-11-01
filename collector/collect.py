@@ -180,7 +180,16 @@ def main() -> None:
                 collected[item["id"]] = item
     except (OSError, ValueError, KeyError):
         pass
-    # Import minimal metadata leads published by the user-authorised Gmail bridge.\n    # These remain unverified until the original casting brief is checked.\n    try:\n        email_payload = json.loads(EMAIL_LEADS_FILE.read_text(encoding="utf-8"))\n        for item in email_payload.get("leads", []):\n            if item.get("id"):\n                collected[item["id"]] = item\n    except (OSError, ValueError):\n        pass\n    active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
+    # Import minimal metadata leads published by the user-authorised Gmail bridge.
+    # These remain unverified until the original casting brief is checked.
+    try:
+        email_payload = json.loads(EMAIL_LEADS_FILE.read_text(encoding="utf-8"))
+        for item in email_payload.get("leads", []):
+            if item.get("id"):
+                collected[item["id"]] = item
+    except (OSError, ValueError):
+        pass
+    active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
     feed_stats = []
     for source in active_feeds:
         try:
