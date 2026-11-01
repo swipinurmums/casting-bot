@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "data" / "sources.json"
 OUTPUT_FILE = ROOT / "data" / "opportunities.json"
 USER_AGENT = "ModellingOpportunityRadar/0.1 (+https://github.com/swipinurmums/casting-bot)"
-OPPORTUNITY_TITLE = re.compile(r"(?=.*\\b(?:models?|modelling|modeling)\\b)(?=.*\\b(?:casting|cast|wanted|needed|looking|seeking|call|search|campaign|shoot|lookbook|photoshoot|audition|jobs?|opportunities)\\b)", re.I)
+OPPORTUNITY_TITLE = re.compile(r"(?=.*\b(?:models?|modelling|modeling)\b)(?=.*\b(?:casting|cast|wanted|needed|looking|seeking|call|search|campaign|shoot|lookbook|photoshoot|audition|jobs?|opportunities)\b)", re.I)
 MAX_AGE_DAYS = 45
 PAID = re.compile(r"(?:£\s?\d|\bpaid\b|\bfee\b|\brate\b|\bday rate\b|\bsalary\b|\bremuneration\b)", re.I)
 TFP = re.compile(r"\b(TFP|time for prints?|time for print)\b", re.I)
