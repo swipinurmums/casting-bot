@@ -301,6 +301,23 @@ def extract_jsonld_text(parser: DetailPageParser) -> str:
             continue
     return " ".join(values)
 
+def detail_compensation(text: str) -> str:
+    # Avoid treating generic footer/site copy as proof that a casting is paid.
+    if EXPENSES.search(text):
+        return "Expenses only"
+    if TFP.search(text):
+        return "TFP"
+    if UNPAID.search(text):
+        return "Unpaid"
+    explicit_paid = re.search(
+        r"\b(paid\s+(?:modelling|modeling|shoot|casting|campaign|role|work|job)|"
+        r"(?:modelling|modeling|shoot|casting|campaign|role|work|job)\s+is\s+paid|"
+        r"(?:fee|rate|payment|remuneration)\s*(?:of|:)?\s*£?\s*\d|"
+        r"£\s?\d+(?:,\d{3})*(?:\.\d{1,2})?\s*(?:per|/)\s*(?:hour|day|session))\b",
+        text, re.I
+    )
+    return "Paid" if explicit_paid else "Unknown"
+
 def extract_deadline(text: str) -> str | None:
     patterns = [
         r"(?:casting\s+ends|apply\s+by|application\s+deadline|deadline|closing\s+date|closes)\s*:?\s*(\d{1,2}\s+[A-Za-z]+\s+20\d{2})",
@@ -378,6 +395,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
     seen = set()
     results = []
     source_id = source.get("id", "")
+    detail_pages_checked = 0
     for href, title in parser.links:
         title = re.sub(r"\s+", " ", html.unescape(title)).strip()
         if not title or len(title) < 10 or len(title) > 260:
@@ -413,6 +431,9 @@ def fetch_html_listings(source: dict) -> list[dict]:
         stable = hashlib.sha256(canonical.lower().encode()).hexdigest()[:16]
         detail = {}
         detail_error = ""
+        if detail_pages_checked >= 8:
+            continue
+        detail_pages_checked += 1
         try:
             detail = fetch_detail_page(canonical)
             time.sleep(1.0)
@@ -442,7 +463,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
             "id": stable,
             "title": title[:180],
             "category": category(combined_text),
-            "compensation": compensation(combined_text),
+            "compensation": detail_compensation(detail_text) if detail else "Unknown",
             "location": location(combined_text),
             "deadline": extract_deadline(combined_text),
             "source": source.get("name", "Public listing page"),
