@@ -124,7 +124,14 @@ async function loadDiscoveredOpportunities(){
       const local = localById.get(item.id) || {};
       return {...item, status:local.status || "New", saved:local.saved || false, demo:false};
     });
-    const manualItems = localItems.filter(item=>!item.demo && item.collection_method!=="rss_discovery" && !remoteItems.some(remote=>remote.id===item.id));
+    const isObsoleteNewsLead = item => {
+      const links = [item.url, item.source_url].filter(Boolean).join(" ").toLowerCase();
+      const id = String(item.id || "").toLowerCase();
+      return item.collection_method === "rss_discovery" ||
+        links.includes("news.google.com/rss/") ||
+        id.startsWith("rss-") || id.startsWith("google-news-");
+    };
+    const manualItems = localItems.filter(item=>!item.demo && !isObsoleteNewsLead(item) && !remoteItems.some(remote=>remote.id===item.id));
     opportunities = remoteItems.concat(manualItems);
     if(!remoteItems.length && !manualItems.length) opportunities = localItems;
     persist();
