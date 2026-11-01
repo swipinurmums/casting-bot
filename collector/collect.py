@@ -7,13 +7,14 @@ paywalls, robots rules, or source terms. Add only feeds whose use is permitted.
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import os
 import re
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urlparse, urlunparse
@@ -22,7 +23,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "data" / "sources.json"
 OUTPUT_FILE = ROOT / "data" / "opportunities.json"
 USER_AGENT = "ModellingOpportunityRadar/0.1 (+https://github.com/swipinurmums/casting-bot)"
-KEYWORDS = ("model", "modelling", "modeling", "casting", "fashion", "editorial", "campaign", "runway", "lookbook", "photoshoot", "photographer", "brand ambassador", "fit model")
+OPPORTUNITY_TITLE = re.compile(r"\b(casting call|open call|model call|model search|model wanted|models wanted|model needed|models needed|looking for (?:male |female |new )?models?|seeking (?:male |female |new )?models?|fit model|model recruitment|new faces|talent search)\b", re.I)
+MAX_AGE_DAYS = 45
 PAID = re.compile(r"(?:£\s?\d|\bpaid\b|\bfee\b|\brate\b|\bday rate\b|\bsalary\b|\bremuneration\b)", re.I)
 TFP = re.compile(r"\b(TFP|time for prints?|time for print)\b", re.I)
 UNPAID = re.compile(r"\b(unpaid|voluntary|volunteer)\b", re.I)
@@ -125,11 +127,20 @@ def fetch_feed(source: dict) -> list[dict]:
         title = child_text(node, ("title",))
         summary = child_text(node, ("description", "summary", "content", "encoded"))
         link = clean_url(entry_link(node))
-        published = child_text(node, ("pubdate", "published", "updated", "date"))
-        body = re.sub(r"<[^>]+>", " ", summary)
+        published_raw = child_text(node, ("pubdate", "published", "updated", "date"))
+        published_at = parse_date(published_raw)
+        body = html.unescape(re.sub(r"<[^>]+>", " ", summary))
         combined = " ".join((title, body))
-        if not title or not link or not any(k in combined.lower() for k in KEYWORDS):
+        # Search feeds can contain unrelated stories about models. Keep only
+        # recent titles that clearly describe a casting/recruitment opportunity.
+        if not title or not link or not OPPORTUNITY_TITLE.search(title):
             continue
+        if not published_at:
+            continue
+        published_dt = datetime.fromisoformat(published_at.replace("Z", "+00:00"))
+        if datetime.now(timezone.utc) - published_dt > timedelta(days=MAX_AGE_DAYS):
+            continue
+        publisher = child_text(node, ("source",))
         stable = hashlib.sha256(link.lower().encode()).hexdigest()[:16]
         results.append({
             "id": stable,
@@ -138,12 +149,13 @@ def fetch_feed(source: dict) -> list[dict]:
             "compensation": compensation(combined),
             "location": location(combined),
             "deadline": None,
-            "source": source.get("name", "Unknown source"),
+            "source": publisher or source.get("name", "Unknown source"),
+            "discovery_source": source.get("name", "RSS discovery"),
             "source_platform": source.get("platform", "web"),
             "source_url": link,
             "url": link,
             "description": re.sub(r"\s+", " ", body).strip()[:900],
-            "published_at": parse_date(published),
+            "published_at": published_at,
             "collected_at": datetime.now(timezone.utc).isoformat(),
             "status": "New",
             "saved": False,
