@@ -21,59 +21,93 @@ function profileFormOpen(){
 }
 function matchFor(item){
  const text=[item.title,item.description,item.source,item.category].join(" ").toLowerCase();
- const location=(item.location||"").toLowerCase();
+ const location=String(item.location||"").toLowerCase();
  const flags=[];let score=0,review=false;
- // Only use clear, explicit incompatibilities for a "Not suitable" result.
- if(/\\b(nudity|nude modelling|nude modeling|nude model|full nude|implied nude|artistic nude)\\b/.test(text)){
+ const profileGender=String(profile.gender||"").toLowerCase();
+
+ // Only explicit exclusions create an automatic mismatch.
+ if(/\b(nudity|nude modelling|nude modeling|nude model|full nude|implied nude|artistic nude)\b/.test(text)){
    return {label:"Not suitable",className:"not-suitable",reason:"Nudity is outside your stated boundaries"};
  }
- if(/\\b(female only|women only|woman only|girls only)\\b/.test(text)&&/male/i.test(profile.gender||"")){
-   return {label:"Not suitable",className:"not-suitable",reason:"Brief explicitly specifies a different gender category"};
+ if(/\b(female only|women only|woman only|girls only|female models only|models must be female)\b/.test(text)&&/\bmale\b/.test(profileGender)){
+   return {label:"Not suitable",className:"not-suitable",reason:"Brief explicitly specifies female models"};
  }
- // Compare age only when both the profile and listing give a recognisable range.
- const profileAges=(String(profile.ageRange||"").match(/\\d{1,2}/g)||[]).map(Number);
- const listingAgeMatch=text.match(/(?:ages?|aged)\\s*(\\d{1,2})\\s*(?:-|–|—|to|through)\\s*(\\d{1,2})|(?:\\b\\d{1,2})\\s*(?:-|–|—|to)\\s*(\\d{1,2})\\s*(?:years? old|year-old)/i);
- if(profileAges.length>=2&&listingAgeMatch){
-   const min=Number(listingAgeMatch[1]||listingAgeMatch[3]),max=Number(listingAgeMatch[2]||listingAgeMatch[4]);
+
+ // Recognise common age formats: ages 25–35, aged 25 to 35, 25-35 years old.
+ const profileAges=(String(profile.ageRange||"").match(/\d{1,2}/g)||[]).map(Number);
+ const agePatterns=[
+   /\b(?:ages?|aged)\s*(\d{1,2})\s*(?:-|–|—|to|through)\s*(\d{1,2})\b/i,
+   /\b(\d{1,2})\s*(?:-|–|—|to)\s*(\d{1,2})\s*(?:years? old|year-old)\b/i
+ ];
+ let ageMatch=null;
+ for(const pattern of agePatterns){ageMatch=text.match(pattern);if(ageMatch)break;}
+ if(profileAges.length>=2&&ageMatch){
+   const min=Number(ageMatch[1]),max=Number(ageMatch[2]);
    if(max<Math.min(...profileAges)||min>Math.max(...profileAges)){
      return {label:"Not suitable",className:"not-suitable",reason:"Stated casting age range does not overlap your profile"};
    }
    score++;flags.push("Casting age range overlaps your profile");
- } else if(/\\b(over 18|18\\+|adult models?)\\b/i.test(text)){
+ } else if(/\b(over 18|18\+|adult models?)\b/i.test(text)){
    score++;flags.push("Adult casting");
+ } else if(profileAges.length>=2){
+   review=true;flags.push("Casting age requirement not explicit");
  }
- if(/\\b(underwear|lingerie)\\b/.test(text)){
+
+ if(/\b(underwear|lingerie)\b/.test(text)){
    review=true;flags.push("Underwear brief requires your individual approval");
  }
+
  const interests=[
-  [/\\b(swimwear|swimsuit|beachwear)\\b/,"swimwear","Swimwear"],
-  [/\\b(beauty|skincare|skin care|cosmetic)\\b/,"beauty","Beauty/skincare"],
-  [/\\b(jewellery|jewelry|watch|accessories)\\b/,"jewellery","Jewellery/accessories"],
-  [/\\b(fitness|sportswear|gym|activewear)\\b/,"fitness","Fitness"],
-  [/\\b(editorial|fashion|runway|lookbook)\\b/,"fashion","Fashion/editorial"],
-  [/\\b(commercial|campaign|e-commerce|ecommerce|advert)\\b/,"commercial","Commercial"]
+  [/\b(swimwear|swimsuit|beachwear)\b/,"swimwear","Swimwear"],
+  [/\b(beauty|skincare|skin care|cosmetic)\b/,"beauty","Beauty/skincare"],
+  [/\b(jewellery|jewelry|watch|accessories)\b/,"jewellery","Jewellery/accessories"],
+  [/\b(fitness|sportswear|gym|activewear)\b/,"fitness","Fitness"],
+  [/\b(editorial|fashion|runway|lookbook|menswear)\b/,"fashion","Fashion/editorial"],
+  [/\b(commercial|campaign|e-commerce|ecommerce|advert|brand shoot)\b/,"commercial","Commercial"]
  ];
  for(const [pattern,key,label] of interests){
    if(pattern.test(text)&&profile[key]){score++;flags.push("Matches your "+label+" interest");}
  }
- // Use the user's travel preferences where possible; don't penalise unknown or incomplete locations.
+
+ // Location is a suitability consideration, not an automatic rejection.
  const preferredPlaces=(String(profile.travel||"")+" "+String(profile.base||"Manchester")).toLowerCase();
- const preferred=/manchester|london|birmingham/.test(preferredPlaces)?preferredPlaces:"manchester london birmingham "+preferredPlaces;
+ const preferredCities=["manchester","london","birmingham"].filter(city=>preferredPlaces.includes(city));
  if(location){
-   if(/manchester|london|birmingham/.test(location)&&preferred.includes(location.match(/manchester|london|birmingham/)[0])){
-     score++;flags.push("Preferred location");
-   } else if(/uk|remote|nationwide/.test(location)){
-     review=true;flags.push("Check travel arrangements");
+   const city=["manchester","london","birmingham"].find(name=>location.includes(name));
+   if(city&&preferredCities.includes(city)){score++;flags.push("Preferred location");}
+   else if(/\b(uk|remote|nationwide| england|scotland|wales)\b/.test(location)){
+     review=true;flags.push("Check travel arrangements and expenses");
    } else {
      review=true;flags.push("Check travel cost against the fee");
    }
  } else {
    review=true;flags.push("Location not specified");
  }
- // Compensation and missing listing details affect due diligence, not personal suitability.
- if(item.compensation==="Paid")flags.push("Paid opportunity");
- else if(item.compensation==="Unknown")flags.push("Compensation not stated — check the original brief");
+
+ // Measurements: never reject based on an ambiguous or unparseable measurement.
+ // Explicit requirements are surfaced for manual comparison until units/garment conventions are clear.
+ const measurementTerms=[
+   [/\b(height|tall|cm high|feet tall)\b/,"height"],
+   [/\b(waist)\b/,"waist"],
+   [/\b(chest|bust)\b/,"chest"],
+   [/\b(hips?)\b/,"hips"],
+   [/\b(neck)\b/,"neck"],
+   [/\b(shoe size|footwear size)\b/,"shoe"]
+ ];
+ for(const [pattern,key] of measurementTerms){
+   if(pattern.test(text)&&String(profile[key]||"").trim()){
+     review=true;flags.push("Check stated "+key+" requirement against your measurements");
+   }
+ }
+
+ if(/\b(expenses (?:are )?covered|travel expenses (?:are )?covered|travel reimbursed|travel reimbursement)\b/i.test(text)){
+   flags.push("Travel expenses stated as covered");
+ } else if(item.compensation==="Paid"){
+   flags.push("Paid opportunity");
+ }
+ if(item.compensation==="Unknown")flags.push("Compensation not stated — check the original brief");
  if(!item.description||!item.url)flags.push("Some brief/application details are missing");
+
  if(review)return {label:"Possible match",className:"possible-match",reason:flags.join(" · ")||"Worth checking against the full brief"};
  if(score>0)return {label:"Strong match",className:"strong-match",reason:flags.join(" · ")};
  return {label:"Possible match",className:"possible-match",reason:flags.join(" · ")||"No clear mismatch found — review the full brief"};
