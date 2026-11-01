@@ -279,6 +279,81 @@
       "type": "listing_board",
       "verification_status": "public_listing_page_seen",
       "notes": "Public casting/job board added for manual review. Individual listings must be checked for current status, eligibility, application route and site terms; no automated scraping configured."
+    },
+    {
+      "id": "web-3light-uk-casting-directory",
+      "name": "3Light Talent — UK Casting Directory",
+      "platform": "web",
+      "url": "https://www.3lighttalent.co.uk/casting-directory",
+      "type": "listing_board",
+      "source_group": "opportunity_repost",
+      "collection": "manual_review",
+      "enabled": true,
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public UK casting directory with modelling, commercial and other talent categories. Review each listing for suitability, pay, deadline and application route; no automated scraping configured."
+    },
+    {
+      "id": "web-fashiondb-open-castings",
+      "name": "FashionDB — Agency Open Castings",
+      "platform": "web",
+      "url": "https://fashiondb.com/open-castings",
+      "type": "open_call_directory",
+      "source_group": "model_agency",
+      "collection": "manual_review",
+      "enabled": true,
+      "verification_status": "public_listing_page_seen",
+      "notes": "Directory of agency open calls and walk-in information. Check the agency's own page or post before applying; no automated scraping configured."
+    },
+    {
+      "id": "web-talentmanagement-jobs",
+      "name": "Talent Management — Modelling Jobs",
+      "platform": "web",
+      "url": "https://www.talentmanagement.com/search/jobs",
+      "type": "listing_board",
+      "source_group": "opportunity_repost",
+      "collection": "manual_review",
+      "enabled": true,
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public modelling jobs search page with UK briefs. Check the individual brief for age, location, compensation, deadline and application route; no automated scraping configured."
+    },
+    {
+      "id": "google-news-models-direct",
+      "name": "Models Direct — indexed casting leads",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Amodelsdirect.com%2Fmodelling-jobs%20(model%20OR%20models)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Google News RSS domain-restricted discovery query for Models Direct listings. Search indexing is not guaranteed; all leads must be checked against the original brief."
+    },
+    {
+      "id": "google-news-backstage-models",
+      "name": "Backstage — model casting leads",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3Abackstage.com%2Fcasting%20(model%20OR%20models)%20UK%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Google News RSS domain-restricted discovery query for Backstage casting pages. Search indexing is not guaranteed; check original listing and application requirements."
+    },
+    {
+      "id": "google-news-3light-castings",
+      "name": "3Light Talent — casting leads",
+      "platform": "web",
+      "type": "rss_feed",
+      "source_group": "opportunity_repost",
+      "url": "https://news.google.com/",
+      "feed_url": "https://news.google.com/rss/search?q=site%3A3lighttalent.co.uk%2Fcasting-directory%20(model%20OR%20modelling%20OR%20commercial)%20when%3A30d&hl=en-GB&gl=GB&ceid=GB:en",
+      "collection": "rss_atom",
+      "enabled": true,
+      "verification_status": "public_rss_search_feed",
+      "notes": "Google News RSS domain-restricted discovery query for 3Light Talent. Coverage depends on search indexing; not a direct feed or guarantee of new listings."
     }
   ]
 }
