@@ -431,14 +431,13 @@ def fetch_html_listings(source: dict) -> list[dict]:
         stable = hashlib.sha256(canonical.lower().encode()).hexdigest()[:16]
         detail = {}
         detail_error = ""
-        if detail_pages_checked >= 8:
-            continue
-        detail_pages_checked += 1
-        try:
-            detail = fetch_detail_page(canonical)
-            time.sleep(1.0)
-        except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
-            detail_error = str(exc)[:180]
+        if detail_pages_checked < 8:
+            detail_pages_checked += 1
+            try:
+                detail = fetch_detail_page(canonical)
+                time.sleep(1.0)
+            except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
+                detail_error = str(exc)[:180]
         detail_text = detail.get("content", "")
         combined_text = " ".join((title, detail_text))
         description = detail.get("description") or "Listing discovered on the source's public index page. Open the original brief to check details."
@@ -496,7 +495,7 @@ def main() -> None:
     try:
         previous = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
         for item in previous.get("opportunities", []):
-            if item.get("collection_method") == "manual_curated":
+            if item.get("collection_method") in ("manual_curated", "html_scrape"):
                 collected[item["id"]] = item
     except (OSError, ValueError, KeyError):
         pass
@@ -538,7 +537,14 @@ def main() -> None:
                     collected[key] = item
                     collected[key]["also_seen_at"] = []
                 else:
-                    collected[key].setdefault("also_seen_at", []).append({"source": item["source"], "url": item["source_url"]})
+                    previous_item = collected[key]
+                    merged_item = {**previous_item, **item}
+                    if item.get("detail_page_checked") is not True and previous_item.get("detail_page_checked") is True:
+                        for field in ("title", "description", "location", "compensation", "deadline", "casting_requirements", "application_method", "detail_page_checked", "detail_fetch_error"):
+                            if field in previous_item:
+                                merged_item[field] = previous_item[field]
+                    merged_item["last_seen_at"] = datetime.now(timezone.utc).isoformat()
+                    collected[key] = merged_item
         except (urllib.error.URLError, TimeoutError, ValueError, PermissionError) as exc:
             scrape_stats.append({"source": source.get("name", source.get("id")), "leads": 0, "status": "skipped_or_error", "detail": str(exc)[:250]})
             errors.append({"source": source.get("name", source.get("id")), "error": str(exc)[:300]})
