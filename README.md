@@ -11,7 +11,7 @@ The first version is a static website designed for GitHub Pages. It includes:
 - Saved opportunities and application statuses
 - Manual opportunity entry with quick capture from pasted casting captions/briefs
 - A source directory spanning Instagram accounts, independent casting directories, agency open-call directories and UK casting boards
-- Eight Google News RSS discovery queries, including domain-restricted searches for Models Direct, Backstage and 3Light Talent
+- Targeted Google News RSS discovery queries for UK model castings, agency open calls and indexed listings from selected casting sources
 - Basic extraction of likely title, category, compensation, location, deadline and links from pasted text
 - Optional Gmail notification intake via a user-authorised Google Apps Script bridge (metadata and links only; manual review required)\n- Browser-local persistence using localStorage
 - Private modelling profile editor (profile details remain in the current browser)
@@ -31,7 +31,7 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Important current limitations
 
-- The discovery pipeline checks eight Google News RSS search feeds every three hours. Three are domain-restricted discovery queries for Models Direct, Backstage and 3Light Talent. These are search-index leads, not direct integrations or verified castings; indexing is not guaranteed. Always check the original publisher, eligibility, compensation, deadlines and application route. Results may be irrelevant, duplicated or stale.
+- The discovery pipeline checks 12 targeted Google News RSS search feeds every three hours. These are search-index leads, not direct integrations or verified castings; indexing is not guaranteed. The collector filters titles for explicit casting/recruitment language and keeps recent results only, but false positives and missed opportunities remain possible. Always check the original publisher, eligibility, compensation, deadlines and application route. Backstage remains excluded from automated collection because its terms prohibit automated access tools.
 - ToolsForModels, FashionDB, Talent Management, Models Direct, Backstage, 3Light Talent and other directory/social sources are also listed for manual review. They are not yet individually crawled or synchronised into the feed.
 - Instagram accounts are registered for manual review; arbitrary third-party Stories are not available through the standard Instagram API, so the project does not scrape them.
 - Manually entered opportunities and the modelling profile are stored in the current browser only. They are not synced across devices.
