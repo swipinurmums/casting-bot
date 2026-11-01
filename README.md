@@ -10,7 +10,7 @@ The first version is a static website designed for GitHub Pages. It includes:
 - Search and filters for category, compensation and location
 - Saved opportunities and application statuses
 - Manual opportunity entry with quick capture from pasted casting captions/briefs
-- Public source directory covering 11 user-supplied Instagram accounts and two UK casting boards
+- Public source directory covering user-supplied Instagram accounts, UK casting boards and five Google News RSS discovery queries
 - Basic extraction of likely title, category, compensation, location, deadline and links from pasted text
 - Browser-local persistence using localStorage
 - Private modelling profile editor (profile details remain in the current browser)
@@ -30,7 +30,7 @@ Open `index.html` in a browser. No build step or package installation is require
 
 ## Important current limitations
 
-- The discovery pipeline supports permitted RSS/Atom feeds, but none are configured yet. The source directory is a research/intake shortlist, not an automatic scraper, so the live feed will remain empty until suitable feeds or authorised integrations are added.
+- The discovery pipeline now checks five Google News RSS search feeds for UK modelling/casting announcements every three hours. These are discovery leads, not verified castings: always check the original publisher, eligibility, compensation, deadlines and application route. Some results may be irrelevant, duplicated or stale. Other boards and Instagram accounts remain manual-review sources unless an authorised feed or integration is available.
 - Instagram accounts are registered for manual review; arbitrary third-party Stories are not available through the standard Instagram API, so the project does not scrape them.
 - Manually entered opportunities and the modelling profile are stored in the current browser only. They are not synced across devices.
 - Profile matching is an early keyword-based heuristic, not a reliable eligibility decision. Always check the original casting brief.
