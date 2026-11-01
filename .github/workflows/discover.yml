@@ -1,0 +1,40 @@
+name: Discover opportunities
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "collector/**"
+      - "data/sources.json"
+      - ".github/workflows/discover.yml"
+  schedule:
+    - cron: "17 */3 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect configured public feeds
+        run: python collector/collect.py
+      - name: Commit updated opportunity feed
+        run: |
+          if git diff --quiet -- data/opportunities.json; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/opportunities.json
+          git commit -m "Refresh discovered opportunities"
+          # Rebase on concurrent website/source edits before pushing the feed update.
+          git pull --rebase origin main
+          git push

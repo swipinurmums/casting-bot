@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="A free-first hub for discovering and tracking modelling opportunities.">
+  <title>Opportunity Radar — Modelling castings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Opportunity Radar home">
+        <span class="brand-mark">R</span>
+        <span><strong>RADAR</strong><small>MODELLING OPPORTUNITIES</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="side-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="all"><span>◫</span> All opportunities <b id="nav-all">0</b></button>
+        <button class="nav-item" data-view="saved"><span>♡</span> Saved <b id="nav-saved">0</b></button>
+        <button class="nav-item" data-view="applied"><span>↗</span> Applied <b id="nav-applied">0</b></button>
+        <button class="nav-item" data-view="new"><span>✳</span> New finds</button>
+      </nav>
+      <div class="side-label category-label">CATEGORIES</div>
+      <nav class="side-nav" aria-label="Opportunity categories">
+        <button class="nav-item category-link" data-category="Fashion"><i class="dot fashion"></i> Fashion</button>
+        <button class="nav-item category-link" data-category="Commercial"><i class="dot commercial"></i> Commercial</button>
+        <button class="nav-item category-link" data-category="Editorial"><i class="dot editorial"></i> Editorial</button>
+        <button class="nav-item category-link" data-category="Runway"><i class="dot runway"></i> Runway</button>
+        <button class="nav-item category-link" data-category="Other"><i class="dot other"></i> Other / TFP</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="free-card"><span class="free-icon">✦</span><strong>Free-first discovery</strong><p>Find the opportunity before paying a platform to show it to you.</p></div>
+        <div class="profile"><div class="avatar">A</div><span><strong>My radar</strong><small>Personal workspace</small></span><span class="profile-dots">···</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumb-view">All opportunities</strong></div>
+        <div class="top-actions"><span class="status-dot"></span><span class="sync-label">Saved in this browser</span><button class="secondary-button profile-open" id="profile-open">My profile</button><button class="icon-button" id="add-open" aria-label="Add opportunity">＋</button></div>
+      </header>
+
+      <section class="page-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR CASTING DESK</div><h1 id="page-title">Find your next <em>opportunity.</em></h1><p class="intro">A single place for castings, campaigns, open calls and creative projects — without juggling subscriptions.</p></div>
+        <button class="primary-button" id="add-open-main">＋ Add opportunity</button>
+      </section>
+
+      <section class="stats-grid" aria-label="Opportunity overview">
+        <article class="stat-card"><div class="stat-top"><span>Total opportunities</span><span class="stat-symbol">◫</span></div><strong id="stat-total">0</strong><small>In your radar</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Free to apply</span><span class="stat-symbol green">↗</span></div><strong id="stat-free">0</strong><small>Free application routes</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Saved</span><span class="stat-symbol pink">♡</span></div><strong id="stat-saved">0</strong><small>Worth a closer look</small></article>
+        <article class="stat-card"><div class="stat-top"><span>Applied</span><span class="stat-symbol violet">✓</span></div><strong id="stat-applied">0</strong><small>Applications tracked</small></article>
+      </section>
+
+      <section class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search roles, brands, locations..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <select id="category-filter" aria-label="Filter by category"><option value="">All categories</option><option>Fashion</option><option>Commercial</option><option>Editorial</option><option>Runway</option><option>Other</option></select>
+        <select id="pay-filter" aria-label="Filter by compensation"><option value="">Any compensation</option><option value="Paid">Paid</option><option value="TFP">TFP</option><option value="Unpaid">Unpaid</option><option value="Expenses only">Expenses only</option><option value="Unknown">Unknown</option></select>
+        <select id="location-filter" aria-label="Filter by location"><option value="">All UK locations</option><option>London</option><option>Manchester</option><option>Birmingham</option><option>Leeds</option><option>Remote / UK-wide</option></select>
+      </section>
+
+      <div class="list-heading"><div><h2 id="list-title">Latest opportunities</h2><p id="result-count">0 results</p></div><select id="sort-filter" aria-label="Sort opportunities"><option value="recent">Recently added</option><option value="deadline">Deadline soon</option><option value="title">Title A–Z</option></select></div>
+      <section class="source-panel"><div class="source-panel-heading"><div><strong>Discovery sources</strong><p>Accounts currently tracked by Radar</p></div><span id="source-count">Loading…</span></div><div id="source-list" class="source-list"><span class="source-loading">Loading source directory…</span></div><p class="source-footnote">Instagram Stories are not automatically collected. Accounts are tracked for permitted public posts, forwarded items or future authorised integrations.</p></section><div class="profile-prompt" id="profile-prompt" hidden><div><strong>Set up your matching profile</strong><p>Add your casting preferences to see personalised suitability checks on each opportunity.</p></div><button class="secondary-button" id="profile-prompt-open" type="button">Create profile</button></div><div class="demo-notice" id="demo-notice"><span>ⓘ</span><span><strong>Preview data:</strong> these example cards demonstrate the dashboard. They are not real or currently open castings. Live discovery is the next build stage.</span></div>
+      <section id="opportunity-list" class="opportunity-list" aria-live="polite"></section>
+      <footer class="footer"><span>RADAR <span class="footer-dot">·</span> Built for independent discovery</span><span id="last-updated">No live source checks yet</span></footer>
+    </main>
+  </div>
+
+
+  <dialog id="profile-dialog" class="modal profile-modal">
+<form id="profile-form" method="dialog">
+<div class="modal-heading"><div><div class="eyebrow">PRIVATE MATCHING PROFILE</div><h2>Your modelling profile</h2></div><button type="button" class="icon-button" id="profile-close" aria-label="Close">×</button></div>
+<p class="modal-intro">Saved in this browser only. These details are not sent to GitHub or included in the opportunity feed.</p>
+<div class="profile-section-title">Casting basics</div>
+<div class="form-row"><label>Gender category<input name="gender" placeholder="e.g. Male"></label><label>Casting age range<input name="ageRange" placeholder="e.g. 18–29"></label></div>
+<div class="form-row"><label>Height<input name="height" placeholder="e.g. 188 cm"></label><label>Base location<input name="base" placeholder="e.g. Manchester"></label></div>
+<label>Travel preferences<textarea name="travel" rows="2" placeholder="Preferred cities, travel-expense requirements and minimum fee for longer trips"></textarea></label>
+<div class="profile-section-title">Measurements</div>
+<div class="form-row"><label>Neck<input name="neck"></label><label>Chest<input name="chest"></label></div>
+<div class="form-row"><label>Waist<input name="waist"></label><label>Hips<input name="hips"></label></div>
+<div class="form-row"><label>Natural waist (separate scout measurement)<input name="naturalWaist"></label><label>Other measurements<input name="otherMeasurements"></label></div>
+<div class="form-row"><label>Sleeve<input name="sleeve"></label><label>Inside leg<input name="insideLeg"></label></div>
+<div class="form-row"><label>Shoe size<input name="shoe"></label></div>
+<div class="profile-section-title">Appearance and experience</div>
+<div class="form-row"><label>Hair<input name="hair"></label><label>Eyes<input name="eyes"></label></div>
+<label>Appearance / styling notes<input name="appearance"></label>
+<div class="form-row"><label>Facial hair / styling<input name="facialHair"></label><label>Tattoos / piercings / other notes<input name="otherAppearance"></label></div>
+<label>Experience level<select name="experience"><option value="">Choose experience level</option><option value="Both">New-face and experienced castings</option><option value="New-face only">New-face only</option><option value="Experienced only">Experienced only</option></select></label>
+<div class="profile-section-title">Work preferences</div>
+<div class="profile-checks"><label><input type="checkbox" name="fashion"> Fashion / editorial</label><label><input type="checkbox" name="swimwear"> Swimwear</label><label><input type="checkbox" name="underwear"> Underwear — review individually</label><label><input type="checkbox" name="fitness"> Fitness / shirtless</label><label><input type="checkbox" name="beauty"> Beauty / skincare</label><label><input type="checkbox" name="jewellery"> Jewellery / close-ups</label><label><input type="checkbox" name="commercial"> Commercial work</label><label><input type="checkbox" disabled> Nudity — not accepted</label></div>
+<div class="modal-actions"><button type="button" class="secondary-button" id="profile-cancel">Cancel</button><button type="submit" class="primary-button">Save private profile</button></div>
+</form></dialog>
+  <dialog id="opportunity-dialog" class="modal">
+    <form id="opportunity-form" method="dialog">
+      <div class="modal-heading"><div><div class="eyebrow">YOUR RADAR</div><h2>Add an opportunity</h2></div><button type="button" class="icon-button close-button" id="add-close" aria-label="Close">×</button></div>
+      <p class="modal-intro">Capture a casting from a public post, Story you have permission to share, email or agency announcement. It will be stored in this browser.</p>
+      <label>Paste the brief or caption<textarea name="rawBrief" rows="4" placeholder="Paste the text from an Instagram post, Story, email or casting page…"></textarea></label>
+      <button type="button" class="secondary-button" id="parse-brief">Fill details from pasted text</button>
+      <p class="capture-hint" id="capture-hint" aria-live="polite">We’ll identify likely details for you to review. Nothing is submitted automatically.</p>
+      <label>Opportunity title<input name="title" required maxlength="120" placeholder="e.g. E-commerce fashion campaign"></label>
+      <div class="form-row"><label>Category<select name="category"><option>Fashion</option><option>Commercial</option><option>Editorial</option><option>Runway</option><option>Other</option></select></label><label>Compensation<select name="compensation"><option>Unknown</option><option>Paid</option><option>TFP</option><option>Unpaid</option><option>Expenses only</option></select></label></div>
+      <div class="form-row"><label>Location<input name="location" placeholder="e.g. Manchester"></label><label>Deadline<input name="deadline" type="date"></label></div>
+      <label>Source / brand<input name="source" placeholder="e.g. Agency name or brand"></label>
+      <label>Application link<input name="url" type="url" placeholder="https://..." required></label>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Requirements, rates, details..."></textarea></label>
+      <div class="modal-actions"><button type="button" class="secondary-button" id="add-cancel">Cancel</button><button type="submit" class="primary-button">Save opportunity</button></div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
