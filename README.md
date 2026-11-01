@@ -13,7 +13,7 @@ The first version is a static website designed for GitHub Pages. It includes:
 - A source directory spanning Instagram accounts, independent casting directories, agency open-call directories and UK casting boards
 - Eight Google News RSS discovery queries, including domain-restricted searches for Models Direct, Backstage and 3Light Talent
 - Basic extraction of likely title, category, compensation, location, deadline and links from pasted text
-- Browser-local persistence using localStorage
+- Optional Gmail notification intake via a user-authorised Google Apps Script bridge (metadata and links only; manual review required)\n- Browser-local persistence using localStorage
 - Private modelling profile editor (profile details remain in the current browser)
 - Initial opportunity-to-profile matching labels with brief explanations
 - Clearly labelled example records (not real casting calls)
@@ -40,7 +40,7 @@ Open `index.html` in a browser. No build step or package installation is require
 - Example cards are fictional UI examples and must not be treated as real casting calls.
 - A public GitHub Pages site must never contain API keys, passwords, private tokens or other secrets.
 
-## Roadmap
+## Gmail notification intake\n\nThe optional bridge is documented in [docs/EMAIL-INGESTION.md](docs/EMAIL-INGESTION.md). It reads only Gmail messages explicitly labelled `Radar/Intake`, publishes minimal metadata and links to `data/email-leads.json`, and triggers the discovery workflow. It does not publish email bodies. Configure the Apps Script and GitHub token yourself; never commit credentials. Email leads remain unverified until the original casting brief is checked.\n\n## Roadmap
 
 1. Verify and prioritise source coverage, including agency sites, independent casting boards and Instagram accounts.
 2. Add more permitted public RSS/Atom feeds and documented API integrations where publishers provide them.
