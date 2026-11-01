@@ -87,17 +87,17 @@ def compensation(text: str) -> str:
 def opportunity_type(text: str) -> tuple[str, str]:
     lower = text.lower()
     # Classify by the actual work being requested, not simply fashion-related words.
-    if re.search(r"\\b(creator community|content creator|ugc creator|user.generated content|influencer campaign|influencer|social media creator|tiktok creator|instagram creator)\\b", lower):
+    if re.search(r"\b(creator community|content creator|ugc creator|user.generated content|influencer campaign|influencer|social media creator|tiktok creator|instagram creator)\b", lower):
         return "Creator campaign", "High"
-    if re.search(r"\\b(model agency|agency application|apply to (?:the )?(?:model )?agency|model representation|join (?:the )?(?:model )?agency|new faces application|become a model)\\b", lower):
+    if re.search(r"\b(model agency|agency application|apply to (?:the )?(?:model )?agency|model representation|join (?:the )?(?:model )?agency|new faces application|become a model|apply as a model)\b", lower):
         return "Agency application", "High"
-    if re.search(r"\\b(extra(?:s)?|supporting artist|background artist|background actor|actor casting|acting role|speaking role|voice.?over casting)\\b", lower):
+    if re.search(r"\b(extra(?:s)?|supporting artist|background artist|background actor|actor casting|acting role|speaking role|voice.?over casting)\b", lower):
         return "Acting / Extras", "High"
-    if re.search(r"\\b(promo(?:tional)? staff|promotional model|brand ambassador|event staff|event host|sampling staff|product demonstrator)\\b", lower):
+    if re.search(r"\b(promo(?:tional)? staff|promotional model|brand ambassador|event staff|event host|sampling staff|product demonstrator)\b", lower):
         return "Promotional / Events", "High"
-    if re.search(r"\\b(model casting|casting call for models?|models? wanted|model wanted|fit model|fit models|model search|open call for models?|looking for (?:male |female )?models?|seeking (?:male |female )?models?)\\b", lower):
+    if re.search(r"\b(model casting|casting call for models?|models? wanted|model wanted|fit model|fit models|model search|open call for models?|looking for (?:male |female )?models?|seeking (?:male |female )?models?)\b", lower):
         return "Modelling casting", "High"
-    if re.search(r"\\b(model|models|modelling|modeling|casting|castings|fashion|editorial|lookbook)\\b", lower):
+    if re.search(r"\b(model|models|modelling|modeling|casting|castings|fashion|editorial|lookbook)\b", lower):
         return "Potential modelling work", "Review"
     return "Other", "Review"
 
