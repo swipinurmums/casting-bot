@@ -231,6 +231,18 @@
       "enabled": true,
       "verification_status": "public_rss_search_feed",
       "notes": "Google News RSS search feed for public UK modelling/casting announcements. Search results require checking against the original publisher; listings may be irrelevant, duplicated, stale or not direct casting calls. Compensation and eligibility must not be inferred."
+    },
+    {
+      "id": "web-casting-calls-uk-manchester",
+      "name": "Casting Calls UK — Manchester",
+      "platform": "web",
+      "url": "https://castingcallsunitedkingdom.com/casting-location/manchester/",
+      "type": "listing_board",
+      "source_group": "opportunity_repost",
+      "collection": "manual_review",
+      "enabled": true,
+      "verification_status": "public_listing_page_seen",
+      "notes": "Public regional casting archive with modelling and screen opportunities. Manual review only; do not automate collection without checking permission and site terms."
     }
   ]
 }
