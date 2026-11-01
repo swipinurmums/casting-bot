@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T18:45:18.051402+00:00",
+  "updated_at": "2026-11-01T19:27:43.144247+00:00",
   "source_count": 13,
   "opportunities": [
     {
@@ -171,59 +171,59 @@
       "application_method": "Open Casting London's listing and confirm the campaign is still accepting applications"
     }
   ],
-  "errors": [
+  "errors": [],
+  "feed_stats": [
     {
       "source": "Male model castings — UK",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Model castings — UK",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Model opportunities — Manchester",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Paid modelling opportunities — UK",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Model agency open calls — UK",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Models Direct — indexed casting leads",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "3Light Talent — casting leads",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Talent Talks — indexed audition leads",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "UK model wanted notices",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "UK fashion casting calls",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "UK model photoshoot opportunities",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "Models Direct — indexed job listings",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     },
     {
       "source": "3Light Talent — indexed model castings",
-      "error": "HTTP Error 503: Service Unavailable"
+      "leads": 0
     }
-  ],
-  "feed_stats": []
+  ]
 }
