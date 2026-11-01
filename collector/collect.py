@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "data" / "sources.json"
 OUTPUT_FILE = ROOT / "data" / "opportunities.json"
 USER_AGENT = "ModellingOpportunityRadar/0.1 (+https://github.com/swipinurmums/casting-bot)"
-OPPORTUNITY_TITLE = re.compile(r"\b(casting call|open call|model call|model search|model wanted|models wanted|model needed|models needed|looking for (?:male |female |new )?models?|seeking (?:male |female |new )?models?|fit model|model recruitment|new faces|talent search)\b", re.I)
+OPPORTUNITY_TITLE = re.compile(r"\b(casting call|open call|model call|model search|model wanted|models wanted|model needed|models needed|looking for (?:male |female |new )?models?|seeking (?:male |female |new )?models?|fit model|model recruitment|new faces|talent search|(?:male|female|men\x27s|women\x27s) model for .{0,70}(?:shoot|campaign|lookbook|photoshoot)|models? for .{0,70}(?:shoot|campaign|lookbook|photoshoot))\b", re.I)
 MAX_AGE_DAYS = 45
 PAID = re.compile(r"(?:£\s?\d|\bpaid\b|\bfee\b|\brate\b|\bday rate\b|\bsalary\b|\bremuneration\b)", re.I)
 TFP = re.compile(r"\b(TFP|time for prints?|time for print)\b", re.I)
@@ -167,6 +167,14 @@ def main() -> None:
     config = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     collected: dict[str, dict] = {}
     errors = []
+    # Preserve manually verified entries while refreshing automated RSS results.
+    try:
+        previous = json.loads(OUTPUT_FILE.read_text(encoding="utf-8"))
+        for item in previous.get("opportunities", []):
+            if item.get("collection_method") == "manual_curated":
+                collected[item["id"]] = item
+    except (OSError, ValueError, KeyError):
+        pass
     active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
     for source in active_feeds:
         try:
