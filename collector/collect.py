@@ -35,6 +35,8 @@ CITY_PATTERNS = [
     ("Birmingham", r"\bBirmingham\b"), ("Leeds", r"\bLeeds\b"),
     ("Liverpool", r"\bLiverpool\b"), ("Bristol", r"\bBristol\b"),
     ("Glasgow", r"\bGlasgow\b"), ("Edinburgh", r"\bEdinburgh\b"),
+    ("Brighton", r"\bBrighton\b"), ("Chesterfield", r"\bChesterfield\b"),
+    ("Harrogate", r"\bHarrogate\b"), ("Norwich", r"\bNorwich\b"),
     ("Remote / UK-wide", r"\b(remote|UK[- ]wide|nationwide|anywhere in the UK)\b")
 ]
 
@@ -84,14 +86,20 @@ def compensation(text: str) -> str:
 
 def category(text: str) -> str:
     lower = text.lower()
+    if re.search(r"\b(creator community|content creator|influencer campaign|influencer|ugc creator|user.generated content)\b", lower):
+        return "Creator / Influencer"
+    if re.search(r"\b(agency application|apply to (?:the )?agency|model representation|join (?:the )?agency|new faces application)\b", lower):
+        return "Agency application"
     if any(word in lower for word in ("runway", "catwalk", "fashion week")):
         return "Runway"
     if any(word in lower for word in ("editorial", "magazine", "photographer", "photoshoot", "photo shoot")):
         return "Editorial"
     if any(word in lower for word in ("commercial", "campaign", "e-commerce", "ecommerce", "brand ambassador", "lookbook")):
         return "Commercial"
-    if any(word in lower for word in ("fashion", "designer", "clothing", "garment")):
+    if any(word in lower for word in ("fashion", "designer", "clothing", "garment", "fit model")):
         return "Fashion"
+    if re.search(r"\b(model|models|modelling|modeling|casting|castings)\b", lower):
+        return "Model casting"
     return "Other"
 
 def location(text: str) -> str:
@@ -237,6 +245,7 @@ class DetailPageParser(HTMLParser):
         self.title_parts = []
         self.h1_parts = []
         self.text_parts = []
+        self._skip_depth = 0
         self.meta = {}
         self.jsonld = []
         self._capture = None
@@ -245,6 +254,11 @@ class DetailPageParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         tag = tag.lower()
+        if tag in ("nav", "footer", "header", "aside", "script", "style", "noscript"):
+            self._skip_depth += 1
+            return
+        if self._skip_depth:
+            return
         if tag == "meta":
             key = (attrs.get("property") or attrs.get("name") or attrs.get("itemprop") or "").lower()
             value = attrs.get("content", "").strip()
@@ -252,28 +266,27 @@ class DetailPageParser(HTMLParser):
                 self.meta[key] = value
         elif tag == "title":
             self._capture = "title"
-        elif tag in ("h1", "h2"):
-            self._capture = tag
-        elif tag == "script" and "ld+json" in attrs.get("type", "").lower():
-            self._capture = "jsonld"
-            self._script_type = "jsonld"
+        elif tag == "h1":
+            self._capture = "h1"
 
     def handle_data(self, data):
+        if self._skip_depth:
+            return
         value = " ".join(data.split())
         if not value:
             return
         self.text_parts.append(value)
         if self._capture == "title":
             self.title_parts.append(value)
-        elif self._capture in ("h1", "h2"):
+        elif self._capture == "h1":
             self.h1_parts.append(value)
-        elif self._capture == "jsonld":
-            self.jsonld.append(data)
 
     def handle_endtag(self, tag):
-        if tag.lower() in ("title", "h1", "h2", "script"):
+        tag = tag.lower()
+        if tag in ("nav", "footer", "header", "aside", "script", "style", "noscript") and self._skip_depth:
+            self._skip_depth -= 1
+        if tag in ("title", "h1"):
             self._capture = None
-            self._script_type = ""
 
 def extract_jsonld_text(parser: DetailPageParser) -> str:
     values = []
@@ -301,6 +314,12 @@ def extract_jsonld_text(parser: DetailPageParser) -> str:
             continue
     return " ".join(values)
 
+def clean_listing_title(value: str) -> str:
+    value = html.unescape(re.sub(r"\s+", " ", value or "")).strip(" -|·")
+    value = re.split(r"\s+(?:The assignment|Compensation|How to apply|Explore and prepare)\b", value, maxsplit=1, flags=re.I)[0]
+    value = re.sub(r"\s*[|·•–—-]\s*(?:The assignment|Compensation|How to apply|Explore and prepare).*?$", "", value, flags=re.I)
+    return value.strip(" -|·•")[:180]
+
 def detail_compensation(text: str) -> str:
     # Avoid treating generic footer/site copy as proof that a casting is paid.
     if EXPENSES.search(text):
@@ -310,10 +329,10 @@ def detail_compensation(text: str) -> str:
     if UNPAID.search(text):
         return "Unpaid"
     explicit_paid = re.search(
-        r"\b(paid\s+(?:modelling|modeling|shoot|casting|campaign|role|work|job)|"
-        r"(?:modelling|modeling|shoot|casting|campaign|role|work|job)\s+is\s+paid|"
-        r"(?:fee|rate|payment|remuneration)\s*(?:of|:)?\s*£?\s*\d|"
-        r"£\s?\d+(?:,\d{3})*(?:\.\d{1,2})?\s*(?:per|/)\s*(?:hour|day|session))\b",
+        r"(?:\bpaid\s+(?:modelling|modeling|shoot|casting|campaign|role|work|job)|"
+        r"\b(?:modelling|modeling|shoot|casting|campaign|role|work|job)\s+is\s+paid|"
+        r"\b(?:fee|rate|payment|remuneration)\s*(?:of|:)?\s*£?\s*\d|"
+        r"£\s?\d+(?:,\d{3})*(?:\.\d{1,2})?\s*(?:per|/)\s*(?:hour|day|session))",
         text, re.I
     )
     return "Paid" if explicit_paid else "Unknown"
@@ -360,10 +379,14 @@ def fetch_detail_page(url: str) -> dict:
     meta_description = parser.meta.get("description") or parser.meta.get("og:description") or parser.meta.get("twitter:description") or ""
     jsonld_text = extract_jsonld_text(parser)
     combined = " ".join(x for x in (visible, meta_description, jsonld_text) if x)
+    page_title = parser.meta.get("og:title") or parser.meta.get("twitter:title") or " ".join(parser.h1_parts).strip() or " ".join(parser.title_parts).strip()
+    clean_visible = re.sub(r"\s+", " ", visible).strip()
+    clean_visible = re.sub(r"(?i)\b(the assignment|compensation|how to apply|explore and prepare)\b", " ", clean_visible)
+    clean_visible = re.sub(r"\s+", " ", clean_visible).strip()
     return {
         "final_url": clean_url(final_url) or url,
-        "page_title": " ".join(parser.h1_parts).strip() or " ".join(parser.title_parts).strip(),
-        "description": re.sub(r"\s+", " ", meta_description or jsonld_text or visible).strip()[:1800],
+        "page_title": clean_listing_title(page_title),
+        "description": re.sub(r"\s+", " ", meta_description or jsonld_text or clean_visible).strip()[:1800],
         "content": re.sub(r"\s+", " ", combined).strip()[:12000],
         "meta": parser.meta,
     }
@@ -397,7 +420,7 @@ def fetch_html_listings(source: dict) -> list[dict]:
     source_id = source.get("id", "")
     detail_pages_checked = 0
     for href, title in parser.links:
-        title = re.sub(r"\s+", " ", html.unescape(title)).strip()
+        title = clean_listing_title(title)
         if not title or len(title) < 10 or len(title) > 260:
             continue
         if title.casefold() in NAV_LABELS or not LISTING_HINTS.search(title):
@@ -442,8 +465,8 @@ def fetch_html_listings(source: dict) -> list[dict]:
         combined_text = " ".join((title, detail_text))
         description = detail.get("description") or "Listing discovered on the source's public index page. Open the original brief to check details."
         title_from_page = detail.get("page_title", "")
-        if title_from_page and len(title_from_page) >= 8 and len(title_from_page) <= 180:
-            title = title_from_page
+        if title_from_page and len(title_from_page) >= 8:
+            title = clean_listing_title(title_from_page) or title
         gender_requirement = "Female only" if re.search(r"\b(female|women|woman|girls?)\b.{0,35}\b(model|models|required|wanted|needed)\b|\b(model|models)\b.{0,35}\b(female|women|woman|girls?)\b", combined_text, re.I) else (
             "Male only" if re.search(r"\b(male|men|man|boys?)\b.{0,35}\b(model|models|required|wanted|needed)\b|\b(model|models)\b.{0,35}\b(male|men|man|boys?)\b", combined_text, re.I) else "Not specified"
         )
