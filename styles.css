@@ -10,3 +10,5 @@
 .capture-hint{font-size:9px;color:#9298a3;line-height:1.5;margin:8px 0 15px}.modal #parse-brief{margin:0 0 4px}
 
 .demo-notice[hidden]{display:none}.source-dot.automated{background:#9ddc9f}
+
+.application-method{font-size:9px;color:#c6cbd3;margin:0 0 7px;line-height:1.45}.application-method strong{color:var(--lime);font-weight:600}
