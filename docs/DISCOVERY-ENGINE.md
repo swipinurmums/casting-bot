@@ -11,9 +11,9 @@
 
 ## Current collector
 
-`collector/collect.py` reads eight explicitly configured Google News RSS/Atom search feeds. Three use domain-restricted queries for Models Direct, Backstage and 3Light Talent, alongside broader UK and Manchester casting searches. These are search-index discovery leads, not direct publisher feeds or guaranteed coverage. The collector does not crawl arbitrary websites. Add a source only after checking its terms, robots guidance and feed usage permissions.
+`collector/collect.py` reads configured Google News RSS/Atom search feeds, including targeted searches for Talent Talks, Models Direct, 3Light Talent and broader UK model/casting terms. Backstage automated collection is disabled because its Terms of Service expressly prohibit automated access tools. These are search-index discovery leads, not direct publisher feeds or guaranteed coverage. The collector does not crawl arbitrary websites. Add a source only after checking its terms, robots guidance and feed usage permissions.
 
-Other directories currently registered for manual review include ToolsForModels, FashionDB, Talent Management, Models Direct, Backstage and 3Light Talent. A directory appearing in the registry does not mean its listings are automatically collected.
+Other directories currently registered for manual review include ToolsForModels, FashionDB, Talent Management, Models Direct, Backstage and 3Light Talent. A directory appearing in the registry does not mean its listings are automatically collected. RSS results are discovery leads, not verified castings; the dashboard labels them as unverified until the original brief has been checked. Each run logs the number of leads returned by each feed so weak sources can be identified.
 
 Run locally:
 
@@ -46,3 +46,8 @@ Do not use session-cookie scraping, login automation, private endpoints, access-
 - `also_seen_at`: other sources that published the same opportunity
 
 Compensation is only classified from explicit wording. Missing pay information remains Unknown.
+
+
+## Automated discovery boundaries
+
+The collector only reads configured RSS/Atom feeds. It does not crawl arbitrary listing pages. Backstage automated collection is disabled because its Terms of Service expressly prohibit bots and other automatic access tools. Talent Talks and Models Direct are currently discovered via third-party search-index RSS queries, not direct scraping of their websites. This is not guaranteed coverage and does not bypass membership or application restrictions. Direct integrations should be added only after the source provides permission, a documented feed/API, or other clear authorisation.
