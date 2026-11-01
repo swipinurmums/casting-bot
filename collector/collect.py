@@ -156,6 +156,7 @@ def fetch_feed(source: dict) -> list[dict]:
             "url": link,
             "description": re.sub(r"\s+", " ", body).strip()[:900],
             "published_at": published_at,
+            "added": datetime.now(timezone.utc).date().isoformat(),
             "collected_at": datetime.now(timezone.utc).isoformat(),
             "status": "New",
             "saved": False,
