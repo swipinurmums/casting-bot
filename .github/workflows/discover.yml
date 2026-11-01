@@ -6,6 +6,7 @@ on:
     paths:
       - "collector/**"
       - "data/sources.json"
+      - "data/email-leads.json"
       - ".github/workflows/discover.yml"
   schedule:
     - cron: "17 */3 * * *"
