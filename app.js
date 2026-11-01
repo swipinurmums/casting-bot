@@ -131,8 +131,8 @@ async function loadDiscoveredOpportunities(){
         links.includes("news.google.com/rss/") ||
         id.startsWith("rss-") || id.startsWith("google-news-")) return true;
       if(item.collection_method !== "html_scrape") return false;
-      return /fashiondb\\.com|modelsdirect\\.com\\/(hire-a-model|london|become-a-model|norwich-modelling-agency)|3lighttalent\\.co\\.uk\\/talent-directory|castinglondon\\.co\\.uk\\/sign-up|modelmanagement\\.com\\/(castings\\/post|model-academy|digital-twins-for-models)|talentmanagement\\.com\\/hire-a-model/i.test(links) ||
-        /\\b(sign.?up|become a model|hire a model|model academy|post a casting|digital twins?)\\b/i.test(item.title || "");
+      return /fashiondb\.com|modelsdirect\.com\/(hire-a-model|london|become-a-model|norwich-modelling-agency)|3lighttalent\.co\.uk\/talent-directory|castinglondon\.co\.uk\/sign-up|modelmanagement\.com\/(castings\/post|model-academy|digital-twins-for-models)|talentmanagement\.com\/hire-a-model/i.test(links) ||
+        /\b(sign.?up|become a model|hire a model|model academy|post a casting|digital twins?)\b/i.test(item.title || "")
     };
     const manualItems = localItems.filter(item=>!item.demo && !isObsoleteDiscoveryLead(item) && !remoteItems.some(remote=>remote.id===item.id));
     opportunities = remoteItems.concat(manualItems);
