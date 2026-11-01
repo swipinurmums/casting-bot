@@ -124,14 +124,17 @@ async function loadDiscoveredOpportunities(){
       const local = localById.get(item.id) || {};
       return {...item, status:local.status || "New", saved:local.saved || false, demo:false};
     });
-    const isObsoleteNewsLead = item => {
+    const isObsoleteDiscoveryLead = item => {
       const links = [item.url, item.source_url].filter(Boolean).join(" ").toLowerCase();
       const id = String(item.id || "").toLowerCase();
-      return item.collection_method === "rss_discovery" ||
+      if(item.collection_method === "rss_discovery" ||
         links.includes("news.google.com/rss/") ||
-        id.startsWith("rss-") || id.startsWith("google-news-");
+        id.startsWith("rss-") || id.startsWith("google-news-")) return true;
+      if(item.collection_method !== "html_scrape") return false;
+      return /fashiondb\\.com|modelsdirect\\.com\\/(hire-a-model|london|become-a-model|norwich-modelling-agency)|3lighttalent\\.co\\.uk\\/talent-directory|castinglondon\\.co\\.uk\\/sign-up|modelmanagement\\.com\\/(castings\\/post|model-academy|digital-twins-for-models)|talentmanagement\\.com\\/hire-a-model/i.test(links) ||
+        /\\b(sign.?up|become a model|hire a model|model academy|post a casting|digital twins?)\\b/i.test(item.title || "");
     };
-    const manualItems = localItems.filter(item=>!item.demo && !isObsoleteNewsLead(item) && !remoteItems.some(remote=>remote.id===item.id));
+    const manualItems = localItems.filter(item=>!item.demo && !isObsoleteDiscoveryLead(item) && !remoteItems.some(remote=>remote.id===item.id));
     opportunities = remoteItems.concat(manualItems);
     if(!remoteItems.length && !manualItems.length) opportunities = localItems;
     persist();
