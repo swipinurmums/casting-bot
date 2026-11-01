@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T18:35:51.538183+00:00",
+  "updated_at": "2026-11-01T18:39:13.127Z",
   "source_count": 8,
   "opportunities": [
     {
@@ -106,6 +106,48 @@
       "demo": false,
       "collection_method": "manual_curated",
       "application_method": "Message the photographer through the casting listing"
+    },
+    {
+      "id": "curated-modelsdirect-social-campaign-male-kpmz7378",
+      "title": "Male models — social media campaign shoot",
+      "category": "Commercial",
+      "compensation": "Unknown",
+      "location": "UK-wide (location TBC)",
+      "deadline": "2026-11-05",
+      "source": "Models Direct",
+      "source_platform": "web",
+      "source_url": "https://www.modelsdirect.com/modelling-jobs",
+      "url": "https://www.modelsdirect.com/modelling-jobs",
+      "description": "Male models aged 18–30 for a social media campaign shoot on 4–5 November 2026. The public job board lists the fee as TBC (so pay is marked Unknown, not unpaid). Reference KPMZ-7378. The board says applicants need to be Models Direct models; check membership/agency terms, shoot location and usage before proceeding.",
+      "published_at": "2026-11-01T00:00:00+00:00",
+      "added": "2026-11-01",
+      "collected_at": "2026-11-01T18:39:13.112Z",
+      "status": "New",
+      "saved": false,
+      "demo": false,
+      "collection_method": "manual_curated",
+      "application_method": "Apply via Models Direct (existing members sign in; new applicants may need to join the agency)"
+    },
+    {
+      "id": "curated-talenttalks-fashion-campaign-45331",
+      "title": "Fashion campaign — cast aged 20–50",
+      "category": "Commercial",
+      "compensation": "Paid",
+      "location": "London",
+      "deadline": "2026-11-09",
+      "source": "Talent Talks",
+      "source_platform": "web",
+      "source_url": "https://www.talenttalks.co.uk/audition/45331/",
+      "url": "https://www.talenttalks.co.uk/audition/45331/",
+      "description": "Open casting for a luxury fashion brand campaign in London on 8 November 2026. Cast aged 20–50; £3,000 inclusive of one year of all-media usage including print. Talent Talks states a 15% commission for subscribed members or 20% for non-subscribed members. The page says new applicants must create a profile and then apply. Confirm role/gender breakdown, availability, terms and net payment before applying.",
+      "published_at": "2026-11-01T00:00:00+00:00",
+      "added": "2026-11-01",
+      "collected_at": "2026-11-01T18:39:13.115Z",
+      "status": "New",
+      "saved": false,
+      "demo": false,
+      "collection_method": "manual_curated",
+      "application_method": "Create a Talent Talks profile if needed, then apply on the individual audition page"
     },
     {
       "id": "curated-casting-london-wellness-models-2026-11",
