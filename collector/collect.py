@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES_FILE = ROOT / "data" / "sources.json"
 OUTPUT_FILE = ROOT / "data" / "opportunities.json"
 USER_AGENT = "ModellingOpportunityRadar/0.1 (+https://github.com/swipinurmums/casting-bot)"
-OPPORTUNITY_TITLE = re.compile(r"\b(casting call|open call|model call|model search|model wanted|models wanted|model needed|models needed|looking for (?:male |female |new )?models?|seeking (?:male |female |new )?models?|fit model|model recruitment|new faces|talent search|(?:male|female|men\x27s|women\x27s) model for .{0,70}(?:shoot|campaign|lookbook|photoshoot)|models? for .{0,70}(?:shoot|campaign|lookbook|photoshoot))\b", re.I)
+OPPORTUNITY_TITLE = re.compile(r"(?=.*\\b(?:models?|modelling|modeling)\\b)(?=.*\\b(?:casting|cast|wanted|needed|looking|seeking|call|search|campaign|shoot|lookbook|photoshoot|audition|jobs?|opportunities)\\b)", re.I)
 MAX_AGE_DAYS = 45
 PAID = re.compile(r"(?:£\s?\d|\bpaid\b|\bfee\b|\brate\b|\bday rate\b|\bsalary\b|\bremuneration\b)", re.I)
 TFP = re.compile(r"\b(TFP|time for prints?|time for print)\b", re.I)
@@ -160,7 +160,10 @@ def fetch_feed(source: dict) -> list[dict]:
             "collected_at": datetime.now(timezone.utc).isoformat(),
             "status": "New",
             "saved": False,
-            "demo": False
+            "demo": False,
+            "collection_method": "rss_discovery",
+            "review_status": "needs_review",
+            "application_method": "Check the original listing and its eligibility, fee, deadline and application route before applying"
         })
     return results
 
@@ -177,9 +180,12 @@ def main() -> None:
     except (OSError, ValueError, KeyError):
         pass
     active_feeds = [s for s in config.get("sources", []) if s.get("enabled") and s.get("collection") == "rss_atom" and s.get("feed_url")]
+    feed_stats = []
     for source in active_feeds:
         try:
-            for item in fetch_feed(source):
+            feed_items = fetch_feed(source)
+            feed_stats.append({"source": source.get("name", source.get("id")), "leads": len(feed_items)})
+            for item in feed_items:
                 # Same canonical URL from multiple feeds becomes one opportunity;
                 # preserve every discovered source link.
                 key = item["id"]
@@ -194,11 +200,16 @@ def main() -> None:
         "updated_at": datetime.now(timezone.utc).isoformat(),
         "source_count": len(active_feeds),
         "opportunities": sorted(collected.values(), key=lambda x: x.get("published_at") or "", reverse=True),
-        "errors": errors
+        "errors": errors,
+        "feed_stats": feed_stats
     }
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_FILE.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Checked {len(active_feeds)} feed(s); collected {len(collected)} opportunity/ies; {len(errors)} error(s).")
+    for stat in feed_stats:
+        print("  " + stat["source"] + ": " + str(stat["leads"]) + " lead(s)")
+    for error in errors:
+        print("  ERROR " + error["source"] + ": " + error["error"])
 
 if __name__ == "__main__":
     main()
