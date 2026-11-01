@@ -27,18 +27,25 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Collect configured public feeds
-        run: python collector/collect.py
-      - name: Commit updated opportunity feed
+      - name: Collect configured public feeds and safely publish results
         run: |
-          if git diff --quiet -- data/opportunities.json; then
-            echo "No feed changes."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/opportunities.json
-          git commit -m "Refresh discovered opportunities"
-          # Rebase on concurrent website/source edits before pushing the feed update.
-          git pull --rebase origin main
-          git push
+          set -e
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python collector/collect.py
+            if git diff --quiet -- data/opportunities.json; then
+              echo "No feed changes."
+              exit 0
+            fi
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/opportunities.json
+            git commit -m "Refresh discovered opportunities"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push raced with another update; retrying against latest main (attempt $attempt)."
+          done
+          echo "Could not publish after three attempts."
+          exit 1
