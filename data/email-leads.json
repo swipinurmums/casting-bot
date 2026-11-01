@@ -1,22 +1,5 @@
 {
   "version": 1,
   "updated_at": "2026-11-01T19:44:04.770Z",
-  "leads": [
-    {
-      "id": "email-d41c6eceb6aea33610ee",
-      "title": "modelling radar test",
-      "source": "Email notification",
-      "sender_domain": "gmail.com",
-      "received_at": "2026-11-01T19:24:15.000Z",
-      "source_url": "",
-      "links": [],
-      "collection_method": "email_notification",
-      "review_status": "needs_review",
-      "compensation": "Unknown",
-      "application_method": "Open the original casting link and verify eligibility, fee, deadline and application route",
-      "status": "New",
-      "saved": false,
-      "demo": false
-    }
-  ]
+  "leads": []
 }
