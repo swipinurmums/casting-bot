@@ -1,5 +1,31 @@
 {
   "version": 1,
-  "updated_at": "2026-11-01T19:44:04.770Z",
-  "leads": []
+  "updated_at": "2026-11-02T14:25:51.205Z",
+  "leads": [
+    {
+      "id": "email-1aa78854e91483589faf",
+      "title": "32 New Roles Available for Job Recommendations - Nov 2",
+      "source": "Backstage",
+      "sender_domain": "backstage.com",
+      "received_at": "2026-11-02T13:39:14.000Z",
+      "source_url": "https://www.backstage.com/casting/?geo=-2.23743%2C53.48095&radius=250&location=Manchester%2C+England&sort_by=relevance&search_id=33817424",
+      "links": [
+        "https://www.backstage.com/casting/?geo=-2.23743%2C53.48095&radius=250&location=Manchester%2C+England&sort_by=relevance&search_id=33817424",
+        "https://www.backstage.com/casting/vets-for-pets-social-media-campaign-3331687/?&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/vets-for-pets-social-media-campaign-3331687/?role_id=5668878&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/interview-style-short-film-project-3331660/?&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/interview-style-short-film-project-3331660/?role_id=5668847&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/leading-fragrance-brand-social-media-video-shoot-3331151/?&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/leading-fragrance-brand-social-media-video-shoot-3331151/?role_id=5667982&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs",
+        "https://www.backstage.com/casting/family-tithes-3332088/?&utm_source=digest&utm_medium=email&utm_campaign=saved-search&utm_content=recommended-jobs"
+      ],
+      "collection_method": "email_notification",
+      "review_status": "needs_review",
+      "compensation": "Unknown",
+      "application_method": "Open the original casting link and verify eligibility, fee, deadline and application route",
+      "status": "New",
+      "saved": false,
+      "demo": false
+    }
+  ]
 }
